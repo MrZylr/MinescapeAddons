@@ -2,6 +2,7 @@ package com.zylr.minescapeaddons.addons.handlers;
 
 import com.zylr.minescapeaddons.addons.Main;
 import com.zylr.minescapeaddons.addons.ModConfiguration;
+import com.zylr.minescapeaddons.addons.gui.screens.HudEditScreen;
 import com.zylr.minescapeaddons.addons.gui.screens.farming.FarmingTimerCompletedOnLogin;
 import com.zylr.minescapeaddons.addons.gui.screens.farming.FarmingTimersScreen;
 import com.zylr.minescapeaddons.addons.gui.screens.ConfigBuilder;
@@ -22,11 +23,13 @@ public class KeyInputHandler {
     @SubscribeEvent
     public void keyInputEvent(InputEvent.KeyInputEvent e) throws IOException {
         // TEST
-        if (e.getKey() == GLFW.GLFW_KEY_J) {
-        }
-        if (e.getKey() == GLFW.GLFW_KEY_H) {
-        }
-        if (e.getKey() == GLFW.GLFW_KEY_G)  {
+        if (!ModConfiguration.CLIENT.debugOff.get()) {
+            if (e.getKey() == GLFW.GLFW_KEY_J) {
+            }
+            if (e.getKey() == GLFW.GLFW_KEY_H) {
+            }
+            if (e.getKey() == GLFW.GLFW_KEY_G) {
+            }
         }
 
         // Key held down give mouse control

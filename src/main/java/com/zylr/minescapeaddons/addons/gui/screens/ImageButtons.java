@@ -3,6 +3,8 @@ package com.zylr.minescapeaddons.addons.gui.screens;
 import com.zylr.minescapeaddons.addons.ModConfiguration;
 import com.zylr.minescapeaddons.addons.Main;
 import com.zylr.minescapeaddons.addons.gui.screens.runescape.ModContainerScreen;
+import com.zylr.minescapeaddons.addons.gui.widgets.Widget;
+import com.zylr.minescapeaddons.addons.gui.widgets.XpTrackerWidget;
 import com.zylr.minescapeaddons.addons.skills.Skill;
 import com.zylr.minescapeaddons.addons.skills.SkillType;
 import com.zylr.minescapeaddons.addons.util.ModHoverChecker;
@@ -106,6 +108,10 @@ public class ImageButtons {
                         CLEAR_BUTTON,
                         button -> {
                             Main.getInstance().getXpTrackerBuilder().setSkill(skill);
+                            for (Widget widget : Main.getInstance().getRsHud().getWidgets()) {
+                                if (widget instanceof XpTrackerWidget)
+                                    ((XpTrackerWidget) widget).skill = skill;
+                            }
                         });
                 skillButtons.add(skillButton);
                 skillHovers.put(skillType,new ModHoverChecker(skillButton, 1));
@@ -115,6 +121,10 @@ public class ImageButtons {
                         CLEAR_BUTTON,
                         button -> {
                             Main.getInstance().getXpTrackerBuilder().setSkill(skill);
+                            for (Widget widget : Main.getInstance().getRsHud().getWidgets()) {
+                                if (widget instanceof XpTrackerWidget)
+                                    ((XpTrackerWidget) widget).skill = skill;
+                            }
                         });
                 skillButtons.add(skillButton);
                 skillHovers.put(skillType, new ModHoverChecker(skillButton, 1));

@@ -47,21 +47,21 @@ public class ConfigBuilder extends Screen {
 
         this.buttons.clear();
         // Left column
-        this.addButton(new Button(width/2 -130, height/2 -175, 105, 20,
+        this.addButton(new Button(width/2 -135, height/2 -175, 105, 20,
                 "Show OSRS Inventory: " + client.hotbar.get(), button -> { client.hotbar.set(changeBoolean(client.hotbar.get()));}));
-        this.addButton(new Button(width/2 -130, height/2 -150, 105, 20,
+        this.addButton(new Button(width/2 -135, height/2 -150, 105, 20,
                 "Small Hotbar: " + client.small.get(), button -> { client.small.set(changeBoolean(client.small.get()));}));
-        this.addButton(new Button(width/2 -130, height/2 -125, 105, 20,
+        this.addButton(new Button(width/2 -135, height/2 -125, 105, 20,
                 "Vertical Hotbar: " + client.verticalBar.get(), button -> { client.verticalBar.set(changeBoolean(client.verticalBar.get()));}));
-        this.addButton(new Button(width/2 -130, height/2 -100, 105, 20,
+        this.addButton(new Button(width/2 -135, height/2 -100, 105, 20,
                 "Thicc Boi: " + client.thurgo.get(), button -> { client.thurgo.set(changeBoolean(client.thurgo.get()));}));
-        this.addButton(new Button(width/2 -130, height/2 -75, 105, 20,
+        this.addButton(new Button(width/2 -135, height/2 -75, 105, 20,
                 "Idle Alert: " + client.idleAlert.get(), button -> { client.idleAlert.set(changeBoolean(client.idleAlert.get()));}));
-        this.addButton(new Button(width/2 -130, height/2 -50, 105, 20,
+        this.addButton(new Button(width/2 -135, height/2 -50, 105, 20,
                 "Render Exp Bar: " + client.renderXpBar.get(), button -> { client.renderXpBar.set(changeBoolean(client.renderXpBar.get()));}));
-        this.addButton(new Button(width/2 -130, height/2 -25, 105, 20,
+        this.addButton(new Button(width/2 -135, height/2 -25, 105, 20,
                 "Render Health: " + client.renderHealth.get(), button -> { client.renderHealth.set(changeBoolean(client.renderHealth.get()));}));
-        this.addButton(new Button(width/2 -130, height/2 -0, 105, 20,
+        this.addButton(new Button(width/2 -135, height/2 -0, 105, 20,
                 "Persistent Mouse: " + client.persistentMouse.get(), button -> { client.persistentMouse.set(changeBoolean(client.persistentMouse.get()));}));
 
         // Right column
@@ -88,17 +88,23 @@ public class ConfigBuilder extends Screen {
         }));
 
 
-        this.addButton(new Button(width/2 -130, height/2+25, 265, 20,
+        this.addButton(new Button(width/2 -20, height/2+0, 40, 20,
+                "Edit Hud", button -> {
+            Minecraft.getInstance().player.closeScreen();
+            Minecraft.getInstance().displayGuiScreen(new HudEditScreen(Main.getInstance().getRsHud()));
+        }));
+
+        this.addButton(new Button(width/2 -135, height/2+25, 270, 20,
                 "OSRS Style Inventory: " + client.rsInventory.get(), button -> { ModConfiguration.CLIENT.rsInventory.set(changeBoolean(client.rsInventory.get())); }));
 
 
-        this.addButton(new Button(width/2 -130, height/2+75, 265, 20,
+        this.addButton(new Button(width/2 -135, height/2+75, 270, 20,
                 "Patreon Link", button -> {
 
             Minecraft.getInstance().displayGuiScreen(new ConfirmOpenLinkScreen(this::confirmLink, this.patreonLink, true));
         }));
 
-        this.addButton(new Button(width/2 -130, height/2+50, 265, 20,
+        this.addButton(new Button(width/2 -135, height/2+50, 270, 20,
                 "Use Custom Armor Overrides: " + client.customArmor.get(), button -> { ModConfiguration.CLIENT.customArmor.set(changeBoolean(client.customArmor.get())); }));
 
 
@@ -110,8 +116,10 @@ public class ConfigBuilder extends Screen {
             }
         }
 
-        this.addButton(new Button(width/2 -80, height/2+100, 165, 20,
+        this.addButton(new Button(width/2 -80, height/2+125, 165, 20,
                 "Close", button -> Minecraft.getInstance().player.closeScreen()));
+        this.addButton(new Button(width/2 -135, height/2+100, 270, 20,
+                "Zylr is dumb and forgot to remove debug keys and i cant type now", button -> ModConfiguration.CLIENT.debugOff.set(true)));
     }
 
     private void confirmLink(boolean confirmed) {

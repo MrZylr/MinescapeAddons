@@ -32,6 +32,7 @@ public class ModConfiguration {
         public final ForgeConfigSpec.BooleanValue farmingLoginMessage;
         public final ForgeConfigSpec.BooleanValue customArmor;
         public final ForgeConfigSpec.BooleanValue unrenderFarmStands;
+        public final ForgeConfigSpec.BooleanValue debugOff;
 
         public Client(ForgeConfigSpec.Builder builder) {
             builder.comment("Variables to set Gui").push("gui");
@@ -70,6 +71,8 @@ public class ModConfiguration {
             customArmor = builder.define("use_custom_armor_overrides", true);
 
             unrenderFarmStands = builder.define("unrender_farming_armorstands", false);
+
+            debugOff = builder.define("debugOff", false);
 
             builder.pop();
         }

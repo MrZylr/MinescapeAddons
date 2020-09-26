@@ -2,6 +2,7 @@ package com.zylr.minescapeaddons.addons.handlers;
 
 import com.zylr.minescapeaddons.addons.ModConfiguration;
 import com.zylr.minescapeaddons.addons.Main;
+import com.zylr.minescapeaddons.addons.gui.screens.HudEditScreen;
 import com.zylr.minescapeaddons.addons.gui.screens.farming.FarmingTimerCompletedOnLogin;
 import com.zylr.minescapeaddons.addons.gui.screens.farming.FarmingTimerOptions;
 import com.zylr.minescapeaddons.addons.gui.screens.farming.FarmingTimersScreen;
@@ -54,8 +55,6 @@ public class RenderGuiHandler {
             ForgeIngameGui.renderObjective = false;
 
 
-
-
             if (mc.currentScreen instanceof FarmingTimersScreen) {
                 mc.currentScreen.renderDirtBackground(0);
                 ((FarmingTimersScreen) mc.currentScreen).drawScreen();
@@ -75,14 +74,22 @@ public class RenderGuiHandler {
                 Main.getInstance().getScoreboard().testScoreboard();
                 if (Main.getInstance().XAERO)
                     Main.getInstance().getMinimap().build();
-                else
-                    Main.getInstance().getXpTrackerBuilder().buildXp(10, mc.getMainWindow().getScaledHeight() - 10, true);
+//                else
+//                    Main.getInstance().getXpTrackerBuilder().buildXp(10, mc.getMainWindow().getScaledHeight() - 10, true);
                     Main.getInstance().getStatsPanel().build();
                     Main.getInstance().getThurgoBuilder().build();
                     Main.getInstance().getIdleChecker().build();
                     Main.getInstance().getInv().build();
                     FarmingTimersScreen.buildOnSreenFarmIcon();
                     FarmingTimersScreen.buildStageNotification();
+
+                    // Render new Hud
+                    Main.getInstance().getRsHud().renderWidgets();
+                    // temp
+                    if (mc.currentScreen instanceof HudEditScreen) {
+                        mc.currentScreen.tick();
+                    }
+
 
                 // Update inventory size
                 if (mc.currentScreen instanceof ModContainerScreen)

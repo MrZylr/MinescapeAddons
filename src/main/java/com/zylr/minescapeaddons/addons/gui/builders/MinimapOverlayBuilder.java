@@ -182,7 +182,7 @@ public class MinimapOverlayBuilder {
             trackerOriginX = 10;
         }
         // Move xp tracker
-        Main.getInstance().getXpTrackerBuilder().buildXp(trackerOriginX, originY - 5, right);
+        //Main.getInstance().getXpTrackerBuilder().buildXp(trackerOriginX, originY - 5, right);
 
         RenderSystem.popMatrix();
     }

@@ -4,6 +4,7 @@ import com.zylr.minescapeaddons.addons.Proxy.IProxy;
 import com.zylr.minescapeaddons.addons.Proxy.ClientProxy;
 import com.zylr.minescapeaddons.addons.armor.MinescapeItems;
 import com.zylr.minescapeaddons.addons.gui.builders.*;
+import com.zylr.minescapeaddons.addons.gui.hud.RSHud;
 import com.zylr.minescapeaddons.addons.gui.screens.ImageButtons;
 import com.zylr.minescapeaddons.addons.handlers.*;
 import com.zylr.minescapeaddons.addons.idle.IdleChecker;
@@ -39,7 +40,6 @@ public class Main
 {
     // TODO:: Add auto update to patreons 5+
     // TODO:: Move xp drops to xp counter
-    // TODO:: Make inventory hud positioned relative to 1 point
     // TODO:: Make xp goals on tracker
     // TODO:: Persistent mouse in bank
     // TODO:: suggestion, death logger and alarm?
@@ -53,6 +53,23 @@ public class Main
     // Add glow effect when behind wall
     // Middle mouse moves camera
 
+
+
+    // TODO:: Main HUD & Individual Widgets
+    // Setup a main HUD where widgets can be added similar to buttons on a Screen
+    // The HUD should be able to convery into a Screen a back
+    // The Widgets should have the ability to be interacted with
+    // All Widgets should have a central fixed point that is based on the relative postion in the HUD class
+    //
+    // The settings Screen should be a child of the new Screen class
+    // All options in the Settings Screen should be built relative to a "scroll" value in the Screen class
+    // The scroll wheel when the Settings Screen is open should change the "scroll" value everything is relative to
+    // The width should be relative to the Screens width, so the screen can grow wider when opened to create a slide in animation
+    //
+    // The OSRS style hotbar needs a new HUD/Screen/Widget for each menu thats currently open
+    // Widget for when on the HUD and clicking between them should call for a new screen to be made
+    //
+    // Make option for OSRS hotbar to only appear when in inventory
 
 
     public static final String ID = "ms_addon";
@@ -72,6 +89,9 @@ public class Main
     private ImageButtons imageButtons;
     private ScoreboardBuilder scoreboard;
     private IdleChecker idle;
+
+    // Huds
+    private RSHud rsHud;
 
 
 
@@ -106,6 +126,10 @@ public class Main
         // Register Items
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus(), forgeEventBus = MinecraftForge.EVENT_BUS;
         addRegistries(modEventBus);
+
+        // Setup files
+        PersistenceFile.createFiles();
+        FarmingUtil.setTimersFromFile();
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -154,15 +178,13 @@ public class Main
         imageButtons = new ImageButtons();
         scoreboard = new ScoreboardBuilder();
 
+        rsHud = new RSHud();
+
 
         // Create this instance
         instance = this;
 
         inServer = false;
-
-        // Setup files
-        PersistenceFile.createFiles();
-        FarmingUtil.setTimersFromFile();
 
         // Load Settings
         PatchType.loadPatchTypeSettings();
@@ -179,6 +201,9 @@ public class Main
     public InventoryBuilder getInv() { return inv; }
     public ImageButtons getImageButtons() { return imageButtons; }
     public ScoreboardBuilder getScoreboard() { return scoreboard; }
+
+
+    public RSHud getRsHud() { return rsHud; }
 
 
     public static Main getInstance() {
