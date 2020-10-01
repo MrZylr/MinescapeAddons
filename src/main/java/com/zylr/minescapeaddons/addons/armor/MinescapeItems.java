@@ -20,6 +20,29 @@ public class MinescapeItems {
             () -> new MetalArmorItem(MinescapeArmorMaterial.RUNE, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)));
     public static final RegistryObject<MetalArmorItem> RUNE_BOOTS = ITEMS.register("rune_boots",
             () -> new MetalArmorItem(MinescapeArmorMaterial.RUNE, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)));
+    // Bronze
+    public static final RegistryObject<MetalArmorItem> BRONZE_CHESTPLATE = ITEMS.register("bronze_chestplate",
+            () -> new MetalArmorItem(MinescapeArmorMaterial.BRONZE, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)));
+    public static final RegistryObject<MetalArmorItem> BRONZE_LEGGINGS = ITEMS.register("bronze_leggings",
+            () -> new MetalArmorItem(MinescapeArmorMaterial.BRONZE, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)));
+    public static final RegistryObject<MetalArmorItem> BRONZE_BOOTS = ITEMS.register("bronze_boots",
+            () -> new MetalArmorItem(MinescapeArmorMaterial.BRONZE, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)));
+    public static final RegistryObject<MetalArmorItem> BRONZESKIRT_LEGGINGS = ITEMS.register("bronzeskirt_leggings",
+            () -> new MetalArmorItem(MinescapeArmorMaterial.BRONZESKIRT, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)));
+    // Bronze Trim
+    public static final RegistryObject<MetalArmorItem> BRONZETRIM_CHESTPLATE = ITEMS.register("bronzetrim_chestplate",
+            () -> new MetalArmorItem(MinescapeArmorMaterial.BRONZETRIM, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)));
+    public static final RegistryObject<MetalArmorItem> BRONZETRIM_LEGGINGS = ITEMS.register("bronzetrim_leggings",
+            () -> new MetalArmorItem(MinescapeArmorMaterial.BRONZETRIM, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)));
+    public static final RegistryObject<MetalArmorItem> BRONZESKIRTTRIM_LEGGINGS = ITEMS.register("bronzeskirttrim_leggings",
+            () -> new MetalArmorItem(MinescapeArmorMaterial.BRONZESKIRTTRIM, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)));
+    // Bronze Gold
+    public static final RegistryObject<MetalArmorItem> BRONZEGOLD_CHESTPLATE = ITEMS.register("bronzegold_chestplate",
+            () -> new MetalArmorItem(MinescapeArmorMaterial.BRONZEGOLD, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)));
+    public static final RegistryObject<MetalArmorItem> BRONZEGOLD_LEGGINGS = ITEMS.register("bronzegold_leggings",
+            () -> new MetalArmorItem(MinescapeArmorMaterial.BRONZEGOLD, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)));
+    public static final RegistryObject<MetalArmorItem> BRONZESKIRTGOLD_LEGGINGS = ITEMS.register("bronzeskirtgold_leggings",
+            () -> new MetalArmorItem(MinescapeArmorMaterial.BRONZESKIRTGOLD, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)));
     // Iron
     public static final RegistryObject<MetalArmorItem> IRON_CHESTPLATE = ITEMS.register("iron_chestplate",
             () -> new MetalArmorItem(MinescapeArmorMaterial.IRON, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)));

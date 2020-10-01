@@ -55,9 +55,12 @@ public class ScoreboardBuilder extends IngameGui {
     protected void renderScoreboard(ScoreObjective objective) {
         Scoreboard scoreboard = objective.getScoreboard();
         Collection<Score> collection = scoreboard.getSortedScores(objective);
+
+
         List<Score> list = collection.stream().filter((p_212911_0_) -> {
             return p_212911_0_.getPlayerName() != null && !p_212911_0_.getPlayerName().startsWith("#");
         }).collect(Collectors.toList());
+
         if (list.size() > 15) {
             collection = Lists.newArrayList(Iterables.skip(list, collection.size() - 15));
         } else {
@@ -106,6 +109,7 @@ public class ScoreboardBuilder extends IngameGui {
                     int k1 = this.mc.getMainWindow().getScaledWidth() - 3 + 2;
                     fill(k2 - 2, j1, k1, j1 + 9, l);
                     this.getFontRenderer().drawString(s2, (float) k2, (float) j1, -1);
+//                    System.out.println(s2);
                 }
                 if (k == collection.size()) {
                     int j1 = i2 - k5 * 9;
@@ -113,10 +117,10 @@ public class ScoreboardBuilder extends IngameGui {
                     fill(k2 - 2, j1 - 9 - 1, k1, j1 - 1, i1);
                     fill(k2 - 2, j1 - 1, k1, j1, l);
                     this.getFontRenderer().drawString(s, (float) (k2 + j / 2 - i / 2), (float) (j1 - 9), -1);
+//                    System.out.println(s);
                 }
             }
         }
-
     }
 
     protected void renderMyScoreboard(ScoreObjective objective) {

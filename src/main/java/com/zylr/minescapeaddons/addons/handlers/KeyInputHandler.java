@@ -15,8 +15,10 @@ import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.client.gui.GuiUtils;
 import org.lwjgl.glfw.GLFW;
 
+import java.awt.*;
 import java.io.IOException;
 
 public class KeyInputHandler {
@@ -25,6 +27,11 @@ public class KeyInputHandler {
         // TEST
         if (!ModConfiguration.CLIENT.debugOff.get()) {
             if (e.getKey() == GLFW.GLFW_KEY_J) {
+                int x = Main.getInstance().getRsHud().getWidgets().get(0).getAnchorX();
+                int y = Main.getInstance().getRsHud().getWidgets().get(0).getAnchorY();
+
+                System.out.println(x +", "+ y);
+                System.out.println(Minecraft.getInstance().getMainWindow().getScaledWidth() +", "+ Minecraft.getInstance().getMainWindow().getScaledHeight());
             }
             if (e.getKey() == GLFW.GLFW_KEY_H) {
             }

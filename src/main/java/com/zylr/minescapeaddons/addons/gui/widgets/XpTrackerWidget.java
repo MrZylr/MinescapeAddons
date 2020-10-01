@@ -23,6 +23,7 @@ public class XpTrackerWidget extends Widget {
     private int backgroundColor;
     private int fontColor;
     private int barColor;
+    private int barBackgroundColor;
 
     public XpTrackerWidget() {
         super();
@@ -31,12 +32,13 @@ public class XpTrackerWidget extends Widget {
         // default colors
         backgroundColor = new Color(0, 0, 0, 100).getRGB();
         barColor = new Color(34, 175, 229, 183).getRGB();
+        barBackgroundColor = new Color(0, 0, 0, 255).getRGB();
         fontColor = new Color(255,255, 255, 255).getRGB();
 
         anchorX = 100;
         anchorY = 100;
 
-        if (setFromFile()) {
+        if (!setFromFile()) {
             PersistenceFile.defaultXpTrackerFile();
             setFromFile();
         }
@@ -44,12 +46,25 @@ public class XpTrackerWidget extends Widget {
 
     @Override
     public void render() {
-        // TEST TODO:: REMOVE
-        backgroundColor = new Color(255, 136, 236, 72).getRGB();
-        barColor = new Color(254, 148, 255, 183).getRGB();
-        fontColor = new Color(236, 10, 255, 255).getRGB();
+        // Catherby Colors
+//        backgroundColor = new Color(129, 1, 0, 76).getRGB();
+//        barColor = new Color(180, 1, 0, 183).getRGB();
+//        barBackgroundColor = new Color(0, 0, 0, 105).getRGB();
+//        fontColor = new Color(255,255, 255, 255).getRGB();
+        // Greens Colors
+//        backgroundColor = new Color(0, 110, 14, 212).getRGB();
+//        barColor = new Color(0, 110, 14, 212).getRGB();
+//        barBackgroundColor = new Color(0, 0, 0, 57).getRGB();
+//        fontColor = new Color(255, 242, 17, 255).getRGB();
+
+//        backgroundColor = new Color(0, 110, 14, 212).getRGB();
+//        barColor = new Color(0, 110, 14, 212).getRGB();
+//        barBackgroundColor = new Color(0, 0, 0, 57).getRGB();
+//        fontColor = new Color(255, 242, 17, 255).getRGB();
 
 
+        // Calculate the exp/hour
+        skill.getTracker().calcXp();
         // Fix the anchor point if it goes off screen
         fixAnchors();
         // Setup for dynamic background size
@@ -94,7 +109,7 @@ public class XpTrackerWidget extends Widget {
         // Draw the bar
         double barWidth = widgetWidth*percentDone;
         GuiUtils.drawGradientRect(1, getLeftSide(), getBottom()-mc.fontRenderer.FONT_HEIGHT-2, getRightSide(), getBottom(),
-                new Color(0, 0, 0).getRGB(), new Color(0, 0, 0).getRGB());
+                barBackgroundColor, barBackgroundColor);
         GuiUtils.drawGradientRect(2, getLeftSide(), getBottom()-mc.fontRenderer.FONT_HEIGHT-2, getLeftSide()+(int)barWidth, getBottom(),
                 barColor, barColor);
 
@@ -136,7 +151,7 @@ public class XpTrackerWidget extends Widget {
                         System.out.println("XP TRACKER FILE CORRUPTED. MAKING DEFAULT FILE.");
                         return false;
                     }
-                    break;
+                    return true;
                 default:
                     return true;
             }

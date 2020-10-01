@@ -1,5 +1,6 @@
 package com.zylr.minescapeaddons.addons.gui.hud;
 
+import com.zylr.minescapeaddons.addons.gui.widgets.ScoreboardWidget;
 import com.zylr.minescapeaddons.addons.gui.widgets.XpTrackerWidget;
 
 public class RSHud extends Hud {
@@ -9,5 +10,6 @@ public class RSHud extends Hud {
     public RSHud() {
         super();
         this.widgets.add(new XpTrackerWidget());
+        this.widgets.add(new ScoreboardWidget());
     }
 }

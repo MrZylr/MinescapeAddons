@@ -4,6 +4,7 @@ import com.zylr.minescapeaddons.addons.gui.hud.Hud;
 import com.zylr.minescapeaddons.addons.gui.widgets.Widget;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.util.text.ITextComponent;
 
 import java.util.ArrayList;
@@ -20,9 +21,23 @@ public class ModScreen extends Screen {
         widgets = new ArrayList<>();
     }
 
+    @Override
+    protected void init() {
+        super.init();
+        renderWidgets();
+    }
+
     public void renderWidgets() {
         for (Widget widget : widgets) {
             widget.render();
+            this.renderButtons(widget.getButtons());
+        }
+    }
+
+    public void renderButtons(List<Button> widgetButtons) {
+        this.buttons.clear();
+        for (Button widgetButton : widgetButtons) {
+            this.addButton(widgetButton);
         }
     }
 

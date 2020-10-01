@@ -16,6 +16,13 @@ import java.util.function.Supplier;
 public enum MinescapeArmorMaterial implements IArmorMaterial {
     // Rune
     RUNE("rune", 33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, () -> Ingredient.fromItems(Items.DIAMOND)),
+    // Bronze
+    BRONZE("bronze", 33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, () -> Ingredient.fromItems(Items.DIAMOND)),
+    BRONZESKIRT("bronzeskirt", 33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, () -> Ingredient.fromItems(Items.DIAMOND)),
+    BRONZETRIM("bronzetrim", 33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, () -> Ingredient.fromItems(Items.DIAMOND)),
+    BRONZESKIRTTRIM("bronzeskirttrim", 33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, () -> Ingredient.fromItems(Items.DIAMOND)),
+    BRONZEGOLD("bronzegold", 33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, () -> Ingredient.fromItems(Items.DIAMOND)),
+    BRONZESKIRTGOLD("bronzeskirtgold", 33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, () -> Ingredient.fromItems(Items.DIAMOND)),
     // Iron
     IRON("iron", 33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, () -> Ingredient.fromItems(Items.DIAMOND)),
     IRONSKIRT("ironskirt", 33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, () -> Ingredient.fromItems(Items.DIAMOND)),

@@ -71,7 +71,7 @@ public class RenderGuiHandler {
                 if (mc.currentScreen instanceof FarmingTimerCompletedOnLogin)
                     ((FarmingTimerCompletedOnLogin) mc.currentScreen).buildLoginCheck();
 
-                Main.getInstance().getScoreboard().testScoreboard();
+//                Main.getInstance().getScoreboard().testScoreboard();
                 if (Main.getInstance().XAERO)
                     Main.getInstance().getMinimap().build();
 //                else

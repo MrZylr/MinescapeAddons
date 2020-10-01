@@ -5,6 +5,21 @@ import com.zylr.minescapeaddons.addons.armor.item.MetalArmorItem;
 
 public enum ArmorToOverride {
 //    BRONZE_PLATEBODY_T("Bronze Platebody T", null),
+// Bronze
+    BRONZE_PLATEBODY("Bronze Platebody", MinescapeItems.BRONZE_CHESTPLATE.get()),
+    BRONZE_PLATELEGS("Bronze Platelegs", MinescapeItems.BRONZE_LEGGINGS.get()),
+    BRONZEPLATESKIRT("Bronze Plateskirt", MinescapeItems.BRONZESKIRT_LEGGINGS.get()),
+
+    // Bronze T
+    BRONZE_PLATEBODY_T("Bronze Platebody T", MinescapeItems.BRONZETRIM_CHESTPLATE.get()),
+    BRONZE_PLATELEGS_T("Bronze Platelegs T", MinescapeItems.BRONZETRIM_LEGGINGS.get()),
+    BRONZEPLATESKIRT_T("Bronze Plateskirt T", MinescapeItems.BRONZESKIRTTRIM_LEGGINGS.get()),
+
+    // Bronze G
+    BRONZE_PLATEBODY_G("Bronze Platebody G", MinescapeItems.BRONZEGOLD_CHESTPLATE.get()),
+    BRONZE_PLATELEGS_G("Bronze Platelegs G", MinescapeItems.BRONZEGOLD_LEGGINGS.get()),
+    BRONZEPLATESKIRT_G("Bronze Plateskirt G", MinescapeItems.BRONZESKIRTGOLD_LEGGINGS.get()),
+
     // Iron
     IRON_PLATEBODY("Iron Platebody", MinescapeItems.IRON_CHESTPLATE.get()),
     IRON_PLATELEGS("Iron Platelegs", MinescapeItems.IRON_LEGGINGS.get()),

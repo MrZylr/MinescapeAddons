@@ -8,8 +8,7 @@ import com.zylr.minescapeaddons.addons.skills.SkillType;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screen.ConfirmOpenLinkScreen;
 import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.gui.widget.button.Button;
-import net.minecraft.client.gui.widget.button.ImageButton;
+import net.minecraft.client.gui.widget.button.*;
 import net.minecraft.util.Util;
 import net.minecraft.util.text.StringTextComponent;
 
@@ -115,6 +114,9 @@ public class ConfigBuilder extends Screen {
                 }
             }
         }
+
+//        this.addButton(new CheckboxButton(width/2 -80, height/2+150, 20, 20, "Some Text", false));
+//        this.addButton(new ChangePageButton(width/2 -80, height/2 +175, false, button ->{}, false));
 
         this.addButton(new Button(width/2 -80, height/2+125, 165, 20,
                 "Close", button -> Minecraft.getInstance().player.closeScreen()));

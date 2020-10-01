@@ -1,7 +1,10 @@
 package com.zylr.minescapeaddons.addons.util.files;
 
+import com.electronwill.nightconfig.core.file.FileConfigBuilder;
 import com.zylr.minescapeaddons.addons.skills.Skill;
 import com.zylr.minescapeaddons.addons.skills.SkillType;
+import org.apache.logging.log4j.core.LoggerContext;
+import org.apache.logging.log4j.core.config.yaml.YamlConfiguration;
 import org.apache.logging.log4j.core.config.yaml.YamlConfigurationFactory;
 
 import java.io.*;
@@ -21,7 +24,8 @@ public class PersistenceFile {
     public static final File FARMINGTIMERSFILE = new File("minescape/farming/timers.txt");
     public static final File PATCHTYPESETTINGS = new File("minescape/farming/patch_type_settings.txt");
     public static final File SKILLXPFILE = new File("minescape/skills/skillXp.txt");
-    public static final File XPTRACKERFILE = new File("minescape/widgets/xptracker");
+    public static final File XPTRACKERFILE = new File("minescape/widgets/xptracker.txt");
+    public static final File SCOREBOARDFILE = new File("minescape/widgets/scoreboard.txt");
 
 
     public static void createFiles() {
@@ -44,6 +48,8 @@ public class PersistenceFile {
                 System.out.println("Creating patch type file");
             if (XPTRACKERFILE.createNewFile())
                 defaultXpTrackerFile();
+            if (SCOREBOARDFILE.createNewFile())
+                System.out.println("Creating scoreboard file");
         } catch (IOException ex) {
             ex.printStackTrace();
         }

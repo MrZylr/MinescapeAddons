@@ -3,8 +3,11 @@ package com.zylr.minescapeaddons.addons.gui.widgets;
 import com.zylr.minescapeaddons.addons.util.files.PersistenceFile;
 import net.minecraft.client.MainWindow;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.widget.button.Button;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Widget {
 
@@ -16,6 +19,7 @@ public class Widget {
     protected int width;
     protected int height;
     protected WidgetType type;
+    List<Button> buttons;
 
 
     // TODO:: Change anchor from being center based to the matching quadrant on the screen the widget is currently in
@@ -29,6 +33,7 @@ public class Widget {
         this.type = null;
         this.width = window.getScaledWidth();
         this.height = window.getScaledHeight();
+        buttons = new ArrayList<>();
     }
 
     // Check if this widget is being hovered by the mouse or not
@@ -36,13 +41,31 @@ public class Widget {
         double pointerX = mc.mouseHelper.getMouseX()/window.getGuiScaleFactor();
         double pointerY = mc.mouseHelper.getMouseY()/window.getGuiScaleFactor();
 
-        if (pointerX > getLeftSide() && pointerX < getRightSide() && pointerY > getTop() && pointerY < getBottom())
+        if (pointerX > getLeftSide()-20 && pointerX < getRightSide()+20 && pointerY > getTop()-20 && pointerY < getBottom()+20)
             return true;
         return false;
     }
 
     public void render() {
+        // Fix the anchor point if it goes off screen
+        fixAnchors();
+    }
 
+    public List<Button> getButtons() {
+        buttons.clear();
+        return buttons;
+    }
+
+    public boolean isLeftHalf() {
+        if (anchorX < window.getScaledWidth()/2)
+            return true;
+        return false;
+    }
+
+    public boolean isTopHalf() {
+        if (anchorY < window.getScaledHeight()/2)
+            return true;
+        return false;
     }
 
     protected void fixAnchors() {
