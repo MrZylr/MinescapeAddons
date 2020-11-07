@@ -38,14 +38,7 @@ Addons for Minescape.me
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
     side="BOTH"
 
-[[dependencies.ms_addon]] #optional
-    modId="xaerominimap"
-    mandatory=false
-    versionRange="[1.15.2]"
-    ordering="AFTER"
-    side="BOTH"
-
-[[dependencies.ms_addon]]
+[[dependencies.examplemod]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.15.2]"

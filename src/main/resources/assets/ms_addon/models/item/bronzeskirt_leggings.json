@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "ms_addon:item/bronzeskirt_leggings"
-  }
-}
