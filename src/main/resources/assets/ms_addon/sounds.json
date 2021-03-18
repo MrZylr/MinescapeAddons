@@ -1,0 +1,6 @@
+{
+  "inventory_full": {
+    "category": "player",
+    "sounds": [ "minescapeaddons:inventory_full_sound" ]
+  }
+}
