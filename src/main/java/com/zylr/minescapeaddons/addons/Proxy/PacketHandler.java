@@ -5,8 +5,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.network.NetworkRegistry;
 import net.minecraftforge.fml.network.simple.SimpleChannel;
 
-public class PacketHandler {
-    private static final String PROTOCOL_VERSION = "1";
+public class PacketHandler {private static final String PROTOCOL_VERSION = "1";
     public static final SimpleChannel INSTANCE = NetworkRegistry.newSimpleChannel(
             new ResourceLocation(Main.ID, "main"),
             () -> PROTOCOL_VERSION,

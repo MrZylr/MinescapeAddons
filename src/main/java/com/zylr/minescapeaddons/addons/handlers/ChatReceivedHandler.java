@@ -26,8 +26,51 @@ public class ChatReceivedHandler {
     public void onChatReceived(ClientChatReceivedEvent e) {
         XpTrackerBuilder gui = Main.getInstance().getXpTrackerBuilder();
         Minecraft mc = Minecraft.getInstance();
-        // Get messaged for chatWidget
-        if (e.getType() == ChatType.SYSTEM){
+        // Get XP from Game Info Chats
+        if (e.getType() == ChatType.GAME_INFO) {
+            String message = e.getMessage().getFormattedText();
+            int totalExp = 0;
+            int skillExp = 0;
+            Map<SkillType, Skill> skills = Main.getInstance().skills;
+            List<String> skillsList = Arrays.asList(Main.getInstance().skillsList);
+            List<String> skillsSymbolList = Arrays.asList(Main.getInstance().skillsSymbolList);
+
+            // Split the game info chat popup into each skill
+            // So each skill xp gets its own string
+            for (String s : message.split(",")) {
+                if (s.contains("xp")) {
+                    int xp = Integer.parseInt(s.substring(s.indexOf("+") + 1, s.indexOf("x")));
+                    // Grab the skill symbol
+                    for (String s1 : skillsSymbolList) {
+                        // Check to see if the string contain the skill symbol
+                        if (s.contains(s1)) {
+                            // Set the skill and begin adding the xp
+                            Skill skill = skills.get(SkillType.valueOf(skillsList.get(skillsSymbolList.indexOf(s1)).toUpperCase()));
+                            // Check to start farm timer
+                            if (skill.getType() == SkillType.FARMING) {
+                                if (Main.getInstance().clickOnFarmingPatch != null)
+                                    Main.getInstance().clickOnFarmingPatch.setSeed();
+                            }
+                            if (xp > 0) {
+                                skill.addExp(xp);
+                            }
+                        }
+                    }
+                    totalExp += xp;
+                }
+            }
+
+            // Start the counter if xp gained
+            if (totalExp > 0) {
+                Main.getInstance().getIdleChecker().getXpTimer().startTimer();
+                skills.get(SkillType.TOTAL).addExp(totalExp);
+
+                if (totalExp == 100 || totalExp == 50)
+                    gui.addTrout();
+                if (totalExp == 140 || totalExp == 70)
+                    gui.addSalmon();
+            }
+        }else if (e.getType() == ChatType.SYSTEM){
             for (IWidget widget : Main.getInstance().getRsHud().getWidgets()) {
                 if (widget instanceof ChatWidget) {
                     ((ChatWidget)widget).addTextComponent(e.getMessage());

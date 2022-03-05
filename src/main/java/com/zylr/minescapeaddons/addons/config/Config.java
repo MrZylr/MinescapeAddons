@@ -33,14 +33,10 @@ public enum Config {
         return name;
     }
 
-    public boolean isToggled() {
+    public boolean get() {
         return this.option.getValue();
     }
     public void set(boolean value) {
         this.option.setValue(value);
-    }
-
-    public void toggle() {
-        set(!isToggled());
     }
 }

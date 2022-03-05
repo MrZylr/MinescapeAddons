@@ -13,8 +13,8 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '0.3.2'
-//version = '0.1.2.4_Patreon'
+//version = '0.3.0'
+version = '0.1.2.4_Patreon'
 group = 'com.zylr.ms_addon' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'MinescapeAddon_Forge_1.15.2'
 

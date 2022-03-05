@@ -40,8 +40,6 @@ public class ModVanillaInventoryScreen extends ModDisplayEffectsScreen<PlayerCon
     private static final ResourceLocation RECIPE_BUTTON_TEXTURE = new ResourceLocation("textures/gui/recipe_button.png");
     private static final ResourceLocation CLEAR_BUTTON = new ResourceLocation(Main.ID, "textures/gui/clear.png");
     private static final ResourceLocation TEST_BUTTON = new ResourceLocation(Main.ID, "textures/gui/redidle.png");
-//    private String patreonLink = "https://www.patreon.com/Mr_Zylr";
-    // Redirecting patreon link to Mod Download
     private String patreonLink = "https://www.patreon.com/Mr_Zylr";
     /** The old x position of the mouse pointer */
     protected float oldMouseX;
@@ -81,7 +79,7 @@ public class ModVanillaInventoryScreen extends ModDisplayEffectsScreen<PlayerCon
 
 
         // Button for farming
-        int y = Main.getInstance().getStatsPanel().topOfInventory;
+        int y = Main.getInstance().getStatsPanel().toOfInventory;
         if (ModConfiguration.CLIENT.small.get())
             y *= .75;
         this.addButton( new ImageButton(mc.getMainWindow().getScaledWidth() - 40, mc.getMainWindow().getScaledHeight() -y-25, 20, 20,

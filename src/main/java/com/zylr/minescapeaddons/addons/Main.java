@@ -90,7 +90,8 @@ public class Main
     private XpTrackerBuilder xpTrackerBuilder;
     private HotbarBuilder statsPanel;
     private IdleChecker idleChecker;
-//    private MinimapOverlayBuilder minimap;
+    private ThurgoBuilder thurgoBuilder;
+    private MinimapOverlayBuilder minimap;
     private InventoryBuilder inv;
     private ImageButtons imageButtons;
     private ScoreboardBuilder scoreboard;
@@ -113,9 +114,9 @@ public class Main
     public static final KeyBinding settingsKey = new KeyBinding("Open Settings", GLFW.GLFW_KEY_RIGHT_ALT, "MinescapeAddon");
     public static final KeyBinding heldInventoryKey = new KeyBinding("Hold to open inventory", GLFW.GLFW_KEY_LEFT_CONTROL, "MinescapeAddon");
     public static final KeyBinding farmTimersKey = new KeyBinding("Open The Farming Timers Screen", GLFW.GLFW_KEY_LEFT_SHIFT + GLFW.GLFW_KEY_F, "MinescapeAddon");
-//    public static final KeyBinding chatKey = new KeyBinding("Open The Chat to Type", GLFW.GLFW_KEY_ENTER, "MinescapeAddon");
-//    public static final KeyBinding altChatKey = new KeyBinding("Alt Key to Open The Chat to Type", GLFW.GLFW_KEY_T, "MinescapeAddon");
-//    public static final KeyBinding commandKey = new KeyBinding("Open The Chat to Type Commands", GLFW.GLFW_KEY_SLASH, "MinescapeAddon");
+    public static final KeyBinding chatKey = new KeyBinding("Open The Chat to Type", GLFW.GLFW_KEY_ENTER, "MinescapeAddon");
+    public static final KeyBinding altChatKey = new KeyBinding("Alt Key to Open The Chat to Type", GLFW.GLFW_KEY_T, "MinescapeAddon");
+    public static final KeyBinding commandKey = new KeyBinding("Open The Chat to Type Commands", GLFW.GLFW_KEY_SLASH, "MinescapeAddon");
 
 
     static {
@@ -123,9 +124,9 @@ public class Main
         ClientRegistry.registerKeyBinding(settingsKey);
         ClientRegistry.registerKeyBinding(heldInventoryKey);
         ClientRegistry.registerKeyBinding(farmTimersKey);
-//        ClientRegistry.registerKeyBinding(chatKey);
-//        ClientRegistry.registerKeyBinding(altChatKey);
-//        ClientRegistry.registerKeyBinding(commandKey);
+        ClientRegistry.registerKeyBinding(chatKey);
+        ClientRegistry.registerKeyBinding(altChatKey);
+        ClientRegistry.registerKeyBinding(commandKey);
     }
 
     public Main() throws IOException {
@@ -187,7 +188,8 @@ public class Main
         xpTrackerBuilder = new XpTrackerBuilder();
         statsPanel = new HotbarBuilder();
         idleChecker = new IdleChecker();
-//        minimap = new MinimapOverlayBuilder();
+        thurgoBuilder = new ThurgoBuilder();
+        minimap = new MinimapOverlayBuilder();
         inv = new InventoryBuilder();
         imageButtons = new ImageButtons();
         scoreboard = new ScoreboardBuilder();
@@ -210,7 +212,8 @@ public class Main
     }
     public HotbarBuilder getStatsPanel() { return statsPanel; }
     public IdleChecker getIdleChecker() { return idleChecker; }
-//    public MinimapOverlayBuilder getMinimap() { return minimap; }
+    public ThurgoBuilder getThurgoBuilder() { return thurgoBuilder; }
+    public MinimapOverlayBuilder getMinimap() { return minimap; }
     public InventoryBuilder getInv() { return inv; }
     public ImageButtons getImageButtons() { return imageButtons; }
     public ScoreboardBuilder getScoreboard() { return scoreboard; }

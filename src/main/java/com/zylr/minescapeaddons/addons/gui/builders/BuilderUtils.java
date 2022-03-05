@@ -33,20 +33,11 @@ public class BuilderUtils {
         Minecraft.getInstance().textureManager.bindTexture(resource);
 
         // Create corners
-        /*List<Double> corners = new ArrayList<>();
-        corners.add(originX);           corners.add(originY);
-        corners.add(originX);           corners.add(originY-height);
-        corners.add(originX-width);     corners.add(originY-height);
-        corners.add(originX-width);     corners.add(originY);*/
-
-
-        // Create corners
         List<Double> corners = new ArrayList<>();
-        corners.add(originX);           corners.add(originY-height);
         corners.add(originX);           corners.add(originY);
-        corners.add(originX-width);     corners.add(originY);
+        corners.add(originX);           corners.add(originY-height);
         corners.add(originX-width);     corners.add(originY-height);
-
+        corners.add(originX-width);     corners.add(originY);
         // Check if small
         if(small) {
             // Small

@@ -126,14 +126,14 @@ public class FarmingTimersScreen extends Screen {
         else
             color = 0x90FF0000;
 
-        int y = Main.getInstance().getStatsPanel().topOfInventory;
+        int y = Main.getInstance().getStatsPanel().toOfInventory;
         if (ModConfiguration.CLIENT.small.get())
             y *= .75;
         BuilderUtils.drawRect(40, y+25, 20, 20, color, color, false);
     }
 
     public static void buildOnSreenFarmIcon() {
-        int y = Main.getInstance().getStatsPanel().topOfInventory;
+        int y = Main.getInstance().getStatsPanel().toOfInventory;
         if (ModConfiguration.CLIENT.small.get())
             y *= .75;
         BuilderUtils.rectangle(40, y+25, 20, 20, FARMING_ICON, false);
@@ -141,7 +141,7 @@ public class FarmingTimersScreen extends Screen {
     }
 
     public static void buildStageNotification() {
-        int y = Main.getInstance().getStatsPanel().topOfInventory;
+        int y = Main.getInstance().getStatsPanel().toOfInventory;
         if (hasStageCompleted())
             BuilderUtils.rectangle(43, y+28, 6, 6, ALERT_CIRCLE, false);
     }

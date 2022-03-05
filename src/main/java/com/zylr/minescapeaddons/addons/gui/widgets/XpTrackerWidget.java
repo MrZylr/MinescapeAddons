@@ -34,14 +34,14 @@ public class XpTrackerWidget extends Widget {
         fontColor = new Color(255,255, 255, 255).getRGB();
 
         try {
-            this.relativeAnchorX = Double.parseDouble(config.getProperty("x"));
-            this.relativeAnchorY = Double.parseDouble(config.getProperty("y"));
+            anchorX = Integer.parseInt(config.getProperty("x"));
+            anchorY = Integer.parseInt(config.getProperty("y"));
             skill = Main.skills.get(SkillType.valueOf(config.getProperty("skill")));
         }catch(Exception ex) {
             setupConfig();
             // TODO:: Setup to redo config in a method IWidget
-            this.relativeAnchorX = Double.parseDouble(config.getProperty("x"));
-            this.relativeAnchorY = Double.parseDouble(config.getProperty("y"));
+            anchorX = Integer.parseInt(config.getProperty("x"));
+            anchorY = Integer.parseInt(config.getProperty("y"));
             skill = Main.skills.get(SkillType.valueOf(config.getProperty("skill")));
         }
     }
@@ -55,21 +55,15 @@ public class XpTrackerWidget extends Widget {
 //        barBackgroundColor = new Color(0, 0, 0, 105).getRGB();
 //        fontColor = new Color(255,255, 255, 255).getRGB();
         // Greens Colors
-        backgroundColor = new Color(0, 110, 14, 212).getRGB();
-        barColor = new Color(0, 110, 14, 212).getRGB();
+//        backgroundColor = new Color(0, 110, 14, 212).getRGB();
+//        barColor = new Color(0, 110, 14, 212).getRGB();
+//        barBackgroundColor = new Color(0, 0, 0, 57).getRGB();
+//        fontColor = new Color(255, 242, 17, 255).getRGB();
+
+        this.setBackgroundColor(new Color(85, 0, 67, 212).getRGB());
+        barColor = new Color(85, 0, 67, 212).getRGB();
         barBackgroundColor = new Color(0, 0, 0, 57).getRGB();
         fontColor = new Color(255, 242, 17, 255).getRGB();
-        // Brat Colors
-//        this.setBackgroundColor(new Color(0, 0, 0, 134).getRGB());
-//        barColor = new Color(109, 0, 0, 201).getRGB();
-//        barBackgroundColor = new Color(0, 0, 0, 119).getRGB();
-//        fontColor = new Color(255, 255, 255, 255).getRGB();
-
-//        this.setBackgroundColor(new Color(0, 0, 0, 134).getRGB());
-//        barColor = new Color(78, 2, 142, 201).getRGB();
-//        barBackgroundColor = new Color(0, 0, 0, 119).getRGB();
-//        fontColor = new Color(255, 255, 255, 255).getRGB();
-
 
 
         // Calculate the exp/hour

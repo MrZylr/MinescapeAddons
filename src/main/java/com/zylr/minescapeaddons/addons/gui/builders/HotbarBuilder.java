@@ -30,7 +30,7 @@ public class HotbarBuilder {
 
     private ResourceLocation display;
     private int currentScreen;
-    public int topOfInventory = 0;
+    public int toOfInventory = 0;
 
     private boolean grabbedStats;
     private boolean small;
@@ -49,9 +49,8 @@ public class HotbarBuilder {
     }
 
     public void build() {
-        if (!ModConfiguration.CLIENT.hotbar.get()) {
+        if (!ModConfiguration.CLIENT.hotbar.get())
             return;
-        }
 
         switch(currentScreen) {
             case 0:
@@ -71,10 +70,10 @@ public class HotbarBuilder {
         vertical = ModConfiguration.CLIENT.verticalBar.get();
 
         if (vertical) {
-            topOfInventory = 178;
+            toOfInventory = 178;
             BuilderUtils.rectangle(158D, 178D, 133, 178, display, small);
         } else {
-            topOfInventory = 203;
+            toOfInventory = 203;
             BuilderUtils.rectangle(133D, 203D, 133, 178, display, small);
         }
 
@@ -94,8 +93,6 @@ public class HotbarBuilder {
             BuilderUtils.rectangle(25, 178D, 25, 178, VERTICAL_HOTBAR_RIGHT, small);
         } else
             BuilderUtils.rectangle(275D, 25D, 275, 25, HOTBAR, small);
-
-
 
         populateSkills();
     }

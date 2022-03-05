@@ -32,6 +32,7 @@ public class ModConfiguration {
         public final ForgeConfigSpec.BooleanValue farmingLoginMessage;
         public final ForgeConfigSpec.BooleanValue customArmor;
         public final ForgeConfigSpec.BooleanValue unrenderFarmStands;
+        public final ForgeConfigSpec.BooleanValue osrsChat;
         public final ForgeConfigSpec.BooleanValue debugOff;
 
         public Client(ForgeConfigSpec.Builder builder) {
@@ -71,6 +72,8 @@ public class ModConfiguration {
             customArmor = builder.define("use_custom_armor_overrides", true);
 
             unrenderFarmStands = builder.define("unrender_farming_armorstands", false);
+
+            osrsChat = builder.define("enable osrs style chat", true);
 
             debugOff = builder.define("debugOff", false);
 

@@ -13,7 +13,7 @@ import xaero.common.minimap.MinimapProcessor;
 import xaero.minimap.XaeroMinimap;
 
 public class MinimapOverlayBuilder {
-   /* public final ResourceLocation MINIMAP_OVERLAY = new ResourceLocation(Main.ID, "textures/gui/minimap.png");
+    public final ResourceLocation MINIMAP_OVERLAY = new ResourceLocation(Main.ID, "textures/gui/minimap.png");
     public final ResourceLocation MINIMAP_LEFT_OVERLAY = new ResourceLocation(Main.ID, "textures/gui/minimap_left.png");
     private boolean right;
     private boolean bottom;
@@ -185,5 +185,5 @@ public class MinimapOverlayBuilder {
         //Main.getInstance().getXpTrackerBuilder().buildXp(trackerOriginX, originY - 5, right);
 
         RenderSystem.popMatrix();
-    }*/
+    }
 }

@@ -37,8 +37,8 @@ public class ScoreboardWidget extends Widget {
         anchorX = 100;
         anchorY = 100;
 
-        this.relativeAnchorX = Double.parseDouble(config.getProperty("x"));
-        this.relativeAnchorY = Double.parseDouble(config.getProperty("y"));
+        anchorX = Integer.parseInt(config.getProperty("x"));
+        anchorY = Integer.parseInt(config.getProperty("y"));
         anchor = Integer.parseInt(config.getProperty("anchor"));
         backgroundColor = Integer.parseInt(config.getProperty("backgroundColor"));
     }
@@ -47,14 +47,14 @@ public class ScoreboardWidget extends Widget {
     public void render() {
         super.render();
         // If anchored to right side
-        /*switch(anchor) {
+        switch(anchor) {
             case 1:
                 this.anchorX = this.widgetWidth/2 + 4;
                 break;
             case 3:
                 this.anchorX = window.getScaledWidth() - this.widgetWidth / 2 - 4;
                 break;
-        }*/
+        }
 
         // Built off of vanilla Minecraft render scoreboard code
         Scoreboard scoreboard = this.mc.world.getScoreboard();
@@ -78,10 +78,10 @@ public class ScoreboardWidget extends Widget {
     }
     @Override
     public List<Button> getButtons() {
-        super.getButtons();/*
+        super.getButtons();
         buttons.add(anchorLeftButton());
         buttons.add(anchorRightButton());
-        buttons.add(freeModeButton());*/
+        buttons.add(freeModeButton());
         return buttons;
     }
 
@@ -153,11 +153,11 @@ public class ScoreboardWidget extends Widget {
 
     private void darkenTitleBar() {
         // Greens scoreboard
-        backgroundColor = new Color(0, 110, 14, 212).getRGB();
-        this.setBackgroundColor(new Color(0, 0, 0, 134).getRGB());
+//        backgroundColor = new Color(0, 110, 14, 212).getRGB();
+        this.setBackgroundColor(new Color(85, 0, 67, 102).getRGB());
 
-        GuiUtils.drawGradientRect(0, this.getLeftSide(), this.getTop(), this.getRightSide(),
-                (this.getTop())+mc.fontRenderer.FONT_HEIGHT, backgroundColor, backgroundColor);
+        GuiUtils.drawGradientRect(0, this.getLeftSide()-1, this.getTop()-1, this.getRightSide()+3,
+                (this.getTop()-1)+mc.fontRenderer.FONT_HEIGHT, backgroundColor, backgroundColor);
     }
     private void setWidth(List<String> strings) {
         List<Integer> stringWidths = new ArrayList<>();

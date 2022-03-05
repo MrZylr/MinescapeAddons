@@ -57,11 +57,7 @@ public enum ArmorToOverride {
 
     // Guthans
     GUTHANS_PLATEBODY("Guthans Platebody", MinescapeItems.GUTHANS_CHESTPLATE.get()),
-    VERACS_BRASSARD("Veracs Brassard", MinescapeItems.VERACS_CHESTPLATE.get()),
-//    DHAROKS_PLATEBODY("Dharoks Platebody", MinescapeItems.DHAROKS_CHESTPLATE.get())
-
-    // Mystic
-    MYSTIC_ROBE_DARK("Mystic Robe Top Dark", MinescapeItems.MYSTIC_ROBE_TOP_DARK.get())
+    DHAROKS_PLATEBODY("Dharoks Platebody", MinescapeItems.DHAROKS_CHESTPLATE.get())
 
     ;
 

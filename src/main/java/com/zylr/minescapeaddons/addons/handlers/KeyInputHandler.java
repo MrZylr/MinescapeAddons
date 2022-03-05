@@ -1,19 +1,30 @@
 package com.zylr.minescapeaddons.addons.handlers;
 
+import com.mojang.blaze3d.systems.RenderSystem;
 import com.zylr.minescapeaddons.addons.Main;
 import com.zylr.minescapeaddons.addons.ModConfiguration;
+import com.zylr.minescapeaddons.addons.gui.screens.ChatScreen;
 import com.zylr.minescapeaddons.addons.gui.screens.farming.FarmingTimersScreen;
 import com.zylr.minescapeaddons.addons.gui.screens.ConfigBuilder;
 import com.zylr.minescapeaddons.addons.gui.screens.runescape.RunescapeInventoryScreen;
+import com.zylr.minescapeaddons.addons.config.BooleanOption;
+import com.zylr.minescapeaddons.addons.gui.screens.settings.MainSettings;
 import com.zylr.minescapeaddons.addons.gui.screens.vanilla.ModVanillaInventoryScreen;
-import com.zylr.minescapeaddons.addons.gui.widgets.screens.MainSettings;
-import com.zylr.minescapeaddons.addons.gui.widgets.screens.MouseControlScreen;
+import com.zylr.minescapeaddons.addons.gui.widgets.ChatWidget;
+import com.zylr.minescapeaddons.addons.gui.widgets.IWidget;
 import com.zylr.minescapeaddons.addons.skills.farming.FarmingUtil;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.ChatLine;
+import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.client.event.InputEvent;
+import net.minecraftforge.client.model.IModelConfiguration;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import org.lwjgl.glfw.GLFW;
+
+import java.awt.*;
+import java.io.IOException;
 
 public class KeyInputHandler {
     @SubscribeEvent
@@ -23,8 +34,8 @@ public class KeyInputHandler {
         if (!ModConfiguration.CLIENT.debugOff.get()) {
             if (e.getKey() == GLFW.GLFW_KEY_J) {
                 if (e.getAction() == 1)
-                    return;
-               /* Minecraft.getInstance().player.sendChatMessage("/scoreboard");
+                    return;/*
+                Minecraft.getInstance().player.sendChatMessage("/scoreboard");
 
                 Minecraft.getInstance().player.sendChatMessage(
                         "/chat line 1 <clan>|<region>|<online>|"
@@ -39,15 +50,12 @@ public class KeyInputHandler {
             if (e.getKey() == GLFW.GLFW_KEY_H) {
                 if (e.getAction() == 1)
                     return;
-                if (Minecraft.getInstance().currentScreen == null) {
-                    Minecraft.getInstance().displayGuiScreen(new MainSettings());
-                }
             }
 
             if (e.getKey() == GLFW.GLFW_KEY_G) {
                 if (e.getAction() == 1)
                     return;
-                mc.displayGuiScreen(new MouseControlScreen(Main.getInstance().getRsHud(), mc.player));
+                System.out.println(mc.gameSettings.keyBindChat.getKey().getKeyCode());
             }
 
             if (e.getKey() == GLFW.GLFW_KEY_KP_ENTER) {
@@ -125,22 +133,21 @@ public class KeyInputHandler {
         }
 
         // Open chat
-        /*if (ModConfiguration.CLIENT.osrsChat.get()) {
-            System.out.println("opening custom chat");
+        if (ModConfiguration.CLIENT.osrsChat.get()) {
             if (Minecraft.getInstance().currentScreen == null) {
                 if (e.getKey() == Main.chatKey.getKey().getKeyCode() || e.getKey() == Main.altChatKey.getKey().getKeyCode()) {
-                    if (e.getAction() == 0)
+                    if (e.getAction() == 1)
                         return;
-                    mc.displayGuiScreen(new ChatScreen(Main.getInstance().getRsHud(), false, e.getKey() == Main.altChatKey.getKey().getKeyCode()));
+                    mc.displayGuiScreen(new ChatScreen(Main.getInstance().getRsHud(), false));
                 }
                 if (e.getKey() == Main.commandKey.getKey().getKeyCode()) {
-                    if (e.getAction() == 0)
+                    if (e.getAction() == 1)
                         return;
-                    mc.displayGuiScreen(new ChatScreen(Main.getInstance().getRsHud(), true, false));
+                    mc.displayGuiScreen(new ChatScreen(Main.getInstance().getRsHud(), true));
                 }
             }
 
-        }*/
+        }
     }
 
     /*

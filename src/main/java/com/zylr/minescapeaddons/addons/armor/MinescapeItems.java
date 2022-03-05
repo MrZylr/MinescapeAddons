@@ -4,8 +4,6 @@ import com.zylr.minescapeaddons.addons.Main;
 import com.zylr.minescapeaddons.addons.armor.item.MetalArmorItem;
 import com.zylr.minescapeaddons.addons.armor.item.barrows.DharoksArmorItem;
 import com.zylr.minescapeaddons.addons.armor.item.barrows.GuthansArmorItem;
-import com.zylr.minescapeaddons.addons.armor.item.barrows.VeracsArmorItem;
-import com.zylr.minescapeaddons.addons.armor.item.mystic.MysticRobesItem;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -99,12 +97,6 @@ public class MinescapeItems {
             () -> new GuthansArmorItem(MinescapeArmorMaterial.GUTHANS, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)));
     public static final RegistryObject<DharoksArmorItem> DHAROKS_CHESTPLATE = ITEMS.register("dharoks_chestplate",
             () -> new DharoksArmorItem(MinescapeArmorMaterial.DHAROKS, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)));
-    public static final RegistryObject<VeracsArmorItem> VERACS_CHESTPLATE = ITEMS.register("veracs_chestplate",
-            () -> new VeracsArmorItem(MinescapeArmorMaterial.VERACS, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)));
-
-
-    // Mystic Sets
-    public static final RegistryObject<MysticRobesItem> MYSTIC_ROBE_TOP_DARK = ITEMS.register("mystic_robe_top_dark",
-            () -> new MysticRobesItem(MinescapeArmorMaterial.MYSTIC_DARK, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)));
+            ;
 
 }

@@ -2,16 +2,17 @@ package com.zylr.minescapeaddons.addons.gui.screens;
 
 import com.zylr.minescapeaddons.addons.ModConfiguration;
 import com.zylr.minescapeaddons.addons.Main;
+import com.zylr.minescapeaddons.addons.gui.hud.RSHud;
 import com.zylr.minescapeaddons.addons.gui.screens.runescape.RunescapeInventoryScreen;
+import com.zylr.minescapeaddons.addons.gui.widgets.ChatWidget;
 import com.zylr.minescapeaddons.addons.gui.widgets.IWidget;
-import com.zylr.minescapeaddons.addons.gui.widgets.ThurgoWidget;
-import com.zylr.minescapeaddons.addons.gui.widgets.screens.HudEditScreen;
 import com.zylr.minescapeaddons.addons.skills.Skill;
 import com.zylr.minescapeaddons.addons.skills.SkillType;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screen.ConfirmOpenLinkScreen;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.button.*;
+import net.minecraft.client.util.InputMappings;
 import net.minecraft.util.Util;
 import net.minecraft.util.text.StringTextComponent;
 
@@ -56,26 +57,7 @@ public class ConfigBuilder extends Screen {
         this.addButton(new Button(width/2 -135, height/2 -125, 105, 20,
                 "Vertical Hotbar: " + client.verticalBar.get(), button -> { client.verticalBar.set(changeBoolean(client.verticalBar.get()));}));
         this.addButton(new Button(width/2 -135, height/2 -100, 105, 20,
-                "Thicc Boi: " + client.thurgo.get(), button -> {
-            client.thurgo.set(changeBoolean(client.thurgo.get()));
-            for (IWidget widget : Main.getInstance().getRsHud().getWidgets()) {
-                if (widget instanceof ThurgoWidget) {
-                    if (widget.isVisible())
-                        ((ThurgoWidget) widget).setVisible(false);
-                    else
-                        ((ThurgoWidget) widget).setVisible(true);
-                }
-            }
-        }));
-        this.addButton(new Button(width/2 -20, height/2 -100, 40, 20,
-                "Flip Boi", button -> {
-            for (IWidget widget : Main.getInstance().getRsHud().getWidgets()) {
-                if (widget instanceof ThurgoWidget) {
-                    ((ThurgoWidget) widget).toggleUpsideDown();
-                }
-                Minecraft.getInstance().player.closeScreen();
-            }
-        }));
+                "Thicc Boi: " + client.thurgo.get(), button -> { client.thurgo.set(changeBoolean(client.thurgo.get()));}));
         this.addButton(new Button(width/2 -135, height/2 -75, 105, 20,
                 "Idle Alert: " + client.idleAlert.get(), button -> { client.idleAlert.set(changeBoolean(client.idleAlert.get()));}));
         this.addButton(new Button(width/2 -135, height/2 -50, 105, 20,
@@ -108,7 +90,7 @@ public class ConfigBuilder extends Screen {
                 Main.getInstance().getXpTrackerBuilder().getSkill().getTracker().getTimer().pause();
         }));
 
-        /*this.addButton(new Button(width/2 +150, height/2 -0, 105, 20,
+        this.addButton(new Button(width/2 +150, height/2 -0, 105, 20,
                 "OSRS Chat: " + client.osrsChat.get(), button -> {
             client.osrsChat.set(changeBoolean(client.osrsChat.get()));
             // Set visible
@@ -126,7 +108,7 @@ public class ConfigBuilder extends Screen {
                 Main.altChatKey.setToDefault();
                 Main.commandKey.setToDefault();
             }
-        }));*/
+        }));
 
 
         this.addButton(new Button(width/2 -20, height/2+0, 40, 20,
@@ -162,8 +144,8 @@ public class ConfigBuilder extends Screen {
 
         this.addButton(new Button(width/2 -80, height/2+125, 165, 20,
                 "Close", button -> Minecraft.getInstance().player.closeScreen()));
-//        this.addButton(new Button(width/2 -135, height/2+100, 270, 20,
-//                "Zylr is dumb and forgot to remove debug keys and i cant type now", button -> ModConfiguration.CLIENT.debugOff.set(true)));
+        this.addButton(new Button(width/2 -135, height/2+100, 270, 20,
+                "Zylr is dumb and forgot to remove debug keys and i cant type now", button -> ModConfiguration.CLIENT.debugOff.set(true)));
     }
 
     private void confirmLink(boolean confirmed) {

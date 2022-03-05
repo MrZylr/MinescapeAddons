@@ -22,8 +22,6 @@ public class Widget implements IWidget {
     protected int backgroundColor;
 
     // Position variables
-    protected double relativeAnchorX;
-    protected double relativeAnchorY;
     protected int anchorX;
     protected int anchorY;
     protected int widgetWidth;
@@ -93,9 +91,6 @@ public class Widget implements IWidget {
     }
 
     public void render() {
-        // Setup anchor points based on the percentage screen location
-        relativeXToPixelX();
-        relativeYToPixelY();
         // Fix the anchor point if it goes off screen
         fixAnchors();
         // Render background image
@@ -103,27 +98,6 @@ public class Widget implements IWidget {
         if (parent != null && anchorPointToParent != null) {
             this.anchorToParent(anchorPointToParent);
         }
-    }
-
-    private void relativeXToPixelX() {
-        anchorX = (int) (this.mc.getMainWindow().getScaledWidth()*this.relativeAnchorX);
-    }
-
-    private void relativeYToPixelY() {
-        anchorY = (int) (this.mc.getMainWindow().getScaledHeight()*this.relativeAnchorY);
-    }
-
-    public void pixelXToRelativeX(int xPos) {
-        System.out.println("Xpos: " + xPos);
-        System.out.println("Screen Width: " + this.mc.getMainWindow().getScaledWidth());
-        relativeAnchorX = (double) xPos/(double)this.mc.getMainWindow().getScaledWidth();
-        System.out.println("Relative X: " + relativeAnchorX);
-        relativeXToPixelX();
-    }
-
-    public void pixelYToRelativeY(int yPos) {
-        relativeAnchorY = (double)yPos/(double)this.mc.getMainWindow().getScaledHeight();
-        relativeYToPixelY();
     }
 
     public void renderChildren() {
@@ -225,25 +199,17 @@ public class Widget implements IWidget {
         return anchorX;
     }
 
-    public double getRelativeAnchorX() { return this.relativeAnchorX; }
-
     public void setAnchorX(int anchorX) {
         this.anchorX = anchorX;
     }
-
-    public void setRelativeAnchorX(double relativeAnchorX) { this.relativeAnchorX = relativeAnchorX; }
 
     public int getAnchorY() {
         return anchorY;
     }
 
-    public double getRelativeAnchorY() { return this.relativeAnchorY; }
-
     public void setAnchorY(int anchorY) {
         this.anchorY = anchorY;
     }
-
-    public void setRelativeAnchorY(double relativeAnchorY) { this.relativeAnchorY = relativeAnchorY; }
 
     public int getWidgetHeight() { return widgetHeight; }
 

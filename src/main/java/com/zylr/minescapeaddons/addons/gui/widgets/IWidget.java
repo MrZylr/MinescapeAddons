@@ -12,10 +12,6 @@ public interface IWidget {
 
     void render();
 
-    void pixelXToRelativeX(int xPos);
-
-    void pixelYToRelativeY(int yPos);
-
     List<Button> getButtons();
 
     boolean isLeftHalf();
@@ -34,19 +30,11 @@ public interface IWidget {
 
     int getAnchorX();
 
-    double getRelativeAnchorX();
-
     void setAnchorX(int anchorX);
-
-    void setRelativeAnchorX(double relativeAnchorX);
 
     int getAnchorY();
 
-    double getRelativeAnchorY();
-
     void setAnchorY(int anchorY);
-
-    void setRelativeAnchorY(double relativeAnchorY);
 
     int getWidgetHeight();
 

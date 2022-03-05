@@ -1,6 +1,8 @@
 package com.zylr.minescapeaddons.addons.gui.hud;
 
-import com.zylr.minescapeaddons.addons.gui.widgets.*;
+import com.zylr.minescapeaddons.addons.gui.widgets.ChatWidget;
+import com.zylr.minescapeaddons.addons.gui.widgets.ScoreboardWidget;
+import com.zylr.minescapeaddons.addons.gui.widgets.XpTrackerWidget;
 import net.minecraft.client.Minecraft;
 
 public class RSHud extends Hud {
@@ -14,9 +16,6 @@ public class RSHud extends Hud {
         super();
         this.widgets.add(new XpTrackerWidget());
         this.widgets.add(new ScoreboardWidget());
-//        this.widgets.add(new ChatWidget());
-        this.widgets.add(new XpDropWidget());
-        this.widgets.add(new ThurgoWidget());
-        this.widgets.add(new InventoryWidget());
+        //this.widgets.add(new ChatWidget());
     }
 }

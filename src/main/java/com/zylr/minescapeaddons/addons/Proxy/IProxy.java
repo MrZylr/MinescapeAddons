@@ -14,8 +14,4 @@ public interface IProxy {
     default <A> A  getDharoksArmorModel(EquipmentSlotType armorSlot) {
         return null;
     }
-
-    default <A> A  getMysticRobesModel(EquipmentSlotType armorSlot) { return null; }
-
-    default <A> A  getVeracsArmorModel(EquipmentSlotType slotType) { return null; }
 }

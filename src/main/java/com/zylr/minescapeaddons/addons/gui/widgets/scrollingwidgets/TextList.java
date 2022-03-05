@@ -6,8 +6,6 @@ import com.zylr.minescapeaddons.addons.gui.widgets.Widget;
 import net.minecraft.client.gui.ChatLine;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.RenderComponentsUtil;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
@@ -18,7 +16,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TextList extends Widget implements ScrollingWidget {
+public class TextList extends Widget {
 
     private List<ITextComponent> textList = new ArrayList<>();
     private int relativeAnchorX;
@@ -72,17 +70,11 @@ public class TextList extends Widget implements ScrollingWidget {
 
     }
 
-    @Override
     public void render() {
         // TODO:: Remove Test Code
         this.setBackgroundColor(new Color(0, 0, 0, 0).getRGB());
 
         FontRenderer font = mc.fontRenderer;
-        /*System.out.println(this.widgetHeight);
-        System.out.println(this.widgetWidth);*/
-        this.widgetWidth = parent.getWidgetWidth() - 10;
-        this.widgetHeight = parent.getWidgetHeight() - 42;
-        this.linesVisible = widgetHeight/mc.fontRenderer.FONT_HEIGHT;
 
 
         if (parent != null && anchorPointToParent != null) {
@@ -103,10 +95,6 @@ public class TextList extends Widget implements ScrollingWidget {
         if (textList.size() != 0) {
             for (int i = scrollIndex; i < linesVisible+scrollIndex && i < textList.size(); i++) {
                 font.drawString(textList.get(i).getFormattedText(), this.getLeftSide()+2, this.getBottom()-font.FONT_HEIGHT*(i+1-scrollIndex), -1);
-
-                //TODO::REMOVE
-//                if (i == 1)
-//                    System.out.println(textList.get(i).getFormattedText());
             }
         }
 
@@ -114,7 +102,6 @@ public class TextList extends Widget implements ScrollingWidget {
         this.renderChildren();
     }
 
-    @Override
     public void scrollUp() {
         boolean canScroll = true;
         // Check if chat is full enough to scroll
@@ -132,7 +119,6 @@ public class TextList extends Widget implements ScrollingWidget {
             scrollIndex += scrollAmount;
     }
 
-    @Override
     public void scrollDown() {
         if (scrollIndex < 3)
             scrollIndex = 0;
@@ -178,16 +164,9 @@ public class TextList extends Widget implements ScrollingWidget {
     }
 
     public void addText(ITextComponent textComponent) {
-        System.out.println(textComponent.getFormattedText());
         this.textList.add(0, textComponent);
         while (textList.size() > 200) {
             textList.remove(textList.size() - 1);
-        }
-
-        // TODO:: REMOVE
-        if (textList.get(1).getFormattedText().equalsIgnoreCase("§6§6You hear something land from the heavens §r§c§c<3§r§6§6.§r")) {
-            System.out.println("Ding");
-            mc.player.playSound(SoundEvents.BLOCK_ANVIL_HIT, 2F, 1F);
         }
     }
 

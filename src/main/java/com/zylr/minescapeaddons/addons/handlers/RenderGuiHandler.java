@@ -1,93 +1,40 @@
 package com.zylr.minescapeaddons.addons.handlers;
 
+import com.mojang.blaze3d.systems.RenderSystem;
 import com.zylr.minescapeaddons.addons.ModConfiguration;
 import com.zylr.minescapeaddons.addons.Main;
-import com.zylr.minescapeaddons.addons.gui.widgets.screens.HudEditScreen;
+import com.zylr.minescapeaddons.addons.gui.screens.HudEditScreen;
 import com.zylr.minescapeaddons.addons.gui.screens.farming.FarmingTimerCompletedOnLogin;
 import com.zylr.minescapeaddons.addons.gui.screens.farming.FarmingTimerOptions;
 import com.zylr.minescapeaddons.addons.gui.screens.farming.FarmingTimersScreen;
 import com.zylr.minescapeaddons.addons.gui.screens.runescape.ModContainerScreen;
 import com.zylr.minescapeaddons.addons.gui.screens.ConfigBuilder;
 import com.zylr.minescapeaddons.addons.gui.screens.runescape.RunescapeInventoryScreen;
-import com.zylr.minescapeaddons.addons.gui.widgets.screens.MainSettings;
+import com.zylr.minescapeaddons.addons.gui.screens.settings.MainSettings;
 import com.zylr.minescapeaddons.addons.gui.screens.vanilla.ModVanillaInventoryScreen;
-import com.zylr.minescapeaddons.addons.gui.widgets.IWidget;
-import com.zylr.minescapeaddons.addons.gui.widgets.XpDropWidget;
 import com.zylr.minescapeaddons.addons.skills.SkillHover;
-import com.zylr.minescapeaddons.addons.skills.tracker.XpOrb;
+import com.zylr.minescapeaddons.addons.skills.farming.FarmingTimer;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.IngameGui;
 import net.minecraft.client.gui.screen.ChatScreen;
-import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.client.settings.KeyBinding;
+import net.minecraft.client.util.InputMappings;
+import net.minecraft.entity.player.ChatVisibility;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.gui.ForgeIngameGui;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import org.lwjgl.glfw.GLFW;
+
+import javax.swing.text.JTextComponent;
 
 public class RenderGuiHandler {
     @SubscribeEvent
     public void onRenderGui(RenderGameOverlayEvent.Pre e) {
         Minecraft mc = Minecraft.getInstance();
 
-        // Grab exp
-        if (e.getType() == RenderGameOverlayEvent.ElementType.BOSSINFO) {
-            RenderGameOverlayEvent.BossInfo bossInfo = ((RenderGameOverlayEvent.BossInfo)e);
-            bossInfo.getBossInfo().getName().getFormattedText();
-            String bossInfoText = bossInfo.getBossInfo().getName().getFormattedText();
-            boolean isXp = false;
-
-            for (String skill : Main.skillsSymbolList) {
-                if (bossInfoText.contains(skill)) {
-                    isXp = true;
-                    break;
-                }
-            }
-
-            if (isXp) {
-                System.out.println(bossInfoText);
-                XpOrb.handleXpGained(bossInfoText);
-                for (IWidget widget : Main.getInstance().getRsHud().getWidgets()) {
-                    if (widget instanceof XpDropWidget) {
-                        ((XpDropWidget) widget).setXpDropString(bossInfoText);
-                    }
-                }
-                bossInfo.getBossInfo().setName(new StringTextComponent(""));
-            }
-
-
-            /*float PI = 3.14152f;
-            int RADIUS = 100;
-            int SECTORS = 10;
-            int items = 1;
-            // Place circle slightly above centre of screen
-            int x = mc.getMainWindow().getScaledWidth() / 2;
-            int y = mc.getMainWindow().getScaledHeight() / 2 - 15;
-
-            float multiplier = SECTORS / items;
-            // System.out.println(multiplier);
-
-            //GL11.glPushMatrix();
-            float red = 0.0f;
-            GL11.glColor4f(red, 0.6F, 0.6F, 0.3F);
-            GL11.glBegin(GL11.GL_TRIANGLE_FAN);
-            GL11.glVertex2f(x, y);
-            for(int i = 0; i < items; i++)
-            {
-                for(float n = 0 + (i * multiplier); n <= (SECTORS / items) + (i * multiplier); n += 1)
-                {
-                    float t = 2 * PI * (float) n / (float) SECTORS;
-                    if (red >= 1)
-                        red = 0.0f;
-                    red += 0.1f;
-                    GL11.glColor4f(red, 0.6F, 0.6F, 0.3F);
-                    GL11.glVertex2d(x + Math.sin(t) * RADIUS, y + Math.cos(t) * RADIUS);
-                }
-            }
-            GL11.glEnd();*/
-//            System.out.println(exp);
-        }
-
         // Cancel Elements
-//        if (e.getType() == RenderGameOverlayEvent.ElementType.CHAT && ModConfiguration.CLIENT.osrsChat.get())
-//            e.setCanceled(true);
+        if (e.getType() == RenderGameOverlayEvent.ElementType.CHAT && ModConfiguration.CLIENT.osrsChat.get())
+            e.setCanceled(true);
         if (e.getType() == RenderGameOverlayEvent.ElementType.HEALTH && !ModConfiguration.CLIENT.renderHealth.get()) {
             e.setCanceled(true);
         }
@@ -118,10 +65,10 @@ public class RenderGuiHandler {
         if (e.getType() == RenderGameOverlayEvent.ElementType.CHAT) {
 //            ((RenderGameOverlayEvent.Chat)e)
             ForgeIngameGui.renderObjective = false;
-//            if (ModConfiguration.CLIENT.osrsChat.get()) {
-//                mc.gameSettings.keyBindChat.bind(InputMappings.getInputByCode(-1, -1));
-//                mc.gameSettings.keyBindCommand.bind(InputMappings.getInputByCode(-1, -1));
-//            }
+            if (ModConfiguration.CLIENT.osrsChat.get()) {
+                mc.gameSettings.keyBindChat.bind(InputMappings.getInputByCode(-1, -1));
+                mc.gameSettings.keyBindCommand.bind(InputMappings.getInputByCode(-1, -1));
+            }
 
 
             if (mc.currentScreen instanceof FarmingTimersScreen) {
@@ -142,7 +89,7 @@ public class RenderGuiHandler {
 
 //                Main.getInstance().getScoreboard().testScoreboard();
                 if (Main.getInstance().XAERO)
-//                    Main.getInstance().getMinimap().build();
+                    Main.getInstance().getMinimap().build();
 //                else
 //                    Main.getInstance().getXpTrackerBuilder().buildXp(10, mc.getMainWindow().getScaledHeight() - 10, true);
 
@@ -160,7 +107,10 @@ public class RenderGuiHandler {
                 }*/
 
 
+
+
                     Main.getInstance().getStatsPanel().build();
+                    Main.getInstance().getThurgoBuilder().build();
                     Main.getInstance().getIdleChecker().build();
                     Main.getInstance().getInv().build();
                     FarmingTimersScreen.buildOnSreenFarmIcon();
@@ -179,6 +129,11 @@ public class RenderGuiHandler {
                     if (mc.currentScreen instanceof ChatScreen) {
                         mc.currentScreen.tick();
                     }
+
+
+
+
+
 
                 // Update inventory size
                 if (mc.currentScreen instanceof ModContainerScreen)
@@ -226,9 +181,6 @@ public class RenderGuiHandler {
                     }
                 }
             }
-
-
-
             /*
             mc.getConnection().sendPacket(new CClientStatusPacket(CClientStatusPacket.State.REQUEST_STATS));
             System.out.println("Zombie killed: " +

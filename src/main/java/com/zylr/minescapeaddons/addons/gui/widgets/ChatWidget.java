@@ -6,6 +6,7 @@ import com.zylr.minescapeaddons.addons.Main;
 import com.zylr.minescapeaddons.addons.ModConfiguration;
 import com.zylr.minescapeaddons.addons.gui.builders.BuilderUtils;
 import com.zylr.minescapeaddons.addons.gui.widgets.scrollingwidgets.TextList;
+import javafx.scene.control.ButtonType;
 import net.minecraft.client.MainWindow;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ChatLine;
@@ -72,15 +73,15 @@ public class ChatWidget extends Widget {
         this.currentChat = ButtonType.ALL;
         this.textFieldPrefix = "";
         this.isPrivateSplit = true;
-//        this.setVisible(ModConfiguration.CLIENT.osrsChat.get());
+        this.setVisible(ModConfiguration.CLIENT.osrsChat.get());
 
         this.numberOfChatLines = 12;
 
         // Get properties file
         config = this.getConfig();
         // Grab position/color/settings from properties file
-        this.relativeAnchorX = Double.parseDouble(config.getProperty("x"));
-        this.relativeAnchorY = Double.parseDouble(config.getProperty("y"));
+        this.anchorX = Integer.parseInt(config.getProperty("x"));
+        this.anchorY = Integer.parseInt(config.getProperty("y"));
 
         // Setup colors
         this.backgroundColor = Integer.parseInt(config.getProperty("backgroundColor"));
@@ -135,7 +136,7 @@ public class ChatWidget extends Widget {
 
         createTextList();
 
-        this.numberOfChatLines = widgetHeight/fontHeight;
+        numberOfChatLines = widgetHeight/fontHeight;
 
         font.drawString(textFieldPrefix +": ", this.getLeftSide()+7, this.chatButtonsTop-16, Color.black.getRGB());
 
@@ -235,13 +236,12 @@ public class ChatWidget extends Widget {
         for (ITextComponent textComponent : iTextComponents) {
             // This gets the first 5 characters and checks for the built in buttons in chat and doesnt add them
             String s = "";
-
-            s = textComponent.getFormattedText();
-
-            if (!s.equalsIgnoreCase("       ")) {
+            if (textComponent.getFormattedText().length() > 5)
+                s = textComponent.getFormattedText().substring(0, 5);
+            if (!s.equalsIgnoreCase("§9§9|")) {
 
                 this.mainChat.addText(textComponent);
-                //System.out.println(textComponent.getFormattedText());
+                System.out.println(textComponent.getFormattedText());
             }
         }
     }
