@@ -1,6 +1,7 @@
 package com.zylr.minescapeaddons.addons.listeners;
 
 import com.zylr.minescapeaddons.addons.MinescapeAddons;
+import com.zylr.minescapeaddons.addons.annotations.Listener;
 import com.zylr.minescapeaddons.addons.skills.farming.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
@@ -24,6 +25,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+@Listener
 public class BlockClickListener {
 
     private ArmorStand lastLookedAtArmorStand = null;

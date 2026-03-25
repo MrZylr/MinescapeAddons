@@ -1,6 +1,7 @@
 package com.zylr.minescapeaddons.addons.listeners;
 
 import com.zylr.minescapeaddons.addons.*;
+import com.zylr.minescapeaddons.addons.annotations.Listener;
 import com.zylr.minescapeaddons.addons.gui.overrides.ZylrInventoryScreen;
 import com.zylr.minescapeaddons.addons.gui.screens.BrowserScreen;
 import com.zylr.minescapeaddons.addons.gui.screens.FarmingTimersScreen;
@@ -27,6 +28,7 @@ import net.neoforged.neoforge.client.event.InputEvent;
 import net.neoforged.neoforge.client.event.ScreenEvent;
 import org.lwjgl.glfw.GLFW;
 
+@Listener
 public class InputListener {
     public static float yRotation = 0;
     public static double mouseX = 0;

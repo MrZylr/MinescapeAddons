@@ -2,6 +2,7 @@ package com.zylr.minescapeaddons.addons.gui.renderers;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.zylr.minescapeaddons.addons.Config;
+import com.zylr.minescapeaddons.addons.annotations.Listener;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.LevelRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -17,6 +18,7 @@ import net.neoforged.neoforge.client.event.RenderLevelStageEvent;
 import java.util.ArrayList;
 import java.util.List;
 
+@Listener
 public class AgilityCourseHighlights {
     public List<String> agilityObstacleNames;
 

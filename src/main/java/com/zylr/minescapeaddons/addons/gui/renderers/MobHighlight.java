@@ -2,6 +2,7 @@ package com.zylr.minescapeaddons.addons.gui.renderers;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.zylr.minescapeaddons.addons.Config;
+import com.zylr.minescapeaddons.addons.annotations.Listener;
 import com.zylr.minescapeaddons.addons.utils.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.LevelRenderer;
@@ -18,6 +19,7 @@ import net.neoforged.neoforge.client.event.RenderLevelStageEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+@Listener
 public class MobHighlight {
     private static final Logger log = LoggerFactory.getLogger(MobHighlight.class);
 

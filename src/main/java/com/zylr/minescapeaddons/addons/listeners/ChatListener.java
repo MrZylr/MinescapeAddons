@@ -2,6 +2,7 @@ package com.zylr.minescapeaddons.addons.listeners;
 
 import com.zylr.minescapeaddons.addons.Config;
 import com.zylr.minescapeaddons.addons.MinescapeAddons;
+import com.zylr.minescapeaddons.addons.annotations.Listener;
 import com.zylr.minescapeaddons.addons.gui.widgets.chat.ChatWidget;
 import com.zylr.minescapeaddons.addons.skills.tracker.XpTracker;
 import net.minecraft.client.Minecraft;
@@ -18,6 +19,7 @@ import org.slf4j.Logger;
 import java.util.ArrayList;
 import java.util.List;
 
+@Listener
 public class ChatListener {
     public static final List<String> NUMBERS =  List.of("\uF01B", "\uF01C", "\uF01D", "\uF01E", "\uF01F", "\uF020",
             "\uF021", "\uF022", "\uF023", "\uF024");

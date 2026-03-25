@@ -1,6 +1,7 @@
 package com.zylr.minescapeaddons.addons.listeners;
 
 import com.zylr.minescapeaddons.addons.Config;
+import com.zylr.minescapeaddons.addons.annotations.Listener;
 import com.zylr.minescapeaddons.addons.item.OverrideArmors;
 import com.zylr.minescapeaddons.addons.item.OverrideArmorsSlim;
 import com.zylr.minescapeaddons.addons.utils.EntityTracker;
@@ -16,8 +17,8 @@ import net.neoforged.neoforge.client.event.RenderPlayerEvent;
 import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
 
 
+@Listener
 public class PlayerRendererListener {
-
     @SubscribeEvent
     public void onRenderPlayer(RenderPlayerEvent.Pre e) {
         if (e.getEntity() instanceof AbstractClientPlayer player) {

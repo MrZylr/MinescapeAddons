@@ -1,6 +1,7 @@
 package com.zylr.minescapeaddons.addons.gui.widgets.minimap;
 
 import com.zylr.minescapeaddons.addons.Config;
+import com.zylr.minescapeaddons.addons.annotations.Listener;
 import com.zylr.minescapeaddons.addons.gui.overrides.ZylrInventoryScreen;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
@@ -9,6 +10,7 @@ import net.neoforged.neoforge.client.event.ClientTickEvent;
 
 import java.text.CompactNumberFormat;
 
+@Listener
 public class SprintInterceptor {
 
     @SubscribeEvent

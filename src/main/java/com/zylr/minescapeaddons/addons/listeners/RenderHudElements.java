@@ -4,29 +4,18 @@ import com.zylr.minescapeaddons.addons.Config;
 import com.zylr.minescapeaddons.addons.MinescapeAddons;
 import com.zylr.minescapeaddons.addons.Player;
 import com.zylr.minescapeaddons.addons.gui.overrides.ZylrInventoryScreen;
-import com.zylr.minescapeaddons.addons.gui.screens.SettingsScreenButton;
 import com.zylr.minescapeaddons.addons.gui.widgets.BrowserWidget;
-import com.zylr.minescapeaddons.addons.gui.widgets.CustomScoreboard;
 import com.zylr.minescapeaddons.addons.gui.widgets.IWidget;
-import com.zylr.minescapeaddons.addons.gui.widgets.chat.ChatWidget;
-import com.zylr.minescapeaddons.addons.gui.widgets.hudmenu.HudMenuWidget;
-import com.zylr.minescapeaddons.addons.gui.widgets.minimap.MinimapWidget;
+import com.zylr.minescapeaddons.addons.annotations.Listener;
 import com.zylr.minescapeaddons.addons.skills.SkillType;
-import com.zylr.minescapeaddons.addons.skills.farming.FarmingUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.ChatScreen;
-import net.minecraft.client.gui.screens.PauseScreen;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.client.event.CustomizeGuiOverlayEvent;
 import net.neoforged.neoforge.client.event.RenderGuiEvent;
 
-import java.awt.*;
-
+@Listener
 public class RenderHudElements {
-
-
     @SubscribeEvent
     public void onRender(RenderGuiEvent.Post e) {
         Minecraft mc = Minecraft.getInstance();
