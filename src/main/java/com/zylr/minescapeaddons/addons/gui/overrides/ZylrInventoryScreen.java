@@ -416,8 +416,6 @@ public class ZylrInventoryScreen extends ZylrEffectRenderingInventoryScreen<Inve
             super.render(guiGraphics, mouseX, mouseY, partialTick);
         }
 
-        this.renderTooltip(guiGraphics, mouseX, mouseY);
-        this.recipeBookComponent.renderTooltip(guiGraphics, this.leftPos, this.topPos, mouseX, mouseY);
         this.xMouse = (float)mouseX;
         this.yMouse = (float)mouseY;
 
@@ -522,6 +520,16 @@ public class ZylrInventoryScreen extends ZylrEffectRenderingInventoryScreen<Inve
                     guiGraphics.renderComponentHoverEffect(this.font, style, (int)(mouseX), (int)(mouseY));
                 }
             }
+            guiGraphics.pose().popPose();
+        }
+
+        // Render item tooltip last so it always appears on top of all inventory widgets
+        // Skip tooltip if a right-click context menu is open
+        if (rightClickItemMenu == null && rightClickSkillMenu == null) {
+            guiGraphics.pose().pushPose();
+            guiGraphics.pose().translate(0, 0, 400);
+            this.renderTooltip(guiGraphics, mouseX, mouseY);
+            this.recipeBookComponent.renderTooltip(guiGraphics, this.leftPos, this.topPos, mouseX, mouseY);
             guiGraphics.pose().popPose();
         }
     }

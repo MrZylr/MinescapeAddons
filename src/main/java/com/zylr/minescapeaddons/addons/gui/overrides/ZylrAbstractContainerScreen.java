@@ -266,7 +266,9 @@ public abstract class ZylrAbstractContainerScreen<T extends AbstractContainerMen
     protected void renderTooltip(GuiGraphics guiGraphics, int x, int y) {
         if (this.menu.getCarried().isEmpty() && this.hoveredSlot != null && this.hoveredSlot.hasItem()) {
             ItemStack itemstack = this.hoveredSlot.getItem();
+            RenderSystem.disableDepthTest();
             guiGraphics.renderTooltip(this.font, this.getTooltipFromContainerItem(itemstack), itemstack.getTooltipImage(), itemstack, x, y);
+            RenderSystem.enableDepthTest();
         }
     }
 
