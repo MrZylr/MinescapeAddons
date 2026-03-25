@@ -1,64 +1,66 @@
 package com.zylr.minescapeaddons.addons.skills.farming;
 
-import com.zylr.minescapeaddons.addons.util.Util;
-import com.zylr.minescapeaddons.addons.util.files.PersistenceFile;
-import net.minecraft.block.Block;
-import net.minecraft.entity.item.ArmorStandEntity;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.util.math.BlockPos;
-import org.apache.commons.lang3.tuple.Pair;
+import com.zylr.minescapeaddons.addons.properties.PersistenceFile;
+import com.zylr.minescapeaddons.addons.utils.Util;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.decoration.ArmorStand;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.client.event.RenderLivingEvent;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 public class FarmingUtil {
 
-    public static boolean isFarmPatchClick(Block block, ItemStack item) {
-        boolean clickedBarrier = false;
-        boolean holdingSeed = false;
-        String itemName = item.getDisplayName().getFormattedText().substring(2);
-        String blockName = block.getNameTextComponent().getFormattedText();
-
-        // Check if clicking a barrier
-        if (blockName.equalsIgnoreCase("Farmland") || blockName.equalsIgnoreCase("Barrier"))
-            clickedBarrier = true;
-
-        // Check if holding a seed
-        for (SeedType seed:SeedType.values()) {
-            if (itemName.equalsIgnoreCase(seed.name))
-                holdingSeed = true;
+    // Static seed lookup map – built once, avoids O(n) SeedType scan on every call
+    private static final Map<String, SeedType> SEED_MAP = new HashMap<>();
+    static {
+        for (SeedType s : SeedType.values()) {
+            if (s.name != null && !s.name.isEmpty())
+                SEED_MAP.put(s.name.toLowerCase(), s);
         }
+    }
 
-        // Return trying to farm
-        if (clickedBarrier && holdingSeed)
-            return true;
-        return false;
+    // Static list of allotment exception positions – avoids new ArrayList + new double[] every render event
+    private static final List<double[]> ARMORSTAND_EXCEPTIONS = List.of(
+            new double[]{105.5,   -94.5},   // South Falador Allotment 1
+            new double[]{123.5,   -82.5},   // South Falador Allotment 2
+            new double[]{-624.5,  -553.5},  // North Catherby Allotment 1
+            new double[]{-624.5,  -531.5},  // North Catherby Allotment 2
+            new double[]{-1061.5, -285.5},  // North Ardougne Allotment 1
+            new double[]{-1061.5, -263.5},  // North Ardougne Allotment 2
+            new double[]{1750.5,  -739.5},  // West Port Phasmatys Allotment 1
+            new double[]{1771.5,  -718.5}   // West Port Phasmatys Allotment 2
+    );
+
+    public static boolean isFarmPatchClick(Block block, ItemStack item) {
+        String itemName = item.getDisplayName().toString().substring(2);
+        String blockName = block.getName().toString();
+
+        boolean clickedBarrier = blockName.equalsIgnoreCase("Farmland") || blockName.equalsIgnoreCase("Barrier");
+        boolean holdingSeed = SEED_MAP.containsKey(itemName.toLowerCase());
+
+        return clickedBarrier && holdingSeed;
     }
 
     public static boolean isInFarmingArea(BlockPos blockPos) {
-        // Check if getFarmingLocation() returns null
-        if (getFarmingLocation(blockPos) != null)
-            return true;
-        return false;
+        return getFarmingLocation(blockPos) != null;
     }
 
     public static boolean isInFarmingPatch(FarmingLocations location, BlockPos blockPos) {
-        // Check if getFarmingPatchLocation returns null
-        if (getFarmingPatchLocation(location, blockPos) != null)
-            return true;
-        return false;
+        return getFarmingPatchLocation(location, blockPos) != null;
     }
 
     public static FarmingLocations getFarmingLocation(BlockPos blockPos) {
-
         int x = blockPos.getX();
         int z = blockPos.getZ();
-        // Loop through the FarmingLocations to see if the clicked block in their region
-        for (FarmingLocations location:FarmingLocations.values()) {
+        for (FarmingLocations location : FarmingLocations.values()) {
             if (Util.withinRegion(location.maxX, location.minX, location.maxZ, location.minZ, x, z))
                 return location;
         }
@@ -66,44 +68,28 @@ public class FarmingUtil {
     }
 
     public static FarmingPatchLocations getFarmingPatchLocation(FarmingLocations location, BlockPos blockPos) {
-        return getFarmingPatchFromLocation(location, blockPos).getPatchLocation();
+        // Call getFarmingPatchFromLocation only once instead of twice
+        FarmingPatch patch = getFarmingPatchFromLocation(location, blockPos);
+        return patch != null ? patch.getPatchLocation() : null;
     }
 
     public static FarmingPatch getFarmingPatchFromLocation(FarmingLocations location, BlockPos blockPos) {
-
         int x = blockPos.getX();
         int z = blockPos.getZ();
-        // Loop through all the keys for the EnumMap<FarmingPatchLocation, FarmingPatch> to find the farming patches
-        for (FarmingPatchLocations patchLocationKey:location.patches.keySet()) {
-            if (location.patches.containsKey(patchLocationKey)) {
-                FarmingPatch patch = location.patches.get(patchLocationKey);
-                // Check if the clicked block is in the region of the current patch
-                int[] region = patch.region;
-                boolean withinRegion;
-                // TODO FIX THIS SHIT
-                if (patch.getPatchType() == PatchType.ALLOTMENT)
-                    withinRegion = Util.withinCornerRegion(region[0],region[1], region[2], region[3], region[4], region[5], region[6], region[7], x, z);
-                else
-                    withinRegion = Util.withinRegion(region[0], region[1], region[2], region[3], x, z);
-                if (withinRegion) {
-                    return patch;
-                }
-            }
+        for (FarmingPatchLocations patchLocationKey : location.patches.keySet()) {
+            FarmingPatch patch = location.patches.get(patchLocationKey);
+            int[] region = patch.region;
+            boolean withinRegion = patch.getPatchType() == PatchType.ALLOTMENT
+                    ? Util.withinCornerRegion(region[0], region[1], region[2], region[3], region[4], region[5], region[6], region[7], x, z)
+                    : Util.withinRegion(region[0], region[1], region[2], region[3], x, z);
+            if (withinRegion) return patch;
         }
         return null;
     }
 
     public static SeedType getSeed(ItemStack item) {
-        // Cycle through all SeedTypes to see if the name matches the name on the held item
-        String itemName = item.getDisplayName().getFormattedText().substring(2);
-
-        for (SeedType seed:SeedType.values()) {
-            if (itemName.equalsIgnoreCase(seed.name)) {
-                return seed;
-            }
-        }
-
-        return null;
+        String itemName = item.getDisplayName().getString().substring(2);
+        return SEED_MAP.get(itemName.toLowerCase());
     }
 
     public static void setAlertsAsChecked() {
@@ -167,7 +153,20 @@ public class FarmingUtil {
         }
     }
 
+    // Cached result — recomputed on tick, not every render frame
+    private static boolean completedTimerCache = false;
+
+    /** Call this from a game tick event (e.g. ClientTickEvent) to refresh the cache. */
+    public static void tickTimerCache() {
+        completedTimerCache = computeCompletedTimers();
+    }
+
+    /** Returns the cached value — safe to call every render frame at zero cost. */
     public static boolean checkForCompletedTimers() {
+        return completedTimerCache;
+    }
+
+    private static boolean computeCompletedTimers() {
         for (FarmingLocations location : FarmingLocations.values()) {
             for (FarmingPatchLocations key : FarmingPatchLocations.values()) {
                 if (location.patches.containsKey(key)) {
@@ -181,62 +180,31 @@ public class FarmingUtil {
         return false;
     }
 
-    public static void reduceArmorStandsInFarmingPatch(ArmorStandEntity armorstand) {
-        // Get the armor stand locations that should be kept rendered
-        List<double[]> exceptions = new ArrayList<>();
-        // South Falador Allotment 1
-        exceptions.add(new double[]{105.5, -94.5});
-        // South Falador Allotment 2
-        exceptions.add(new double[]{123.5, -82.5});
-        // North Catherby Allotment 1
-        exceptions.add(new double[]{-624.5, -553.5});
-        // North Catherby Allotment 2
-        exceptions.add(new double[]{-624.5, -531.5});
+    public static void reduceArmorStandsInFarmingPatch(ArmorStand armorstand, RenderLivingEvent.Pre<?, ?> event) {
+        BlockPos armorstandPos = new BlockPos(armorstand.getBlockX(), armorstand.getBlockY(), armorstand.getBlockZ());
+        FarmingLocations location = FarmingUtil.getFarmingLocation(armorstandPos);
+        if (location == null) return;
 
-        // check if the armorstand is in the general area of a farming patch
-        FarmingLocations location = FarmingUtil.getFarmingLocation(armorstand.getPosition());
-        if (location != null) {
-            // Get the specific patch the armorstand is in
-            FarmingPatch patch = FarmingUtil.getFarmingPatchFromLocation(location, armorstand.getPosition());
-            if (patch != null) {
-                FarmingPatchLocations patchLocation = patch.getPatchLocation();
-                // Check if it is in an allotment patch
-                if (patch.getPatchType() == PatchType.ALLOTMENT) {
-                    double x = armorstand.getPosX();
-                    double z = armorstand.getPosZ();
-                    // Farming items are either an iron sword or iron pickaxe
-                    // They will be in the head, mainhand, or offhand slot
-                    // It will check if it is holding the correct item and replace it with air
-                    // This grabs the 3 possible slots
-                    String headItem = armorstand.getItemStackFromSlot(EquipmentSlotType.HEAD).getItem().getName().getFormattedText();
-                    String mainHandItem = armorstand.getItemStackFromSlot(EquipmentSlotType.MAINHAND).getItem().getName().getFormattedText();
-                    String offHandItem = armorstand.getItemStackFromSlot(EquipmentSlotType.OFFHAND).getItem().getName().getFormattedText();
-                    // This will check for the head slot
-                    if (headItem.equalsIgnoreCase("iron pickaxe") || headItem.equalsIgnoreCase("iron sword")) {
-                        for (double[] exception : exceptions) {
-                            if (x == exception[0] && z == exception[1])
-                                return;
-                        }
-                        armorstand.setItemStackToSlot(EquipmentSlotType.HEAD, new ItemStack(Items.AIR));
-                    }
-                    // This will check for the mainhand slot
-                    if (mainHandItem.equalsIgnoreCase("iron pickaxe") || headItem.equalsIgnoreCase("iron sword")) {
-                        for (double[] exception : exceptions) {
-                            if (x == exception[0] && z == exception[1])
-                                return;
-                        }
-                        armorstand.setItemStackToSlot(EquipmentSlotType.MAINHAND, new ItemStack(Items.AIR));
-                    }
-                    // This will check for the offhand slot
-                    if (offHandItem.equalsIgnoreCase("iron pickaxe") || headItem.equalsIgnoreCase("iron sword")) {
-                        for (double[] exception : exceptions) {
-                            if (x == exception[0] && z == exception[1])
-                                return;
-                        }
-                        armorstand.setItemStackToSlot(EquipmentSlotType.OFFHAND, new ItemStack(Items.AIR));
-                    }
-                }
-            }
+        FarmingPatch patch = FarmingUtil.getFarmingPatchFromLocation(location, armorstandPos);
+        if (patch == null || patch.getPatchType() != PatchType.ALLOTMENT) return;
+
+        double x = armorstand.getX();
+        double z = armorstand.getZ();
+
+        ItemStack headItem     = armorstand.getItemBySlot(EquipmentSlot.HEAD);
+        ItemStack mainHandItem = armorstand.getItemBySlot(EquipmentSlot.MAINHAND);
+        ItemStack offHandItem  = armorstand.getItemBySlot(EquipmentSlot.OFFHAND);
+
+        boolean isMarker = (headItem.getItem() == Items.IRON_PICKAXE || headItem.getItem() == Items.IRON_SWORD)
+                || (mainHandItem.getItem() == Items.IRON_PICKAXE || mainHandItem.getItem() == Items.IRON_SWORD)
+                || (offHandItem.getItem() == Items.IRON_PICKAXE || offHandItem.getItem() == Items.IRON_SWORD);
+
+        if (!isMarker) return;
+
+        // Use static exception list – no allocation per frame
+        for (double[] exception : ARMORSTAND_EXCEPTIONS) {
+            if (x == exception[0] && z == exception[1]) return;
         }
+        event.setCanceled(true);
     }
 }

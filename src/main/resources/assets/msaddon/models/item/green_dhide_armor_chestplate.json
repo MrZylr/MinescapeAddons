@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "msaddon:item/dhide/green/green_dhide_body"
+  }
+}

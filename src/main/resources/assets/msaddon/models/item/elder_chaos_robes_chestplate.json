@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "msaddon:item/robes/elderchaos/elder_chaos_top"
+  }
+}

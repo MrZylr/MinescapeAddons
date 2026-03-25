@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "msaddon:item/mithril/mithril_armor_gold_chestplate"
+  }
+}

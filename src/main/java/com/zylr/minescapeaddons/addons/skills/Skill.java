@@ -1,23 +1,31 @@
 package com.zylr.minescapeaddons.addons.skills;
 
-import com.zylr.minescapeaddons.addons.ModConfiguration;
-import com.zylr.minescapeaddons.addons.Main;
+import com.zylr.minescapeaddons.addons.Config;
+import com.zylr.minescapeaddons.addons.MinescapeAddons;
 import com.zylr.minescapeaddons.addons.skills.tracker.XpTracker;
+import org.slf4j.Logger;
 
 public class Skill {
     private String name;
     private String symbol;
     private int id;
     private int level;
+    private int modifiedLevel;
+    private int levelModifier;
     private int previousLevel;
-    private int exp;
-    private int nextLevel;
-    private int tilNextLevel;
+    private double exp;
+    private double nextLevel;
+    private double tilNextLevel;
     private int slot;
     private float invX;
     private float invY;
     private SkillType type;
     private XpTracker tracker;
+    public float r;
+    public float g;
+    public float b;
+
+    public static final Logger LOGGER = MinescapeAddons.LOGGER;
 
 
     public Skill(String name, int id, SkillType type, int slot, String symbol) {
@@ -27,6 +35,8 @@ public class Skill {
         this.type = type;
         this.slot = slot;
         this.level = 1;
+        this.levelModifier = 0;
+        this.modifiedLevel = this.level+this.levelModifier;
         this.previousLevel = 1;
         this.exp = 1;
         this.nextLevel = 1;
@@ -39,34 +49,61 @@ public class Skill {
     public boolean shouldLvlUp() {
         if (type == SkillType.TOTAL)
             return false;
-        if (!ModConfiguration.CLIENT.virtualLevel.get() && level >= 99)
-            return false;
         if (getLevelAtExperience(exp) > level)
             return true;
         return false;
     }
 
     public void levelUp() {
+
         if (type == SkillType.TOTAL)
             return;
         previousLevel = level;
         level = getLevelAtExperience(exp);
         nextLevel = getExperienceAtLevel(level+1);
-        tilNextLevel = nextLevel - exp;
-        Main.getInstance().skills.get(SkillType.TOTAL).addLevels(level - previousLevel);
+        tilNextLevel = (int)nextLevel - (int)exp;
+        Skill.calcTotalLevel();
         previousLevel = level;
+    }
+
+    public static int calcTotalLevel() {
+        int totalLevel = 0;
+        for (String s : MinescapeAddons.skillsList) {
+            SkillType type = SkillType.valueOf(s.toUpperCase());
+            if (type != SkillType.TOTAL) {
+                Skill skill = MinescapeAddons.skills.get(type);
+                totalLevel =  totalLevel + skill.getLevel();
+            }
+            MinescapeAddons.skills.get(SkillType.TOTAL).setLevel(totalLevel);
+        }
+
+        return totalLevel;
     }
 
     private void addLevels(int i) {
         level += i;
     }
 
-    public void addExp(int xp) {
+    public void addExp(double xp) {
+        double oldExp = this.exp;
         this.exp += xp;
+
+        double expGained = this.exp - oldExp;
+
+        // Drop the decimal places for the xp gained and total xp for the orb display
+        int oldExpAsInt = (int) oldExp;
+        int totalExpAsInt = (int) this.exp;
+        int displayedExp = totalExpAsInt - oldExpAsInt;
+
+        this.nextLevel = getExperienceAtLevel(this.level + 1);
+        this.tilNextLevel = (int)this.nextLevel - (int)this.exp;
         this.getTracker().setXp(xp);
-        PersistentExp.saveExp();
+        if (this.type != SkillType.TOTAL)
+            MinescapeAddons.skills.get(SkillType.TOTAL).addExp(xp);
         if (shouldLvlUp())
             levelUp();
+        if (this.type != SkillType.TOTAL)
+            MinescapeAddons.getInstance().resizableClassic.getOrbWidget().addXpOrb(new XpOrb(this, displayedExp));
     }
 
     // Private methods
@@ -80,10 +117,12 @@ public class Skill {
         return (int) Math.floor(total / 4);
     }
 
-    public int getLevelAtExperience(int experience) {
+    public int getLevelAtExperience(double experience) {
         int index;
 
         for (index = 0; index < 120; index++) {
+            if (index == 99 && !Config.getVirtualLevels())
+                break;
             if (getExperienceAtLevel(index + 1) > experience)
                 break;
         }
@@ -91,27 +130,43 @@ public class Skill {
         return index;
     }
 
-    public int getTotalExp() {
-        int total = 0;
+    public double getTotalExp() {
+        double total = 0;
 
         for (SkillType skillType:SkillType.values()) {
             if (skillType != SkillType.TOTAL) {
-                total += Main.getInstance().skills.get(skillType).getExp();
+                total += MinescapeAddons.getInstance().skills.get(skillType).getExp();
             }
         }
 
         return total;
     }
 
-    public void setupLevel(int exp) {
+    public void setupLevel(double exp) {
         this.exp = exp;
         this.level = getLevelAtExperience(this.exp);
         this.nextLevel = getExperienceAtLevel(this.level + 1);
-        this.tilNextLevel = this.nextLevel - this.exp;
+        this.tilNextLevel = (int)this.nextLevel - (int)this.exp;
         this.previousLevel = this.level;
     }
 
+    public static void handleLogin(SkillType skillType, double exp, int level) {
+        Skill skill = MinescapeAddons.skills.get(skillType);
+        skill.setExp(exp);
+        skill.setLevel(level);
+        skill.setupLevel(exp);
+    }
+
     // Getters
+    public int getModifiedLevel() {
+        this.modifiedLevel = this.level + this.levelModifier;
+        if (this.level > 99 && this.levelModifier > 0)
+            this.modifiedLevel = 99 + this.levelModifier;
+        return this.modifiedLevel;
+    }
+
+    public int getLevelModifier() { return levelModifier; }
+
     public String getName() { return name; }
 
     public String getSymbol() { return symbol; }
@@ -122,11 +177,11 @@ public class Skill {
 
     public int getPreviousLevel() { return previousLevel; }
 
-    public int getExp() { return exp; }
+    public double getExp() { return exp; }
 
-    public int getNextLevel() { return nextLevel; }
+    public double getNextLevel() { return nextLevel; }
 
-    public int getTilNextLevel() { return tilNextLevel; }
+    public double getTilNextLevel() { return tilNextLevel; }
 
     public int getSlot() { return slot; }
 
@@ -139,6 +194,10 @@ public class Skill {
     public XpTracker getTracker() { return tracker; }
 
     // Setters
+    public void setLevelModifier(int levelModifier) {
+        this.levelModifier = levelModifier;
+    }
+
     public void setLevel(int level) { this.level = level; }
 
     public void setPreviousLevel(int previousLevel) { this.level = previousLevel; }
@@ -147,9 +206,9 @@ public class Skill {
 
     public void setInvY(float invY) { this.invY = invY; }
 
-    public void setExp(int exp) { this.exp = exp; }
+    public void setExp(double exp) { this.exp = exp; }
 
-    public void setNextLevel(int nextLevel) { this.nextLevel = nextLevel; }
+    public void setNextLevel(double nextLevel) { this.nextLevel = nextLevel; }
 
-    public void setTilNextLevel(int tilNextLevel) { this.tilNextLevel = tilNextLevel; }
+    public void setTilNextLevel(double tilNextLevel) { this.tilNextLevel = tilNextLevel; }
 }

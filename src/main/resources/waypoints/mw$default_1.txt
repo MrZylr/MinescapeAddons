@@ -1,0 +1,791 @@
+sets:Underground:gui.xaero_default:Easy Clues
+#
+#waypoint:name:initials:x:y:z:color:disabled:type:set:rotate_on_tp:tp_yaw:visibility_type:destination
+#
+waypoint:General Store:╤:-1669:67:-11:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Anvil:╓:-1565:68:-140:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Altar:╙:-1474:69:-8:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dungeon:▐:-1475:68:-60:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Plague City:╒:-1363:67:-155:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-1421:68:-118:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-1417:68:-113:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Altar:╙:1200:74:-618:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:-403:48:-710:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Romeo & Juliet:╒:565:63:-436:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Demon Slayer:╒:544:63:-430:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dungeon:▐:-1119:67:214:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-164:63:229:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Tutorial Island Cave:▐:201:79:658:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Estate Agent:∙:-117:64:-247:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Estate Agent:∙:-848:66:-658:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Maple Trees:▄:-876:67:-655:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Willow Trees:▄:-932:67:-685:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Sandpit:³:-609:67:-172:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Sandpit:³:-1435:67:546:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Sawmill Operator:⁴:857:67:-626:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:General Store:╤:184:63:-690:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dungeon:▐:-970:67:2:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Ship:╔:-744:67:156:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Ship:╔:-1010:66:29:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dungeon:▐:-1302:65:143:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dungeon:▐:-1359:67:165:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-1348:68:107:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Agility Shortcut - Level 39:╨:-1407:67:639:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Magic Shop:╩:-1278:75:595:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Rune Essence Mine:╔:-1285:67:584:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dungeon:▐:-1279:67:601:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dungeon:▐:-1246:67:619:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Anvil:╓:-1220:67:614:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:-1218:67:578:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Nightmare Zone:Ω:-1239:67:510:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dairy Cow:┴:-1308:70:488:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-1394:67:512:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dungeon:▐:-1354:72:488:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Agility Shortcut - Level 16:╨:-1337:66:532:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Farming Patch:╚:-1334:68:546:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dairy Churn:┬:-1350:67:553:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-1363:67:544:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-1363:67:573:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Hand in the Sand:╒:-1408:67:553:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-1415:67:559:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-1415:67:549:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Pub:╪:-1402:67:620:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:House Portal:╧:-1431:67:566:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Gu'Tanoth:▐:-1567:66:889:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Spot:═:-1332:73:855:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Ogre Boat:╔:-1101:63:962:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Spot:═:-1144:77:867:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Spot:═:-1363:68:977:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fairy Ring - AKS:√:-1353:69:990:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Gnome Glider:╔:-1434:69:945:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Hunter Spot:·:-1370:66:1148:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dungeon:▐:-1486:67:1178:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Charter Ship/Crewmember Shop:╤╔:-1296:67:1306:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Ship:╔:-1324:67:1338:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:-1356:67:1266:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Agility Shortcut - Level 10:╨:-1424:66:1241:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dungeon:▐:-1495:68:1273:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Spirit Tree:╔:-1602:69:1309:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Spirit Tree:╔:-1396:69:74:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-567:67:-472:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Minigame:Ω:-527:81:-786:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Minigame:Ω:-504:71:-766:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Witch's House:╒:-268:67:-513:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Farming Patch:╚:-252:68:-464:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Hot Air Balloon:╔:-283:63:-42:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Hot Air Balloon:╔:-635:74:-217:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:-1733:70:604:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Hot Air Balloon:╔:-1682:66:532:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fairy Ring - BKP:√:-1912:65:756:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Teak Tree:▄:-2060:66:715:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dungeon:▐:-1831:67:671:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dungeon:▐:-1607:67:730:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Food Shop:╗:-1523:67:750:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:General Store:╤:-1503:67:751:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Gu'Tanoth:▐:-1547:67:741:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Gu'Tanoth:▐:-1478:75:819:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Gu'Tanoth:▐:-1340:74:768:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Gu'Tanoth:▐:-1377:66:784:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Gu'Tanoth:▐:-1403:74:751:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Gu'Tanoth:▐:-1402:73:690:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Gu'Tanoth:▐:-1442:64:697:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Gu'Tanoth:▐:-1490:66:652:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Hunter Spot:·:-1718:76:184:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Hunter Spot:·:-1645:65:134:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Spot:═:-1647:68:84:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Altar:╙:-1700:79:159:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dungeon:▐:-1710:79:159:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dungeon:▐:-1692:73:295:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fairy Ring - CIQ:√:-1481:69:475:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Pub:╪:-1366:66:429:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Farming Patch:╚:-1596:68:315:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dungeon:▐:-1462:67:390:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-1473:67:399:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:General Store:╤:-1484:73:368:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Tree Gnome Village:╒:-1436:67:340:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Spirit Tree:╔:-1431:67:345:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Spot:═:-1258:68:150:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-1288:72:225:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Monk's Friend:╒:-1241:72:222:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Altar:╙:-1243:72:229:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-1372:66:355:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-1372:66:335:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-1231:66:268:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-1236:66:292:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-1288:66:289:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-1326:66:259:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Spot:═:-1172:65:433:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-1164:68:363:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-1154:68:340:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:General Store:╤:-1138:68:338:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Spot:═:-1104:65:343:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Anvil:╓:-1106:68:358:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:-1078:67:364:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:General Store:╤:-1094:68:396:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Charter Ship/Crewmember Shop:╤╔:-1037:67:420:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Charter Ship/Crewmember Shop:╤╔:49:66:273:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fairy Ring - DIS:√:309:64:419:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Spirit Tree Patch:╚:-652:69:245:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Hunter Spot:·:842:71:-1169:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Hot Air Balloon:╔:837:63:-595:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Nature Spirit:╒:1169:74:-631:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Spot:═:1068:73:-649:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Agility Shortcut - Level 65:╨:1223:74:-581:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Paterdomus:▐:1217:63:-607:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Ectofuntus:▐:1917:70:-711:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Farming Shop:㊊:1839:68:-729:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Agility Shortcut - Level 71:╨:1293:89:-881:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Agility Shortcut - Level 71:╨:1294:83:-882:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Agility Shortcut - Level 61:╨:1218:83:-806:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Agility Shortcut - Level 61:╨:1219:77:-806:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Farming Patch:╚:1308:68:-570:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fairy Ring - CKS:√:1297:67:-561:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fairy Ring - BIP:√:1171:67:-128:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fairy Ring - BKR:√:1361:69:-443:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:1271:65:42:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:1576:68:-84:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Agility Shortcut - Level 72:╨:1591:67:9:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fairy Ring - ALQ:√:1750:69:-629:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:1275:64:-380:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:1223:64:-379:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:1395:64:-465:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:1408:64:-490:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Hunter Spot:·:1610:65:-467:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Hunter Spot:·:1555:64:-489:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:-516:63:-234:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:-530:63:-230:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:-532:63:-218:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Gnome Glider:╔:-515:103:-657:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Agility Shortcut - Level 32:╨:-456:64:-437:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-603:67:-512:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-740:66:-703:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-790:66:-647:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-808:66:-609:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-759:66:-609:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-744:66:-588:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-759:66:-588:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-774:66:-588:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Pub:╪:-990:67:-620:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Site:═:-974:65:-667:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fairy Ring - ALS:√:-1136:67:-646:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Armour Shop:╡:-1041:67:-450:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fairy Ring - BLR:√:-840:69:-201:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Pub:╪:-1340:69:-116:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-1342:69:-152:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fairy Ring - BIS:√:-1157:67:52:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fairy Ring - DJP:√:-1090:66:163:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-1227:66:85:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Tower of Life:╒:-1140:67:201:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Agility Shortcut - Level 10:╨:-939:63:240:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-618:70:369:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Charter ship/Crewmember Shop:╤╔:-779:67:138:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Amulet Shop:結:-647:67:393:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Pub:╪:-669:67:382:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Brimhaven Dungeon:▐:-824:68:395:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Gold Mining Site:═:-825:68:405:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Gold Mining Site:═:-861:68:177:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:House Portal:╧:-789:67:319:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Food Shop:╗:-681:70:289:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-660:70:262:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fruit tree Patch:╚:-765:66:214:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Ardougne Rooftop Course - lvl 90:⌡:-1040:68:-41:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Seers' Rooftop Course - lvl 60:⌡:-874:67:-616:0:false:0:gui.xaero_default:false:0:0:false
+waypoint:Canifis Rooftop Course - lvl 40:⌡:1477:66:-614:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Draynor Rooftop Course - lvl 1:⌡:260:63:13:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Falador Rooftop Course -level 50:⌡:50:63:-160:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-1027:71:-341:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-943:69:-366:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Furnace:┌:-1255:68:-82:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Pottery Wheel:╢:-1299:69:-128:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Waypoint:▐:-1375:71:-217:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:-1365:63:-254:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:-1378:63:-271:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Shop:㊎:-1271:66:-352:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:-1303:66:-411:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:-1250:63:-419:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:-1227:64:-393:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:-1251:64:-401:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-1214:66:-339:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-1117:66:-222:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dairy Cow:┴:-1037:67:-209:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bush patch:╚:-1209:67:179:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Maple trees:▄:-927:67:-290:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew trees:▄:-850:67:-146:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Waypoint:╔:-906:65:-65:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Site:═:-933:67:-140:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Site:═:-977:69:-145:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Altar:╙:-880:67:4:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Shop:㊎:-863:67:-25:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Spinning Wheel:┐:-868:67:22:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-886:67:31:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-1086:67:33:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:-1097:76:1:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-1117:68:-44:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Platebody Shop:▓:-1103:68:-34:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Essence mine:╔:-1015:71:-124:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Silk Trader:Θ:-1089:68:-58:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Spice seller:信:-1085:68:-45:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fur trader:≈:-1070:68:-42:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Gem stall:░:-1059:68:-60:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Baker stall:╗:-1059:68:-80:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Silk Trader:Θ:-1073:68:-93:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Silver stall:短:-1089:68:-93:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Baker stall:╗:-1092:68:-82:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-1171:69:-82:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-1140:69:-82:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Estate Agent:∙:-1144:69:-28:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Pet Insurance:课:-1196:69:-28:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:General Store:╤:-1219:69:-29:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:╙Altar:╙:-1209:70:-73:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-1212:69:-100:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-1212:69:-124:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:-1212:69:-140:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-1144:66:-258:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Windmill:╛:-1164:66:-303:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Farming Patch:╚:-1057:67:-275:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Magic trees:▄:-962:69:-340:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Magic trees:▄:-945:69:-342:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Lost City:╒:407:63:234:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:1450:67:-14:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dungeon:▐:1168:74:-672:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:1724:69:-738:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Farming Patch:╚:1760:68:-731:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Taxidermist:说:1389:70:-606:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:General Store:╤:1387:67:-642:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Tannery:╡:1425:70:-650:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Clothes Shop:╞:1458:70:-666:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Slayer Master:传:1488:66:-680:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Food Shop:╗:1475:70:-634:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:1489:70:-592:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Pub:╪:1431:67:-566:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Survival Expert:Ñ:274:68:603:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Master Chef:Ñ:307:68:691:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Guide:Ñ:189:68:667:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Anonymous Wizard:Ñ:293:72:497:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Paul - Iron man :Ñ:295:72:513:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Brother Brace:Ñ:246:68:564:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Altar:╙:238:68:565:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Financial Advisor:Ñ:184:71:541:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:186:71:560:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:311:68:696:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Treasure Chest:╠:225:69:612:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Tutorial Island:╒:223:74:651:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:285:68:618:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:279:68:612:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Tree Patch:╚:630:62:-530:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Tree Patch:╚:-62:64:-269:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Tree Patch:╚:532:63:148:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-603:67:-500:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:81:63:-1260:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Furnace:┌:-555:67:-203:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Altar:╙:-500:67:-193:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-489:67:-153:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:-439:64:-149:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:-439:64:-166:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dungeon:▐:-596:63:-272:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Law altar - Level 54:㊟:-481:72:-292:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-524:67:-254:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-594:69:-205:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-629:68:-188:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Hops Patch:╚:-627:68:-157:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Ship To Port Sarim:╔:-556:67:-155:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:55:69:-1275:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Noterazzo:╤:20:68:-1261:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Site:═:202:62:-1446:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Obelisk:ⁿ:55:76:-1350:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Furnace:┌:379:67:-1362:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Obelisk:ⁿ:263:71:-1535:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Altar:╙:-212:79:-1616:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Altar:╙:-810:73:-641:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Contest:▀:-1148:63:-482:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Contest :▀:-1170:63:-457:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Contest:▀:-1163:63:-426:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:fishing contest:▀:-1178:63:-397:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:White Wolf Tunnel:▐:-598:59:-601:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing contest:╒:-591:67:-607:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Altar:╙:-979:68:-540:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Anvil:╓:-1150:65:-401:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Anvil:╓:-1142:65:-410:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-1148:65:-450:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Magic Tree:▄:-988:68:-419:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Magic Tree:▄:-975:69:-418:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:-939:67:-547:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:-940:67:-533:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew tree:▄:-916:67:-534:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Spinning Wheel:┐:-929:73:-566:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Anvil:╓:-920:67:-630:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-913:68:-583:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:-883:67:-631:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water obelisk:㊍:-517:69:-416:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Warrior's guild basement:▐:-560:68:-778:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Sword Shop:└:-488:81:-759:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Apothecary:∩:-518:71:-805:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Food Shop:╗:-532:71:-805:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:-527:71:-782:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:▐:▐:-533:65:-418:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Farming Patch:╚:-629:66:-542:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Farming shop:㊊:-599:66:-536:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fruit tree Patch:╚:-476:64:-452:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:-478:63:-430:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:-494:63:-420:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:-519:63:-439:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:-541:63:-445:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Shop:㊎:-559:67:-485:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Archery Shop:┼:-588:67:-478:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-606:67:-482:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:-632:67:-477:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Charter ship/Crewmember Shop:╤╔:-680:67:-390:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:General Store:╤:-648:67:-438:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Candle shop:Φ:-660:67:-466:8:false:0:gui.xaero_default:false:1000:0:false
+waypoint:Yew trees:▄:-793:66:-448:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew trees:▄:-777:67:-434:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew tree:▄:-750:68:-461:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew trees:▄:-757:67:-507:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Maple trees:▄:-810:67:-549:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Grand Exchange:╦:613:64:198:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Shield of Arrav:╒:569:77:-642:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Altar:╙:564:77:-639:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:607:77:-644:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Combat Training:⌠:584:79:-629:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:799:81:-646:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Pub:╪:774:81:-645:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:762:80:-581:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:756:65:-656:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Altar:╙:700:77:-619:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:688:63:-577:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Estate Agent:∙:661:75:-578:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:QuestStart-GardenOfTranquillity:╒:624:63:-590:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Priest in Peril:╒:612:83:-566:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Combat Training:⌠:553:83:-564:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fairy Ring - DKR:√:323:65:-639:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Newspaper Trader:÷:595:63:-450:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fur Trader:≈:588:63:-460:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Platebody Shop:▓:628:69:-466:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Combat Training:⌠:705:83:-459:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:656:83:-380:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:652:70:-359:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Apothecary:∩:530:73:-364:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Tea Trader:宿:756:67:-390:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Rat Pits:Ω:744:63:-354:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Clothes Shop:╞:787:87:-345:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:759:63:-371:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Garden Supplier:Æ:-16:64:-260:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:664:64:191:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Pub:╪:642:75:139:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Lumbridge Castle Cellar:▐:571:83:201:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Cook's Assistant:╒:578:83:204:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Task Master:Ñ:644:63:204:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Site:═:872:63:-105:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Agility Short-Cut Lvl 38:╨:903:67:-109:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Site:═:872:63:-40:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Duel Arena:Ω:882:65:142:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Silk Trader:Θ:829:64:242:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:748:74:299:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:715:60:364:7:false:0:gui.xaero_default:false:0:0:false
+waypoint:Rowboat To Misthalin Mystery:╔:668:63:403:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Candle Shop:Φ:455:64:305:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Lumbridge Swamp Caves:▐:452:63:320:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Imp Catcher:╒:292:103:367:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Wizards' Tower Basement:▐:281:103:359:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Task Master:Ñ:232:65:156:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Farming Shop:Ñ:170:63:91:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dye Trader:Å:201:77:69:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Rope Trader2530:Γ:244:77:74:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Loom:É:52:70:-16:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Farming Shop:Ñ:48:70:-30:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:19:70:-16:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dairy Churn:┬:27:70:-19:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Ship To Entrana:╔:71:57:151:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Melzar's Maze Basement:▐:-301:82:113:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dairy Cow:┴:-274:63:-7:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dairy Churn:┬:-310:80:-119:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Hot Air Balloon:╔:-246:65:-415:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-387:69:-474:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Sword Shop:╟:-403:77:-498:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:White Wolf Tunnel:▐:-426:73:-589:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Fishing Contest:╒:-430:72:-601:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Druidic Ritual:╒:-282:74:-592:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Altar:╙:-262:79:-690:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Agility Short-Cut Level 14:╨:-281:80:-722:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-374:88:-836:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Burthope Games Room:Ω:-356:89:-849:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Anvil:╓:-304:74:-869:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-271:72:-853:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-293:74:-832:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-299:66:-801:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:General Store:╤:-275:77:-791:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Slayer Master:传:-264:74:-759:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Pub:╪:-320:77:-776:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Rogues's Den:Ω:-340:77:-762:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Combat Training:⌠:-359:66:-754:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Troll Stronghold:╒:-371:72:-735:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Site:═:-9:65:-923:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Edgeville Dungeon:▐:208:87:-866:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Site:═:257:62:-859:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Obelisk:ⁿ:418:73:-1012:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Altar:╙:669:71:-977:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Obelisk:ⁿ:633:70:-1148:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:858:73:-550:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Earth Altar - Level 9:╘:856:64:-567:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mammoths:⌂:445:67:-959:8:true:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:577:62:-439:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:550:74:-357:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:600:79:-320:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:654:75:-299:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Canoe:╔:551:63:-180:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Farming Patch:╚:628:74:-91:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Farming Patch:╚:496:65:-226:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:366:65:83:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Champions' Challenge:▐:512:76:-224:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:506:65:-215:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dairy Cow:┴:455:63:-95:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:400:74:-384:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:434:64:-633:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Canoe:╔:339:63:-687:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:360:83:-521:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Food Shop:¼:348:80:-507:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Windmill:╛:350:85:-516:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:339:86:-516:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:367:77:-509:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Wilderness Lever To DesertedKeep:╔:209:63:-586:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:171:74:-664:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:171:74:-645:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:94:66:-621:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Altar:╙:32:85:-715:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Spinning Wheel:┐:186:71:-439:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Canoe:╔:269:62:-394:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Agility Short-Cut Lvl 31:╨:394:61:-237:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Farming Patch:╚:216:63:-231:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:243:74:-247:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Draynor Manor Basement:▐:292:75:-222:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Draynor Manor Basement:▐:232:75:-230:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fire Altar - Level 14:∞:889:67:82:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Chaos Altar - Level 35:≤:131:68:-921:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:812:77:331:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Agility Short-Cut Lvl 70:╨:811:72:395:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Teleport To Sorceress's Garden:╔:928:81:411:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Farming Patch:╚:876:63:221:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Crafting Shop:╕:889:77:269:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Gnome Glider:╔:773:65:239:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:637:72:255:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Canoe:╔:669:60:139:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:604:77:138:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:H.A.M. Hideout:▐:400:67:102:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Agility Short-Cut Lvl 26:╨:-218:63:-85:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Agility Short-Cut Lvl 66:╨:627:57:413:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Draynor Sewers:▐:294:63:137:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Port Sarim Rat Pits:▐:-13:66:160:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:-93:61:379:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:-125:60:321:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mole Hole:▐:-71:63:-282:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mole Hole:▐:-105:63:-301:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-211:65:-295:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Pottery Wheel:╢:196:73:-378:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Altar:╙:1023:71:61:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:1015:65:82:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:515:69:36:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Sheep Shearer:╒:516:70:26:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:58:65:-202:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-147:85:-140:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - The Knight's Sword:╒:-135:68:-175:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Elder Chaos Druids:傳:656:67:-1043:8:true:0:gui.xaero_default:false:0:0:false
+waypoint:Grizzly Bears:²:249:77:-1030:8:true:0:gui.xaero_default:false:0:0:false
+waypoint:Green Dragons:¬:-121:64:-994:8:true:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-307:68:427:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:-282:64:314:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:-291:63:323:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:General Store:╤:-349:67:419:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Pub:╪:-278:68:426:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Ship To Port Sarim:╔:-202:65:416:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Gem Shop:░:-224:64:-151:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:922:67:417:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:752:67:339:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Prince Ali Rescue:╒:812:78:383:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Tannery:╡:758:66:262:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Anvil:╓:757:66:279:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Furnace:┌:755:66:274:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Food Shop:¼:753:66:294:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Plateskirt Shop:¡:889:67:343:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Platelegs Shop:«:884:66:318:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:General Store:╤:883:66:298:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Scimitar Shop:»:795:66:273:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:813:64:240:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Gem Shop:░:800:64:225:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Altar:╙:-281:75:-601:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Heroes' Guild Mine:▐:-379:67:-673:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Altar:╙:-387:74:-684:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:House Portal:╧:-379:66:-547:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Herbalist:▒:-367:69:-431:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-104:63:-92:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Chainmail Shop:▓:-123:63:-89:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Guild Basement:▐:9:63:-158:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:59:64:-167:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:98:63:-182:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:98:63:-212:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dwarven Mine:▐:121:63:-283:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:60:63:-241:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:-14:63:-210:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Shield Shop:│:-134:65:-300:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-91:64:-244:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-91:64:-239:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Anvil:╓:-136:64:-250:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Furnace:┌:-132:64:-245:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Pub:╪:-202:66:-269:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:General Store:╤:-188:65:-313:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mace Shop:┤:-207:65:-313:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:-227:65:-259:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Taverly Dungeon ⌐¿½:▐:-404:69:-341:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Agility Short-Cut Lvl 5:╨:-253:65:-217:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Site:═:-339:66:-225:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-303:67:-104:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Tannery:╡:-262:69:-4:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Spinning Wheel:┐:-255:69:-7:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:-254:63:1:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-258:63:4:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Site:═:-245:61:-2:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Pottery Wheel:╢:-254:63:-14:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Pottery Wheel:╢:-265:63:-17:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Air Altar - Level 1:╖:-109:67:-25:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:-70:65:-81:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:-17:65:-104:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:36:65:-109:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Farming Patch:╚:114:66:-89:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dairy Cow:┴:57:63:-40:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:98:63:31:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:10:66:71:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Axe Shop:└:20:66:106:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Magic Shop:╩:-22:66:76:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Jewellery Shop:╣:-28:66:113:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Shop:㊎:-25:66:177:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Site:═:-133:61:136:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bush Patch:╚:-254:65:188:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:-272:65:178:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:-268:63:154:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:-239:64:153:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:-241:65:172:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:House Portal:╧:-209:63:187:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:-160:63:228:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:General Store:╤:-223:63:214:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:-202:64:219:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Crafting Shop:╕:-223:63:246:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Archery Shop:┼:-201:64:249:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Witch's Potion:╒:-162:63:240:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Altar:╙:-97:64:320:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Anvil:╓:-89:65:407:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Asgarnian Ice Dungeon:▐:-59:67:396:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Food Shop:╗:-25:66:234:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Ship To Karamja:╔:49:66:247:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank Deposit Box:磨:62:66:148:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Pub:╪:79:66:79:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:226:63:33:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Wine Trader:╝:197:64:93:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:221:63:117:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:199:63:155:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:206:63:172:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:336:65:343:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:686:63:362:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:684:63:377:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Site:═:643:64:394:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Altar - Level 5:╜:461:64:354:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Site:═:441:62:388:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:452:63:224:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Treasure Chest:╠:572:64:97:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dairy Churn:┬:511:63:30:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Windmill:╛:443:63:-69:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:399:65:175:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:458:65:180:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:453:66:186:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:527:64:211:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:572:77:187:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Spinning Wheel:┐:573:71:213:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:561:65:205:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:584:65:205:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:610:64:222:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:610:64:174:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:639:63:226:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Axe Shop:└:633:63:241:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:696:64:242:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - The Restless Ghost:╒:666:63:219:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Altar:╙:677:64:229:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:General Store:╤:598:63:136:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Furnace:┌:631:63:90:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Anvil:╓:621:63:99:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:667:62:113:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dairy Cow:┴:683:63:11:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dairy Cow:┴:671:63:-11:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dairy Churn:┬:628:63:-23:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Agility Short-Cut Lvl 13:╨:666:63:-157:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Site:═:801:61:-243:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:737:65:-241:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Site:═:474:63:-271:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Cooking Range:╬:421:63:-439:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:502:63:-462:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Anvil:╓:511:63:-428:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Staff Shop:├:544:63:-457:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Archery Shop:┼:652:63:-428:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Clothes Shop:╞:560:63:-410:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:General Store:╤:590:63:-408:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Sword Shop:╟:564:63:-352:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Pub:╪:622:63:-352:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:VTAM Corporation:▐:680:63:-305:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Altar:╙:726:64:-299:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Pub:╪:755:63:-328:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Magic Shop:╩:707:63:-357:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Anvil:╓:696:63:-364:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:705:64:-418:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:564:61:-543:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:603:61:-543:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Anvil:╓:636:63:-460:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Furnace:┌:637:63:-473:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Varrock Sewers:▐:654:63:-532:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:619:63:-645:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Varrock Sewers:▐:636:63:-661:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:609:64:-664:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:574:63:-659:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:553:64:-669:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Water Source:╥:516:62:-569:7:false:0:gui.xaero_default:false:0:0:false
+waypoint:Spirit Tree:╔:511:63:-672:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Grand Exchange:╦:443:62:-612:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Treasure Chest:╠:471:64:-534:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Anvil:╓:191:63:-386:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mining Site:═:188:64:-405:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Edgeville Dungeon:▐:289:63:-525:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Agility Short-Cut Lvl 21:╨:368:63:-708:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Altar:╙:98:65:-646:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Mind Altar - Level 2:╘:-125:67:-699:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Goblin Diplomacy:╒:-191:55:-688:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Quest Start - Doric's Quest:╒:-207:61:-507:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Anvil:╓:-209:62:-511:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Dwarven Mine:▐:3:69:-491:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Body Altar - Level 20:╫:110:68:-498:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Pub:╪:179:63:-469:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Helmet Shop:┘:170:63:-441:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Stronghold of Security:▐:189:64:-412:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Furnace:┌:254:63:-655:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Slayer Master:传:264:63:-696:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:200:64:-603:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Yew Tree:▄:201:64:-569:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:261:62:-439:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Fishing Spot:▀:267:62:-459:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Edgeville Dungeon ½传:▐:232:63:-561:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Bank:磨:220:63:-653:8:false:0:gui.xaero_default:false:0:0:false
+waypoint:Tele to Al kharid bank:╔:-2649:12:1040:8:false:0:Underground:false:0:0:false
+waypoint:Ring seller:░:-2666:13:1051:8:false:0:Underground:false:0:0:false
+waypoint:Sword Shop:╟:-2651:11:1107:8:false:0:Underground:false:0:0:false
+waypoint:Yew tree:▄:-2628:12:1169:8:false:0:Underground:false:0:0:false
+waypoint:Yew trees:▄:-2704:12:1175:8:false:0:Underground:false:0:0:false
+waypoint:teleport:╔:-2742:12:1034:8:false:0:Underground:false:0:0:false
+waypoint:Slayer Master:传:-2766:12:1167:8:false:0:Underground:false:0:0:false
+waypoint:Sandpit:³:-2786:12:1140:8:false:0:Underground:false:0:0:false
+waypoint:Dairy Cow:┴:-2795:11:1106:8:false:0:Underground:false:0:0:false
+waypoint:Fairy Ring - Zanaris:√:-2864:14:1159:8:false:0:Underground:false:0:0:false
+waypoint:Water Source:╥:-2875:19:1134:8:false:0:Underground:false:0:0:false
+waypoint:Water Source:╥:-2875:17:1110:8:false:0:Underground:false:0:0:false
+waypoint:Windmill:╛:-2894:12:1089:8:false:0:Underground:false:0:0:false
+waypoint:Dairy Churn:┬:-2891:12:1078:8:false:0:Underground:false:0:0:false
+waypoint:Water Source:╥:-2899:12:1047:8:false:0:Underground:false:0:0:false
+waypoint:Furnace:┌:-2905:12:1037:8:false:0:Underground:false:0:0:false
+waypoint:Bank:磨:-2953:12:1082:8:false:0:Underground:false:0:0:false
+waypoint:General Store:╤:-2982:12:1115:8:false:0:Underground:false:0:0:false
+waypoint:Cooking Range:╬:-2963:12:1142:8:false:0:Underground:false:0:0:false
+waypoint:Agility Shortcut - Level 46:╨:-2905:11:1245:8:false:0:Underground:false:0:0:false
+waypoint:Agility Shortcut - Level 66:╨:-2878:12:1251:8:false:0:Underground:false:0:0:false
+waypoint:Cosmic Altar - Level 27:≤:-2871:10:1335:8:false:0:Underground:false:0:0:false
+waypoint:Bank:磨:579:55:214:8:false:0:Underground:false:0:0:false
+waypoint:Exit:⁵:-1494:34:1274:8:false:0:Underground:false:0:0:false
+waypoint:Water Source:╥:-282:18:-76:8:false:0:Underground:false:0:0:false
+waypoint:Cooking Range:╬:-289:18:-88:8:false:0:Underground:false:0:0:false
+waypoint:Fishing Spot:▀:-384:17:-250:8:false:0:Underground:false:0:0:false
+waypoint:Fishing Spot:▀:-406:17:-246:8:false:0:Underground:false:0:0:false
+waypoint:Fishing Spot:▀:-364:17:-236:8:false:0:Underground:false:0:0:false
+waypoint:Agility Shortcut - Level 63:╨:-249:18:-379:8:false:0:Underground:false:0:0:false
+waypoint:Agility Shortcut - Level 80:╨:-415:18:-387:8:false:0:Underground:false:0:0:false
+waypoint:Agility Shortcut - Level 70:╨:-398:19:-418:8:false:0:Underground:false:0:0:false
+waypoint:Agility Shortcut - Level 70:╨:-393:18:-342:8:false:0:Underground:false:0:0:false
+waypoint:Exit:⁵:-404:18:-342:8:false:0:Underground:false:0:0:false
+waypoint:Archery Shop:┼:-459:50:-557:8:false:0:Underground:false:0:0:false
+waypoint:Pub:╪:-457:50:-571:8:false:0:Underground:false:0:0:false
+waypoint:Cart:╔:-427:50:-551:8:false:0:Underground:false:0:0:false
+waypoint:Exit:⁵:-427:50:-534:8:false:0:Underground:false:0:0:false
+waypoint:Exit:⁵:-427:50:-581:8:false:0:Underground:false:0:0:false
+waypoint:Exit:⁵:-596:50:-590:8:false:0:Underground:false:0:0:false
+waypoint:Mining Spot:═:-92:35:-536:8:false:0:Underground:false:0:0:false
+waypoint:Mining Spot:═:-93:35:-623:8:false:0:Underground:false:0:0:false
+waypoint:Mining Spot:═:-199:33:-654:8:false:0:Underground:false:0:0:false
+waypoint:Mining Spot:═:-240:36:-730:8:false:0:Underground:false:0:0:false
+waypoint:Exit:⁵:-381:36:-674:8:false:0:Underground:false:0:0:false
+waypoint:Mining Spot:═:31:43:-88:8:false:0:Underground:false:0:0:false
+waypoint:Mining Spot:═:35:43:-131:8:false:0:Underground:false:0:0:false
+waypoint:Bank:磨:5:43:-127:8:false:0:Underground:false:0:0:false
+waypoint:Exit:⁵:5:43:-158:8:false:0:Underground:false:0:0:false
+waypoint:Mining Spot:═:52:40:-174:8:false:0:Underground:false:0:0:false
+waypoint:Motherlode Mine:▐:89:41:-196:8:false:0:Underground:false:0:0:false
+waypoint:Exit:⁵:112:43:-282:8:false:0:Underground:false:0:0:false
+waypoint:Mining Spot:═:70:43:-252:8:false:0:Underground:false:0:0:false
+waypoint:Mining Spot:═:63:40:-280:8:false:0:Underground:false:0:0:false
+waypoint:Mining Spot:═:97:43:-404:8:false:0:Underground:false:0:0:false
+waypoint:Ranged Shop:┼:-50:43:-370:8:false:0:Underground:false:0:0:false
+waypoint:Anvil:╓:-27:43:-402:8:false:0:Underground:false:0:0:false
+waypoint:Mining Spot:═:22:43:-391:8:false:0:Underground:false:0:0:false
+waypoint:Mining Spot:═:32:43:-423:8:false:0:Underground:false:0:0:false
+waypoint:Exit:⁵:5:43:-490:8:false:0:Underground:false:0:0:false
+waypoint:Bank:磨:-1724:25:172:8:false:0:Underground:false:0:0:false
+waypoint:Exit:⁵:-1709:25:160:8:false:0:Underground:false:0:0:false
+waypoint:Exit:⁵:636:45:-662:8:false:0:Underground:false:0:0:false
+waypoint:Exit:⁵:654:45:-531:8:false:0:Underground:false:0:0:false
+waypoint:Exit:⁵:290:37:-525:8:false:0:Underground:false:0:0:false
+waypoint:Mining Spot:═:355:38:-585:8:false:0:Underground:false:0:0:false
+waypoint:Agility Shortcut - Level 51:╨:390:37:-681:8:false:0:Underground:false:0:0:false
+waypoint:Slayer Master:传:384:37:-704:8:false:0:Underground:false:0:0:false
+waypoint:Exit:⁵:210:37:-870:8:false:0:Underground:false:0:0:false
+waypoint:Exit:⁵:231:37:-562:8:false:0:Underground:false:0:0:false
+waypoint:Mining Spot:═:100:27:308:8:false:0:Underground:false:0:0:false
+waypoint:Mining Spot:═:52:27:353:8:false:0:Underground:false:0:0:false
+waypoint:Metal Dragons Task Area:▐:-911:18:798:8:false:0:Underground:false:0:0:false
+waypoint:Agility Shortcut - Level 56:╨:-905:16:487:8:false:0:Underground:false:0:0:false
+waypoint:Agility Shortcut - Level 56:╨:-945:17:438:8:false:0:Underground:false:0:0:false
+waypoint:Agility Shortcut - Level 22:╨:-1035:18:375:8:false:0:Underground:false:0:0:false
+waypoint:Agility Shortcut - Level 87:╨:-982:20:330:8:false:0:Underground:false:0:0:false
+waypoint:Exit:⁵:-848:33:387:8:false:0:Underground:false:0:0:false
+waypoint:Combat instructor:Ñ:209:44:605:0:false:0:Underground:false:0:0:false
+waypoint:Anvil:╓:243:47:660:8:false:0:Underground:false:0:0:false
+waypoint:Furnace:┌:256:47:671:8:false:0:Underground:false:0:0:false
+waypoint:Furnace:┌:256:47:665:8:false:0:Underground:false:0:0:false
+waypoint:Tutorial Island Cave Exit:⁵:201:47:659:8:false:0:Underground:false:0:0:false
+waypoint:#37 Karim Al Kharid Kabab Shop:ぅ:751:66:292:8:false:0:Easy Clues:false:0:0:false
+waypoint:#36 Father Aereck Lumbridge:と:687:64:228:8:false:0:Easy Clues:false:0:0:false
+waypoint:#35 Wizard Sedridor Wizard tower:で:284:49:376:8:false:0:Easy Clues:false:0:0:false
+waypoint:#34 Duke Horacio Lumbridge:て:576:71:185:8:false:0:Easy Clues:false:0:0:false
+waypoint:#33 Reldo Varrock Castle:づ:569:62:-639:8:false:0:Easy Clues:false:0:0:false
+waypoint:#32 Doric Taverly Gate:つ:-207:61:-508:8:false:0:Easy Clues:false:0:0:false
+waypoint:#31 Thurgo Mudskipper Point:っ:-87:65:408:8:false:0:Easy Clues:false:0:0:false
+waypoint:#30 Sir Vyvin Falador Castle:ぢ:-112:79:-174:8:false:0:Easy Clues:false:0:0:false
+waypoint:#29 Hetty Rimmington:ち:-162:63:239:8:false:0:Easy Clues:false:0:0:false
+waypoint:#28 Customs Officer Karamja :だ:-204:65:415:8:false:0:Easy Clues:false:0:0:false
+waypoint:#27 Aubury Varrock Magic Shop:た:708:63:-358:8:false:0:Easy Clues:false:0:0:false
+waypoint:#26 Seaman Lorris Port Sarim:ぞ:48:66:247:8:false:0:Easy Clues:false:0:0:false
+waypoint:#25 Joe Draynor Jail:そ:309:63:133:8:false:0:Easy Clues:false:0:0:false
+waypoint:#24 Lady Keli Draynor Jail:ぜ:321:63:133:8:false:0:Easy Clues:false:0:0:false
+waypoint:#23 Leela East Of Draynor:せ:296:65:65:8:false:0:Easy Clues:false:0:0:false
+waypoint:#22 Ned Draynor:ず:237:63:78:8:false:0:Easy Clues:false:0:0:false
+waypoint:#21 Aggie Draynor:す:202:62:70:8:false:0:Easy Clues:false:0:0:false
+waypoint:#20 Falador Castle:じ:-132:68:-174:8:false:0:Easy Clues:false:0:0:false
+waypoint:#19 Krystilia Edgeville:し:264:63:-695:8:false:0:Easy Clues:false:0:0:false
+waypoint:#18 Barbarian Village N/W Corner:ご:134:68:-477:8:false:0:Easy Clues:false:0:0:false
+waypoint:#17 East Lumbridge Cow Pen:こ:687:63:-35:8:false:0:Easy Clues:false:0:0:false
+waypoint:#16 East Of Draynor:げ:357:65:64:8:false:0:Easy Clues:false:0:0:false
+waypoint:#15 North East Of GE:け:338:65:-648:8:false:0:Easy Clues:false:0:0:false
+waypoint:#14 South Varrock:ぐ:676:65:-192:8:false:0:Easy Clues:false:0:0:false
+waypoint:#13 West of East Lumby Cow Pen:く:660:65:18:8:false:0:Easy Clues:false:0:0:false
+waypoint:#12 West of Al Kharid Mine:き:809:65:-46:8:false:0:Easy Clues:false:0:0:false
+waypoint:#11 South East of Al Kharid:ぁ:930:67:390:8:false:0:Easy Clues:false:0:0:false
+waypoint:#10 South Falador:が:4:65:-18:8:false:0:Easy Clues:false:0:0:false
+waypoint:#9 Rimmington Mine:か:-131:65:179:8:false:0:Easy Clues:false:0:0:false
+waypoint:#8 Karamja:お:-258:65:395:8:false:0:Easy Clues:false:0:0:false
+waypoint:#7 South Port Sarim:ぉ:4:72:355:8:false:0:Easy Clues:false:0:0:false
+waypoint:#6 West of Champions Guild:え:430:65:-243:8:false:0:Easy Clues:false:0:0:false
+waypoint:#5 West Of Lumbridge Castle:ぇ:459:63:217:8:false:0:Easy Clues:false:0:0:false
+waypoint:#4 South East Lumbridge Mine:う:623:65:399:8:false:0:Easy Clues:false:0:0:false
+waypoint:#3 North East of Lumby Castle:ぃ:548:65:84:8:false:0:Easy Clues:false:0:0:false
+waypoint:#2 Varrock Teleport:あ:612:65:-410:8:false:0:Easy Clues:false:0:0:false
+waypoint:#1 South Of GE:Ö:455:63:-541:8:false:0:Easy Clues:false:0:0:false

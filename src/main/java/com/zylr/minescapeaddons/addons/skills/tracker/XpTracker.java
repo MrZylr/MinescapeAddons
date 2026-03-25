@@ -1,14 +1,16 @@
 package com.zylr.minescapeaddons.addons.skills.tracker;
 
+
+import com.zylr.minescapeaddons.addons.MinescapeAddons;
 import com.zylr.minescapeaddons.addons.skills.Skill;
-import com.zylr.minescapeaddons.addons.skills.tracker.timers.XpTimer;
+import com.zylr.minescapeaddons.addons.skills.SkillType;
 
 import java.text.NumberFormat;
 
 public class XpTracker {
 
-    private int xp;
-    private int skillXp;
+    private double xp;
+    private double skillXp;
     double hourlyXp;
     private XpTimer xpTimer;
     private Skill skill;
@@ -28,13 +30,13 @@ public class XpTracker {
     }
 
     public String getExpPerHour() {
-        return skill.getName() + " exp/Hour: " + NumberFormat.getIntegerInstance().format(hourlyXp);
+        return NumberFormat.getIntegerInstance().format(hourlyXp);
     }
     public String getTotalXp() {
-        return skill.getName() + " exp Gained: " + NumberFormat.getIntegerInstance().format(xp);
+        return NumberFormat.getIntegerInstance().format(xp);
     }
     public String getSessionTime() {
-        return "Session Time: " + String.format("%02d", xpTimer.getHours()) + ":" +
+        return String.format("%02d", xpTimer.getHours()) + ":" +
                 String.format("%02d", xpTimer.getMinutes()) + ":" + String.format("%02d", xpTimer.getSeconds());
     }
     public Skill getSkill() {
@@ -45,9 +47,10 @@ public class XpTracker {
         xpTimer.startTimer();
     }
 
-    public void setXp(int xp) {
+    public void setXp(double xp) {
         if (xpTimer.isPaused())
             return;
+        //System.out.println(this.xp + " : " + xp);
         this.xp = xp + this.xp;
         if (xpTimer.getStartTime() == 0)
             xpTimer.startTimer();
@@ -61,5 +64,25 @@ public class XpTracker {
 
     public XpTimer getTimer() {
         return xpTimer;
+    }
+
+    public static void pauseAllTrackers() {
+        for (SkillType skillType : SkillType.values()) {
+            Skill skill = MinescapeAddons.skills.get(skillType);
+            if (!skill.getTracker().getTimer().isPaused() && skill.getTracker().getTimer().hasStarted()) {
+                skill.getTracker().getTimer().pause();
+                System.out.println("Paused tracker for skill: " + skill.getType().name());
+            }
+        }
+    }
+
+    public static void unpauseAllTrackers() {
+        for (SkillType skillType : SkillType.values()) {
+            Skill skill = MinescapeAddons.skills.get(skillType);
+            if (skill.getTracker().getTimer().isPaused() && skill.getTracker().getTimer().hasStarted()) {
+                skill.getTracker().getTimer().unpause();
+                System.out.println("Unpaused tracker for skill: " + skill.getType().name());
+            }
+        }
     }
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "msaddon:item/robes/purple/purple_robe_top"
+  }
+}

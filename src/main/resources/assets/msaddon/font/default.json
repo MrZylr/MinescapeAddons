@@ -1,0 +1,19 @@
+{
+    "providers": [
+        {
+            "type": "reference",
+            "id": "msaddon:include/space"
+        },
+        {
+            "type": "reference",
+            "id": "msaddon:include/default",
+            "filter": {
+                "uniform": false
+            }
+        },
+        {
+            "type": "reference",
+            "id": "msaddon:include/unifont"
+        }
+    ]
+}

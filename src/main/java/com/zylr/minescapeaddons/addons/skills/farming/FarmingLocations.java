@@ -17,11 +17,11 @@ public enum FarmingLocations {
     }}),
     EAST_CATHERBY                       (-474, -478, -451, -455, true, new EnumMap(FarmingPatchLocations.class) {{
         put(FarmingPatchLocations.EAST_CATHERBY_FRUIT_TREE,
-                new FarmingPatch("Tree", PatchType.FRUIT_TREE, null, new int[] {-474, -478, -451, -455}, FarmingPatchLocations.EAST_CATHERBY_FRUIT_TREE, true));
+                new FarmingPatch("Fruit Tree", PatchType.FRUIT_TREE, null, new int[] {-474, -478, -451, -455}, FarmingPatchLocations.EAST_CATHERBY_FRUIT_TREE, true));
     }}),
-    EAST_PORT_SARIM                     (-99999, -99999, -99999, -99999, false, new EnumMap(FarmingPatchLocations.class) {{
+    EAST_PORT_SARIM                     (120, 116, 74, 70, true, new EnumMap(FarmingPatchLocations.class) {{
         put(FarmingPatchLocations.EAST_PORT_SARIM_SPIRIT_TREE,
-                new FarmingPatch("Spirit Tree", PatchType.SPIRIT_TREE, null, new int[] {-99999, -99999, -99999, -99999}, FarmingPatchLocations.EAST_PORT_SARIM_SPIRIT_TREE, false));
+                new FarmingPatch("Spirit Tree", PatchType.SPIRIT_TREE, null, new int[] {120, 116, 74, 70}, FarmingPatchLocations.EAST_PORT_SARIM_SPIRIT_TREE, false));
     }}),
     FALADOR_PARK                        (-59, -63, -267, -271, true, new EnumMap(FarmingPatchLocations.class) {{
         put(FarmingPatchLocations.FALADOR_PARK_TREE,
@@ -85,21 +85,21 @@ public enum FarmingLocations {
         put(FarmingPatchLocations.LLETYA_FRUIT_TREE,
                 new FarmingPatch("Fruit Tree", PatchType.FRUIT_TREE, null, new int[] {-99999, -99999, -99999, -99999}, FarmingPatchLocations.LLETYA_FRUIT_TREE, false));
     }}),
-    NORTH_ARDOUGNE                      (-99999, -99999, -99999, -99999, false, new EnumMap(FarmingPatchLocations.class) {{
+    NORTH_ARDOUGNE                      (-1045, -1076, -259, -291, true, new EnumMap(FarmingPatchLocations.class) {{
         put(FarmingPatchLocations.NORTH_ARDOUGNE_ALLOTMENT_1,
-                new FarmingPatch("Allotment 1", PatchType.ALLOTMENT, null, new int[] {-99999, -99999, -99999, -99999}, FarmingPatchLocations.NORTH_ARDOUGNE_ALLOTMENT_1, false));
+                new FarmingPatch("Allotment 1", PatchType.ALLOTMENT, null, new int[] {-1046, -1075, -260, -265, -1070, -1075, -260, -268}, FarmingPatchLocations.NORTH_ARDOUGNE_ALLOTMENT_1, false));
         put(FarmingPatchLocations.NORTH_ARDOUGNE_ALLOTMENT_2,
-                new FarmingPatch("Allotment 2", PatchType.ALLOTMENT, null, new int[] {-99999, -99999, -99999, -99999}, FarmingPatchLocations.NORTH_ARDOUGNE_ALLOTMENT_2, false));
+                new FarmingPatch("Allotment 2", PatchType.ALLOTMENT, null, new int[] {-1046, -1075, -285, -290, -1070, -1075, -282, -290}, FarmingPatchLocations.NORTH_ARDOUGNE_ALLOTMENT_2, false));
         put(FarmingPatchLocations.NORTH_ARDOUGNE_FLOWER,
-                new FarmingPatch("Flower", PatchType.FLOWER, null, new int[] {-99999, -99999, -99999, -99999}, FarmingPatchLocations.NORTH_ARDOUGNE_FLOWER, false));
+                new FarmingPatch("Flower", PatchType.FLOWER, null, new int[] {-1059, -1063, -273, -277}, FarmingPatchLocations.NORTH_ARDOUGNE_FLOWER, false));
         put(FarmingPatchLocations.NORTH_ARDOUGNE_HERB,
-                new FarmingPatch("Herb", PatchType.HERB, null, new int[] {-99999, -99999, -99999, -99999}, FarmingPatchLocations.NORTH_ARDOUGNE_HERB, false));
+                new FarmingPatch("Herb", PatchType.HERB, null, new int[] {-1047, -1051, -273, -277}, FarmingPatchLocations.NORTH_ARDOUGNE_HERB, false));
     }}),
-    NORTH_BRIMHAVEN                     (-99999, -99999, -99999, -99999, false, new EnumMap(FarmingPatchLocations.class) {{
+    NORTH_BRIMHAVEN                     (-650, -767, 245, 212, true, new EnumMap(FarmingPatchLocations.class) {{
         put(FarmingPatchLocations.NORTH_BRIMHAVEN_FRUIT_TREE,
-                new FarmingPatch("Fruit Tree", PatchType.FRUIT_TREE, null, new int[] {-99999, -99999, -99999, -99999}, FarmingPatchLocations.NORTH_BRIMHAVEN_FRUIT_TREE, false));
+                new FarmingPatch("Fruit Tree", PatchType.FRUIT_TREE, null, new int[] {-763, -767, 216, 212}, FarmingPatchLocations.NORTH_BRIMHAVEN_FRUIT_TREE, false));
         put(FarmingPatchLocations.NORTH_BRIMHAVEN_SPIRIT_TREE,
-                new FarmingPatch("Spirit Tree", PatchType.SPIRIT_TREE, null, new int[] {-99999, -99999, -99999, -99999}, FarmingPatchLocations.NORTH_BRIMHAVEN_SPIRIT_TREE, false));
+                new FarmingPatch("Spirit Tree", PatchType.SPIRIT_TREE, null, new int[] {-650, -654, 245, 241}, FarmingPatchLocations.NORTH_BRIMHAVEN_SPIRIT_TREE, false));
     }}), // -615 -558    -644 -527
     NORTH_CATHERBY                      (-615, -644, -528, -558, true, new EnumMap(FarmingPatchLocations.class) {{
         put(FarmingPatchLocations.NORTH_CATHERBY_ALLOTMENT_1,
@@ -137,9 +137,9 @@ public enum FarmingLocations {
         put(FarmingPatchLocations.RIMMINGTON_BUSH,
                 new FarmingPatch("Bush", PatchType.BUSH, null, new int[] {-253, -257, 189, 185}, FarmingPatchLocations.RIMMINGTON_BUSH, true));
     }}),
-    SOUTH_ARDOUGNE                      (-99999, -99999, -99999, -99999, false, new EnumMap(FarmingPatchLocations.class) {{
+    SOUTH_ARDOUGNE                      (-1207, -1211, 180, 176, true, new EnumMap(FarmingPatchLocations.class) {{
         put(FarmingPatchLocations.SOUTH_ARDOUGNE_BUSH,
-                new FarmingPatch("Bush", PatchType.BUSH, null, new int[] {-99999, -99999, -99999, -99999}, FarmingPatchLocations.SOUTH_ARDOUGNE_BUSH, false));
+                new FarmingPatch("Bush", PatchType.BUSH, null, new int[] {-1207, -1211, 180, 176}, FarmingPatchLocations.SOUTH_ARDOUGNE_BUSH, false));
     }}),
     SOUTH_FALADOR                       (127, 101, -76, -102, true, new EnumMap(FarmingPatchLocations.class) {{
         put(FarmingPatchLocations.SOUTH_FALADOR_ALLOTMENT_1,
@@ -169,9 +169,9 @@ public enum FarmingLocations {
         put(FarmingPatchLocations.SOUTHWEST_HOSIDIUS_HERB,
                 new FarmingPatch("Herb", PatchType.HERB, null, new int[] {-99999, -99999, -99999, -99999}, FarmingPatchLocations.SOUTHWEST_HOSIDIUS_HERB, false));
     }}),
-    TAVERLY                             (-283, -288, -418, -423, true, new EnumMap(FarmingPatchLocations.class) {{
-        put(FarmingPatchLocations.TAVERLY_TREE,
-                new FarmingPatch("Tree", PatchType.TREE, null, new int[] {-283, -288, -418, -423}, FarmingPatchLocations.TAVERLY_TREE, true));
+    TAVERLEY(-283, -288, -418, -423, true, new EnumMap(FarmingPatchLocations.class) {{
+        put(FarmingPatchLocations.TAVERLEY_TREE,
+                new FarmingPatch("Tree", PatchType.TREE, null, new int[] {-283, -288, -418, -423}, FarmingPatchLocations.TAVERLEY_TREE, true));
     }}),
     TREE_GNOME_STRONGHOLD               (-99999, -99999, -99999, -99999, false, new EnumMap(FarmingPatchLocations.class) {{
         put(FarmingPatchLocations.TREE_GNOME_STRONGHOLD_FRUIT_TREE,
@@ -203,27 +203,27 @@ public enum FarmingLocations {
         put(FarmingPatchLocations.WEST_LUMBRIDGE_TREE,
                 new FarmingPatch("Tree", PatchType.TREE, null, new int[] {534, 530, 149, 145}, FarmingPatchLocations.WEST_LUMBRIDGE_TREE, true));
     }}),
-    WEST_PORT_PHASMATYS                 (-99999, -99999, -99999, -99999, false, new EnumMap(FarmingPatchLocations.class) {{
+    WEST_PORT_PHASMATYS                 (1775, 1746, -715, -745, true, new EnumMap(FarmingPatchLocations.class) {{
         put(FarmingPatchLocations.WEST_PORT_PHASMATYS_ALLOTMENT_1,
-                new FarmingPatch("Allotment 1", PatchType.ALLOTMENT, null, new int[] {-99999, -99999, -99999, -99999}, FarmingPatchLocations.WEST_PORT_PHASMATYS_ALLOTMENT_1, false));
+                new FarmingPatch("Allotment 1", PatchType.ALLOTMENT, null, new int[] {1751, 1746, -727, -744, 1760, 1746, -739, -744}, FarmingPatchLocations.WEST_PORT_PHASMATYS_ALLOTMENT_1, true));
         put(FarmingPatchLocations.WEST_PORT_PHASMATYS_ALLOTMENT_2,
-                new FarmingPatch("Allotment 2", PatchType.ALLOTMENT, null, new int[] {-99999, -99999, -99999, -99999}, FarmingPatchLocations.WEST_PORT_PHASMATYS_ALLOTMENT_2, false));
+                new FarmingPatch("Allotment 2", PatchType.ALLOTMENT, null, new int[] {1775, 1770, -715, -732, 1775, 1761, -715, -720}, FarmingPatchLocations.WEST_PORT_PHASMATYS_ALLOTMENT_2, true));
         put(FarmingPatchLocations.WEST_PORT_PHASMATYS_FLOWER,
-                new FarmingPatch("Flower", PatchType.FLOWER, null, new int[] {-99999, -99999, -99999, -99999}, FarmingPatchLocations.WEST_PORT_PHASMATYS_FLOWER, false));
+                new FarmingPatch("Flower", PatchType.FLOWER, null, new int[] {1762, 1758, -728, -732}, FarmingPatchLocations.WEST_PORT_PHASMATYS_FLOWER, true));
         put(FarmingPatchLocations.WEST_PORT_PHASMATYS_HERB,
-                new FarmingPatch("Herb", PatchType.HERB, null, new int[] {-99999, -99999, -99999, -99999}, FarmingPatchLocations.WEST_PORT_PHASMATYS_HERB, false));
+                new FarmingPatch("Herb", PatchType.HERB, null, new int[] {1775, 1771,-741 , -745}, FarmingPatchLocations.WEST_PORT_PHASMATYS_HERB, true));
     }}),
-    WEST_TREE_GNOME_MAZE                (-99999, -99999, -99999, -99999, false, new EnumMap(FarmingPatchLocations.class) {{
+    WEST_TREE_GNOME_MAZE                (-1594, -1598, 316, 312, true, new EnumMap(FarmingPatchLocations.class) {{
         put(FarmingPatchLocations.WEST_TREE_GNOME_MAZE_FRUIT_TREE,
-                new FarmingPatch("Fruit Tree", PatchType.FRUIT_TREE, null, new int[] {-99999, -99999, -99999, -99999}, FarmingPatchLocations.WEST_TREE_GNOME_MAZE_FRUIT_TREE, false));
+                new FarmingPatch("Fruit Tree", PatchType.FRUIT_TREE, null, new int[] {-1594, -1598, 316, 312}, FarmingPatchLocations.WEST_TREE_GNOME_MAZE_FRUIT_TREE, false));
     }}),
     VARROCK_CASTLE                      (632, 628, -529, -533, true, new EnumMap(FarmingPatchLocations.class) {{
         put(FarmingPatchLocations.VARROCK_CASTLE_TREE,
                 new FarmingPatch("Tree", PatchType.TREE, null, new int[] {632, 628, -529, -533}, FarmingPatchLocations.VARROCK_CASTLE_TREE, true));
     }}),
-    YANILLE                             (-99999, -99999, -99999, -99999, false, new EnumMap(FarmingPatchLocations.class) {{
+    YANILLE                             (-1330, -1341, 546, 535, true, new EnumMap(FarmingPatchLocations.class) {{
         put(FarmingPatchLocations.YANILLE_HOPS,
-                new FarmingPatch("Hops", PatchType.HOPS, null, new int[] {-99999, -99999, -99999, -99999}, FarmingPatchLocations.YANILLE_HOPS, false));
+                new FarmingPatch("Hops", PatchType.HOPS, null, new int[] {-1594, -1598, 316, 312}, FarmingPatchLocations.YANILLE_HOPS, false));
     }});
 
     public int maxX;

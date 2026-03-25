@@ -1,7 +1,8 @@
 package com.zylr.minescapeaddons.addons.skills;
 
-import com.zylr.minescapeaddons.addons.Main;
-import com.zylr.minescapeaddons.addons.util.files.PersistenceFile;
+
+import com.zylr.minescapeaddons.addons.MinescapeAddons;
+import com.zylr.minescapeaddons.addons.properties.PersistenceFile;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +15,7 @@ public class PersistentExp {
 
         // Add all exp to list
         for (SkillType skillType : SkillType.values()) {
-            epxList.add(skillType.toString() + ":" +  Main.skills.get(skillType).getExp());
+            epxList.add(skillType.toString() + ":" +  MinescapeAddons.skills.get(skillType).getExp());
         }
 
         PersistenceFile.writeFile(PersistenceFile.SKILLXPFILE.getPath(), epxList);
@@ -45,7 +46,7 @@ public class PersistentExp {
                 return;
             }
 
-            Main.skills.get(skillType).setupLevel(exp);
+            MinescapeAddons.skills.get(skillType).setupLevel(exp);
         }
     }
 }

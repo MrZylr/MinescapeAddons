@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "msaddon:item/robes/monks/zamorak_monks_robe_chestplate"
+  }
+}

@@ -1,6 +1,6 @@
 package com.zylr.minescapeaddons.addons.skills.farming;
 
-import com.zylr.minescapeaddons.addons.util.Timer;
+import com.zylr.minescapeaddons.addons.utils.Timer;
 
 public class FarmingTimer extends Timer {
 
@@ -63,11 +63,11 @@ public class FarmingTimer extends Timer {
 
             // Completed timer output
             if (completed)
-                timeLeft = stage + "/" + seed.stages + " -- " + "Completed";
+                this.timeLeft = stage + "/" + seed.stages + " -- " + "Completed";
         } else
             this.timeLeft = "0/0 -- --:--:--";
 
-        return timeLeft;
+        return this.timeLeft;
     }
 
     public SeedType getSeed() {

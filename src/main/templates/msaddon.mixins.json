@@ -1,0 +1,31 @@
+{
+  "required": true,
+  "package": "com.zylr.minescapeaddons.addons.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "onUseMixin",
+    "ContainerEventHandlerMixin",
+    "ScoreboardMixin",
+    "ResourcePackMixin",
+    "ResourcePackRepositoryMixin",
+    "ChatComponentMixin",
+    "GuiMixin",
+    "HeartTypeInvoker",
+    "MinecraftMixin",
+    "PauseScreenMixin",
+    "PlayerMixin",
+    "ArmorStandRendererMixin",
+    "ArmorStandMixin",
+    "SuggestionsListMixin",
+    "CommandSuggestionsAccessor",
+    "CameraMixin",
+    "GameRendererMixin",
+    "RenderTargetMixin",
+    "BossHealthOverlayMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

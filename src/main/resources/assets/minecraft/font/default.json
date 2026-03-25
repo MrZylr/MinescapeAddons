@@ -1,0 +1,1017 @@
+{
+    "providers": [
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/bank_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["磨"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/dungeon_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["▐"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/fishing_spot_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["▀"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/rare_trees_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["▄"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/slayer_master_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["传"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/furnace_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["┌"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/helmet_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["┘"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/pub_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╪"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/body_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╫"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/anvil_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╓"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/quest_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╒"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/mind_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╘"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/altar_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╙"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/water_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╥"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/store_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╤"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/portal_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╧"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/shortcut_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╨"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/range_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╬"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/mining_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["═"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/event_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╠"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/grand_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╦"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/magic_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╩"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/trans_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╔"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/farming_patch_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╚"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/sword_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╟"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/farming_patch_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╚"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/sword_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╟"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/clothes_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╞"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/clothes_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╞"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/ranged_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["┼"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/staff_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["├"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/farming_patch_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╚"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/sword_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╟"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/clothes_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╞"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/farmingrelated_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["┬"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/farming_patch_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╚"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/sword_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╟"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/clothes_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╞"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/dairycow_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["┴"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/axe_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["└"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/spinning_wheel_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["┐"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/windmill_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╛"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/wateraltar_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╜"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/wine_stall_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╝"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/food_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╗"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/fishing_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["㊎"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/jewellery_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╣"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/crafting_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╕"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/air_altar_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╖"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/pottery_wheel_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╢"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/tanner_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["╡"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/mace_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["┤"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/shield_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["│"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/chain_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["▓"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/herb_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["▒"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/gem_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["░"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/scim_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["»"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/legs_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["«"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/skirt_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["¡"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/kebab_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["¼"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/black_demon_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["½"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/green_dragon_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["¬"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/blue_dragon_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["⌐"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/black_dragon_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["¿"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/red_dragon_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["º"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/hairdresser_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["ª"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/task_master_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["Ñ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/farming_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["㊊"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/garden_supplier_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["Æ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/loom_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["É"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/dye_trader_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["Å"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/junk_checker_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["Ä"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/rope_trader_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["Γ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/makeover_mage_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["Σ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/candle_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["Φ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/silk_trader_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["Θ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/minigame_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["Ω"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/fire_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["∞"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/apothecary_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["∩"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/chaos_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["≤"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/combat_training_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["⌠"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/agility_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["⌡"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/news_trader_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["÷"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/fur_trader_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["≈"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/tea_trader_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["宿"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/estate_agent_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["∙"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/hunter_training_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["·"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/fairy_ring_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["√"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/obelisk_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["ⁿ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/bear_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["²"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/mammoth_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["⌂"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/elder_druid_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["傳"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/camelot_icon.png",
+            "ascent": 10,
+            "height": 15,
+            "chars": ["㊋"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/flax_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["㊌"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/water_staff_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["㊍"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c1_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["Ö"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c2_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["あ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c3_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["ぃ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c4_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["う"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c5_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["ぇ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c6_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["え"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c7_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["ぉ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c8_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["お"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c9_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["か"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c10_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["が"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c11_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["ぁ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c12_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["き"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c13_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["く"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c14_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["ぐ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c15_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["け"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c16_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["げ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c17_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["こ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c18_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["ご"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c19_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["し"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c20_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["じ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c21_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["す"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c22_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["ず"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c23_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["せ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c24_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["ぜ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c25_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["そ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c26_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["ぞ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c27_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["た"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c28_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["だ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c29_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["ち"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c30_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["ぢ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c31_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["っ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c32_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["つ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c33_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["づ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c34_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["て"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c35_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["で"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c36_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["と"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/c37_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["ぅ"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/snape_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["㊞"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/law_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["㊟"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/taxidermist_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["说"]
+        },       
+	{
+            "type": "bitmap",
+            "file": "minecraft:custom/pfmagic_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["资"]
+        },
+	{
+            "type": "bitmap",
+            "file": "minecraft:custom/pfmelee_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["在"]
+        },
+	{
+            "type": "bitmap",
+            "file": "minecraft:custom/pfrange_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["何"]
+        },
+	{
+            "type": "bitmap",
+            "file": "minecraft:custom/silvershop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["短"]
+        },
+	{
+            "type": "bitmap",
+            "file": "minecraft:custom/spiceshop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["信"]
+        },
+	{
+            "type": "bitmap",
+            "file": "minecraft:custom/pet_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["课"]
+        },
+	{
+            "type": "bitmap",
+            "file": "minecraft:custom/amulet_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["結"]
+        },
+	{
+            "type": "bitmap",
+            "file": "minecraft:custom/sandpit_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["³"]
+        },	{
+            "type": "bitmap",
+            "file": "minecraft:custom/sawmill_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["⁴"]
+        },	{
+            "type": "bitmap",
+            "file": "minecraft:custom/map_link_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["⁵"]
+        }
+    ]
+}

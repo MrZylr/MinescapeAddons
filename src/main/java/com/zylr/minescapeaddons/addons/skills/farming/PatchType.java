@@ -1,7 +1,6 @@
 package com.zylr.minescapeaddons.addons.skills.farming;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-import com.zylr.minescapeaddons.addons.util.files.PersistenceFile;
+import com.zylr.minescapeaddons.addons.properties.PersistenceFile;
 
 import java.util.ArrayList;
 import java.util.List;

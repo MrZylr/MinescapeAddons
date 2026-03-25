@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "msaddon:item/iron/iron_armor_trim_skirt_leggings"
+  }
+}
