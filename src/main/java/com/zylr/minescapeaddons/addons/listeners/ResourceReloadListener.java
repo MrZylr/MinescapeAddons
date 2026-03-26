@@ -1,6 +1,7 @@
 package com.zylr.minescapeaddons.addons.listeners;
 
 import com.zylr.minescapeaddons.addons.MinescapeAddons;
+import com.zylr.minescapeaddons.addons.annotations.Listener;
 import com.zylr.minescapeaddons.addons.gui.widgets.minimap.MinimapWidget;
 import net.minecraft.client.Minecraft;
 import net.minecraft.server.packs.resources.ResourceManager;
@@ -13,6 +14,7 @@ import org.slf4j.Logger;
  * Listens for resource pack reloads and level changes to clear minimap color caches.
  * This ensures the minimap displays the correct colors from server resource packs.
  */
+@Listener
 public class ResourceReloadListener implements ResourceManagerReloadListener {
     private static final Logger LOGGER = MinescapeAddons.LOGGER;
     private static long lastClearTime = 0;

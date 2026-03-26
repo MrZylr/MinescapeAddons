@@ -1,20 +1,14 @@
 package com.zylr.minescapeaddons.addons;
 
-import com.mojang.blaze3d.platform.IconSet;
 import com.mojang.logging.LogUtils;
+import com.zylr.minescapeaddons.addons.annotations.Listener;
 import com.zylr.minescapeaddons.addons.events.ModClientEventbusEvents;
 import com.zylr.minescapeaddons.addons.gui.huds.Hud;
 import com.zylr.minescapeaddons.addons.gui.huds.resizableclassic.ResizableClassic;
 import com.zylr.minescapeaddons.addons.gui.huds.resizableclassic.ResizableClassicChildren;
-import com.zylr.minescapeaddons.addons.gui.renderers.AgilityCourseHighlights;
-import com.zylr.minescapeaddons.addons.gui.renderers.MobHighlight;
 import com.zylr.minescapeaddons.addons.gui.renderers.RenderThurgo;
 import com.zylr.minescapeaddons.addons.gui.widgets.CustomScoreboard;
-import com.zylr.minescapeaddons.addons.gui.widgets.chat.ClientChatInterceptor;
-import com.zylr.minescapeaddons.addons.gui.widgets.minimap.RunEnergyOrb;
-import com.zylr.minescapeaddons.addons.gui.widgets.minimap.SprintInterceptor;
 import com.zylr.minescapeaddons.addons.item.ModItems;
-import com.zylr.minescapeaddons.addons.listeners.*;
 import com.zylr.minescapeaddons.addons.properties.MainProperties;
 import com.zylr.minescapeaddons.addons.properties.PersistenceFile;
 import com.zylr.minescapeaddons.addons.skills.Skill;
@@ -27,13 +21,17 @@ import net.minecraft.world.scores.Scoreboard;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import org.objectweb.asm.Type;
 import org.slf4j.Logger;
 
 import java.io.*;
+import java.lang.annotation.ElementType;
+import java.lang.reflect.Constructor;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -83,31 +81,13 @@ public class MinescapeAddons {
         modEventBus.addListener(this::commonSetup);
         ModItems.REGISTRY.register(modEventBus);
 
-        // Register ourselves for server and other game events we are interested in.
-        // Note that this is necessary if and only if we want *this* class (MinescapeAddons) to respond directly to events.
-        // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
+        // Register this separately because the instance already exists. We could make these all singleton pattern, with an interface implementation to return the instance, but I dont wanna.
         NeoForge.EVENT_BUS.register(this);
-        NeoForge.EVENT_BUS.register(new RenderHudElements());
-        NeoForge.EVENT_BUS.register(new OpenContainerListener());
-        NeoForge.EVENT_BUS.register(new KeyBindings());
-        NeoForge.EVENT_BUS.register(new InputListener());
-        NeoForge.EVENT_BUS.register(new AgilityCourseHighlights());
-        NeoForge.EVENT_BUS.register(new ChatListener());
-        NeoForge.EVENT_BUS.register(new PlayerRendererListener());
-        NeoForge.EVENT_BUS.register(new ArmorStandListener());
-        NeoForge.EVENT_BUS.register(new BossbarListener());
-        NeoForge.EVENT_BUS.register(new TooltipRenderListener());
-        NeoForge.EVENT_BUS.register(new MobHighlight());
-        NeoForge.EVENT_BUS.register(new BlockClickListener());
-        NeoForge.EVENT_BUS.register(new ClientPlayerNetworkListener());
-        NeoForge.EVENT_BUS.register(new ClientChatInterceptor());
-        NeoForge.EVENT_BUS.register(new ResourceReloadListener());
-        NeoForge.EVENT_BUS.register(new SprintInterceptor());
-        NeoForge.EVENT_BUS.register(new ViewportAdjustmentListener());
-        NeoForge.EVENT_BUS.register(new ClientTickListener());
+
+        RegisterEvents();
+
         modEventBus.addListener(ModClientEventbusEvents::onRegisterClientExtensions);
         modEventBus.addListener(ModClientEventbusEvents::onRegisterClientReloadListeners);
-
 
         // Populate Skills
         int i = 0;
@@ -192,6 +172,26 @@ public class MinescapeAddons {
         }
     }
 
+    private void RegisterEvents() {
+        ModList.get().getAllScanData().forEach(scanData -> {
+            scanData.getAnnotatedBy(Listener.class, ElementType.TYPE).forEach(annotationData -> {
+                Type type = annotationData.clazz();
+                try {
+                    Class<?> clazz = Class.forName(type.getClassName());
+                    if(clazz.isAnnotationPresent(Listener.class)) {
+                        Constructor<?> constructor = clazz.getConstructor();
+                        Object instance = constructor.newInstance();
+                        NeoForge.EVENT_BUS.register(instance);
+                    }
+                } catch (ReflectiveOperationException e) {
+                    //Soft fail in case some other mod the user is using somehow does some weird shit.
+                    LogUtils.getLogger().error("Exception for " + type.getClassName() + " : " + type.getDescriptor() + "\n" + e.getMessage());
+                } catch (NoClassDefFoundError ignored) { }
+
+            });
+        });
+    }
+
     public Font getCustomFont() {
         return this.runescapeSmallFont;
     }
@@ -204,5 +204,4 @@ public class MinescapeAddons {
     public void setScoreboard(CustomScoreboard scoreboard) { this.customScoreboard = scoreboard; }
     public RenderThurgo getThurgo() { return thurgo; }
     public void setThurgo(RenderThurgo thurgo) { this.thurgo = thurgo; }
-
 }

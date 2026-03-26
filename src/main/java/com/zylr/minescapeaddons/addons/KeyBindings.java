@@ -1,6 +1,7 @@
 package com.zylr.minescapeaddons.addons;
 
 import com.mojang.blaze3d.platform.InputConstants;
+import com.zylr.minescapeaddons.addons.annotations.Listener;
 import com.zylr.minescapeaddons.addons.gui.overrides.ZylrInventoryScreen;
 import com.zylr.minescapeaddons.addons.gui.screens.BrowserScreen;
 import com.zylr.minescapeaddons.addons.gui.screens.SettingsScreen;
@@ -13,7 +14,7 @@ import net.neoforged.jarjar.nio.util.Lazy;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import org.lwjgl.glfw.GLFW;
 
-
+@Listener
 public class KeyBindings {
     @SubscribeEvent
     public void onClientTick(ClientTickEvent.Post e) {

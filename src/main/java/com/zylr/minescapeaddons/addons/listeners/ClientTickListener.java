@@ -1,11 +1,13 @@
 package com.zylr.minescapeaddons.addons.listeners;
 
 import com.zylr.minescapeaddons.addons.Config;
+import com.zylr.minescapeaddons.addons.annotations.Listener;
 import net.minecraft.client.Minecraft;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import org.lwjgl.glfw.GLFW;
 
+@Listener
 public class ClientTickListener {
 
     @SubscribeEvent

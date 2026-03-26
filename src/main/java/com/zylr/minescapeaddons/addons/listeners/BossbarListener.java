@@ -2,12 +2,14 @@ package com.zylr.minescapeaddons.addons.listeners;
 
 import com.zylr.minescapeaddons.addons.Config;
 import com.zylr.minescapeaddons.addons.MinescapeAddons;
+import com.zylr.minescapeaddons.addons.annotations.Listener;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.client.event.CustomizeGuiOverlayEvent;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Listener
 public class BossbarListener {
     @SubscribeEvent
     public void onBossBarRender(CustomizeGuiOverlayEvent.BossEventProgress e) {

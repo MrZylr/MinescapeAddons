@@ -3,6 +3,7 @@ package com.zylr.minescapeaddons.addons.listeners;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.zylr.minescapeaddons.addons.Config;
 import com.zylr.minescapeaddons.addons.MinescapeAddons;
+import com.zylr.minescapeaddons.addons.annotations.Listener;
 import com.zylr.minescapeaddons.addons.gui.overrides.ZylrInventoryScreen;
 import com.zylr.minescapeaddons.addons.gui.widgets.BrowserWidget;
 import com.zylr.minescapeaddons.addons.gui.widgets.IWidget;
@@ -28,6 +29,7 @@ import org.slf4j.Logger;
 import java.awt.*;
 import java.util.List;
 
+@Listener
 public class OpenContainerListener {
     public static final Logger LOGGER  = MinescapeAddons.LOGGER;
     Minecraft mc = Minecraft.getInstance();

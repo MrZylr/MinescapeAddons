@@ -1,6 +1,7 @@
 package com.zylr.minescapeaddons.addons.listeners;
 
 import com.zylr.minescapeaddons.addons.Config;
+import com.zylr.minescapeaddons.addons.annotations.Listener;
 import com.zylr.minescapeaddons.addons.item.cape.skillcapes.SkillCapeLayer;
 import com.zylr.minescapeaddons.addons.skills.farming.FarmingUtil;
 import com.zylr.minescapeaddons.addons.utils.Util;
@@ -17,6 +18,7 @@ import net.neoforged.neoforge.client.event.RenderLivingEvent;
 
 import java.util.List;
 
+@Listener
 public class ArmorStandListener {
     public final static List<Integer> TRIM_VALUES = List.of(0, 1, 2, 90, 97, 101, 102, 103);
 

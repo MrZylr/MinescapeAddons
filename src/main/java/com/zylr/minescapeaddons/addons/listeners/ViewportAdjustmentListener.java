@@ -2,6 +2,7 @@ package com.zylr.minescapeaddons.addons.listeners;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.zylr.minescapeaddons.addons.Config;
+import com.zylr.minescapeaddons.addons.annotations.Listener;
 import net.minecraft.client.Minecraft;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.client.event.RenderLevelStageEvent;
@@ -16,6 +17,7 @@ import net.neoforged.neoforge.client.event.RenderLevelStageEvent;
  * entity positions, and block highlights all use the correct cropped projection.
  * RenderTargetMixin restores this same viewport after every bindWrite() reset.
  */
+@Listener
 public class ViewportAdjustmentListener {
 
     /** Must match GameRendererMixin.PANEL_WIDTH_GUI and RenderTargetMixin.PANEL_WIDTH_GUI. */
