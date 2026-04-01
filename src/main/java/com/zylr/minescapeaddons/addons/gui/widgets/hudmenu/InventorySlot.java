@@ -27,6 +27,12 @@ public class InventorySlot {
         this.slotIndex = slotIndex;
         this.x = x;
         this.y = y;
+        // Fix Index Out Of bounds when the offhand doesn't exist
+        if (mc.player.containerMenu.slots.size()-1 < slotIndex) {
+            this.itemStack = ItemStack.EMPTY;
+            this.stackSize = 0;
+            return;
+        }
         this.itemStack = mc.player.containerMenu.getSlot(this.slotIndex).getItem();
         List<Component> toolTipLines = this.itemStack.getTooltipLines(Item.TooltipContext.EMPTY, mc.player, TooltipFlag.NORMAL);
         if (toolTipLines.size() > 1) {

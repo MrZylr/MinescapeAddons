@@ -116,7 +116,7 @@ public class EquipmentWidget extends Widget {
         new InventorySlot(18, left + 45, top + 229).render(gui);
         new InventorySlot(19, left + 163, top + 55).render(gui);
         new InventorySlot(36, left + 45, top + 185).render(gui);
-        if (inv.slots.size() > 45) {
+        if (inv.slots.size()-1 > 45) {
             new InventorySlot(45, left + 191, top + 142).render(gui);
         }
         new InventorySlot(28, left + 191, top + 185).render(gui);
@@ -135,7 +135,7 @@ public class EquipmentWidget extends Widget {
         new InventorySlot(18, left + 11, top + 123).render(gui);
         new InventorySlot(19, left + 88, top + 12).render(gui);
         new InventorySlot(36, left + 11, top + 98).render(gui);
-        if (inv.slots.size() > 45) {
+        if (inv.slots.size()-1 > 45) {
             new InventorySlot(45, left + 191, top + 142).render(gui);
         }
         new InventorySlot(28, left + 106, top + 95).render(gui);
@@ -154,7 +154,7 @@ public class EquipmentWidget extends Widget {
         new InventorySlot(18, left + 7,  top + 94).render(gui);
         new InventorySlot(19, left + 67, top + 8).render(gui);
         new InventorySlot(36, left + 7,  top + 72).render(gui);
-        if (inv.slots.size() > 45) {
+        if (inv.slots.size()-1 > 45) {
             new InventorySlot(45, left + 191, top + 142).render(gui);
         }
         new InventorySlot(28, left + 83, top + 72).render(gui);
