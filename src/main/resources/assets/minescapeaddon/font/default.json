@@ -1,0 +1,19 @@
+{
+    "providers": [
+        {
+            "type": "reference",
+            "id": "minescapeaddon:include/space"
+        },
+        {
+            "type": "reference",
+            "id": "minescapeaddon:include/default",
+            "filter": {
+                "uniform": false
+            }
+        },
+        {
+            "type": "reference",
+            "id": "minescapeaddon:include/unifont"
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+	"required": true,
+	"package": "com.zylr.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [],
+	"client": [
+		"MinecraftAccessor",
+		"FontManagerAccessor",
+		"PackRepositoryMixin",
+		"MinecraftMixin",
+		"AbstractContainerScreenMixin",
+		"ContainerScreenMixin",
+		"OptionsScreenMixin",
+		"PauseScreenMixin",
+		"InGameHudMixin",
+		"ChatScreenMixin",
+		"CommandSuggestionsMixin",
+		"ChatComponentFocusedGraphicsAccessMixin",
+		"ChatComponentDrawingFocusedGraphicsAccessMixin",
+		"BossHealthOverlayMixin",
+		"HumanoidArmorLayerMixin",
+		"AvatarRenderStateMixin",
+		"AvatarRendererMixin",
+		"ArmorStandRendererMixin",
+		"EntityRenderDispatcherMixin",
+		"MouseMixin",
+		"SlotAccessor"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

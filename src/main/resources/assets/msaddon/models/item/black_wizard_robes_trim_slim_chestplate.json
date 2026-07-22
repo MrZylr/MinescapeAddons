@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "msaddon:item/robes/wizard/black_wizard_robe_t"
-  }
-}

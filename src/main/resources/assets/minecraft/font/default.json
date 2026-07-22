@@ -23,6 +23,20 @@
         },
         {
             "type": "bitmap",
+            "file": "minecraft:custom/mining_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["伥"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:custom/hunter_shop_icon.png",
+            "ascent": 7,
+            "height": 10,
+            "chars": ["亦"]
+        },
+        {
+            "type": "bitmap",
             "file": "minecraft:custom/rare_trees_icon.png",
             "ascent": 7,
             "height": 10,
@@ -944,57 +958,57 @@
             "ascent": 7,
             "height": 10,
             "chars": ["说"]
-        },       
-	{
+        },
+        {
             "type": "bitmap",
             "file": "minecraft:custom/pfmagic_icon.png",
             "ascent": 7,
             "height": 10,
             "chars": ["资"]
         },
-	{
+        {
             "type": "bitmap",
             "file": "minecraft:custom/pfmelee_icon.png",
             "ascent": 7,
             "height": 10,
             "chars": ["在"]
         },
-	{
+        {
             "type": "bitmap",
             "file": "minecraft:custom/pfrange_icon.png",
             "ascent": 7,
             "height": 10,
             "chars": ["何"]
         },
-	{
+        {
             "type": "bitmap",
             "file": "minecraft:custom/silvershop_icon.png",
             "ascent": 7,
             "height": 10,
             "chars": ["短"]
         },
-	{
+        {
             "type": "bitmap",
             "file": "minecraft:custom/spiceshop_icon.png",
             "ascent": 7,
             "height": 10,
             "chars": ["信"]
         },
-	{
+        {
             "type": "bitmap",
             "file": "minecraft:custom/pet_shop_icon.png",
             "ascent": 7,
             "height": 10,
             "chars": ["课"]
         },
-	{
+        {
             "type": "bitmap",
             "file": "minecraft:custom/amulet_shop_icon.png",
             "ascent": 7,
             "height": 10,
             "chars": ["結"]
         },
-	{
+        {
             "type": "bitmap",
             "file": "minecraft:custom/sandpit_icon.png",
             "ascent": 7,

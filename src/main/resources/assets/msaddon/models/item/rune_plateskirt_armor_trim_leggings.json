@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "msaddon:item/rune/rune_plateskirt_armor_trim_leggings"
-  }
-}

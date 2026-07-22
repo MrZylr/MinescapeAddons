@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "msaddon:item/robes/yellow/yellow_robe_top"
-  }
-}

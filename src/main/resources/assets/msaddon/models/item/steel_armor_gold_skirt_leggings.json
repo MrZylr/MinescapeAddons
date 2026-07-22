@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "msaddon:item/steel/steel_armor_gold_skirt_leggings"
-  }
-}
