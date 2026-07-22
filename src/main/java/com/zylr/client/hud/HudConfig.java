@@ -20,6 +20,7 @@ public final class HudConfig {
 	public Boolean customMobOutlinesEnabled = false;
 	public Boolean entityOcclusionCullingEnabled = true;
 	public Boolean lowHealthVignetteEnabled = true;
+	public Boolean biggerTextEnabled = false;
 	public Boolean performanceDebugEnabled = false;
 	public String trackedXpSkill = null;
 	public WidgetState tabStrip = new WidgetState();

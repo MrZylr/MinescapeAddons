@@ -571,7 +571,8 @@ public final class ContentPanelWidget extends HudWidget {
 		Skills data = Skills.getInstance();
 		boolean virtualLevelsEnabled = HudManager.getInstance().isVirtualLevelsEnabled();
 		float ts = Math.max(0.0F, (float) (scale() - 0.95D));
-		int sfh = scaledTextHeight(mc, ts);
+		float skillNumberScale = HudManager.getInstance().isBiggerTextEnabled() ? ts * HudManager.BIGGER_TEXT_SCALE : ts;
+		int sfh = scaledTextHeight(mc, skillNumberScale);
 		final int JO = 7;
 		SkillType hoveredSkill = null;
 		int hoveredSkillX = -1;
@@ -598,7 +599,7 @@ public final class ContentPanelWidget extends HudWidget {
 				Identifier icon = SKILL_ICONS.get(skill);
 				if (icon != null) {
 					long iconStart = PerfDebug.start();
-					blitTexture(graphics, icon, sx + iconOff, sy + iconOff, iconSize, iconSize, 25, 25);
+					blitTexture(graphics, icon, sx + iconOff, sy + iconOff - 2, iconSize, iconSize, 25, 25);
 					PerfDebug.record("skills.icons", iconStart);
 				}
 				int baseLevel = data.getLevel(skill);
@@ -619,15 +620,15 @@ public final class ContentPanelWidget extends HudWidget {
 				}
 				String effStr = String.valueOf(displayTop);
 				String baseStr = String.valueOf(virtualLevel);
-				int effW = scaledTextWidth(mc, effStr, ts);
-				int baseW = scaledTextWidth(mc, baseStr, ts);
+				int effW = scaledTextWidth(mc, effStr, skillNumberScale);
+				int baseW = scaledTextWidth(mc, baseStr, skillNumberScale);
 				int topH = tileSize * 2 / 5;
 				int botStart = tileSize * 3 / 5;
 				int effY = sy + Math.max(0, (topH - sfh) / 2) + 2;
-				int baseY = sy + botStart + Math.max(0, (tileSize - botStart - sfh) / 2) - 2;
+				int baseY = sy + botStart + Math.max(0, (tileSize - botStart - sfh) / 2) - 4;
 				long textStart = PerfDebug.start();
-				drawScaledText(graphics, mc, effStr, rx + (tileSize - effW) / 2, effY, effColor, ts);
-				drawScaledText(graphics, mc, baseStr, rx + (tileSize - baseW) / 2 + 4, baseY, 0xFFFFFF00, ts);
+				drawScaledText(graphics, mc, effStr, rx + (tileSize - effW) / 2, effY, effColor, skillNumberScale);
+				drawScaledText(graphics, mc, baseStr, rx + (tileSize - baseW) / 2 + 8, baseY, 0xFFFFFF00, skillNumberScale);
 				PerfDebug.record("skills.text", textStart);
 				if (!suppressHover && mouseX >= sx && mouseX < sx + skillW && mouseY >= sy && mouseY < sy + tileSize) {
 					hoveredSkill = skill;
@@ -654,11 +655,11 @@ public final class ContentPanelWidget extends HudWidget {
 			totalExperience += data.getExperience(s);
 		}
 		String totalText = "Total level: " + totalLevel;
-		int totalTextWidth = scaledTextWidth(mc, totalText, ts);
+		int totalTextWidth = scaledTextWidth(mc, totalText, skillNumberScale);
 		int ttx = gx + (gridW - totalTextWidth) / 2;
 		int tty = barY + Math.max(0, (tileSize - sfh) / 2) - 5;
 		long totalTextStart = PerfDebug.start();
-		drawScaledText(graphics, mc, totalText, ttx, tty, 0xFFFFFF00, ts);
+		drawScaledText(graphics, mc, totalText, ttx, tty, 0xFFFFFF00, skillNumberScale);
 		PerfDebug.record("skills.totalText", totalTextStart);
 		if (hoveredSkill != null) {
 			renderSkillHoverTooltip(graphics, mc, hoveredSkill, hoveredSkillX, hoveredSkillY, hoveredSkillW, hoveredSkillH, mc.getWindow().getGuiScaledWidth(), mc.getWindow().getGuiScaledHeight());
