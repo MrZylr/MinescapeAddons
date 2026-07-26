@@ -49,6 +49,12 @@ public final class ContentPanelWidget extends HudWidget {
 	private static final int EQUIPMENT_BUTTON_BASE_GAP = 1;
 	private static final int SKILL_TILE_BASE_SIZE = 14;
 	private static final int SKILL_TILE_OVERLAP = 3;
+	private static final int SKILL_COLUMN_GAP_REDUCTION = 4;
+	private static final int SKILL_GRID_SHIFT_X = 5;
+	private static final int SKILL_TILE_LEFT_INSET = 4;
+	private static final int SKILL_TILE_RIGHT_TRIM = 2;
+	private static final double SKILL_TEXT_BASE_WIDGET_SCALE = 1.95D;
+	private static final float SKILL_TEXT_SCALE_SLOPE = 0.4F;
 	private static final long MAX_XP = 200_000_000L;
 	private static final int TAB_ICON_WIDTH = 33;
 	private static final int TAB_ICON_HEIGHT = 36;
@@ -560,19 +566,18 @@ public final class ContentPanelWidget extends HudWidget {
 		boolean suppressHover = !((mc.screen instanceof HudInventoryScreen) || CustomContainerScreenRegistry.isCustomContainerScreen(mc.screen)) || HudManager.getInstance().isRuntimeContextMenuOpen();
 		int startY = y + 2;
 		int pw = pixelWidth();
-		int tileSize = Math.max(8, (int) (SKILL_TILE_BASE_SIZE * scale()));
-		int tileOverlap = Math.min(SKILL_TILE_OVERLAP, Math.max(0, tileSize / 4));
+		int tileSize = Math.max(8, Math.round(SKILL_TILE_BASE_SIZE * (float) scale()));
+		int tileOverlap = Math.min(SKILL_TILE_OVERLAP, Math.max(0, Math.round(tileSize / 4.0F)));
 		int skillW = 2 * tileSize;
-		int colStep = skillW - tileOverlap;
+		int colStep = skillW - tileOverlap - SKILL_COLUMN_GAP_REDUCTION;
 		int rowStep = tileSize - tileOverlap;
 		int gridW = COLS * skillW - (COLS - 1) * tileOverlap;
-		int gx = x + (pw - gridW) / 2 + 1;
+		int gx = x + Math.round((pw - gridW) / 2.0F) + SKILL_GRID_SHIFT_X;
 		int gy = startY;
 		Skills data = Skills.getInstance();
 		boolean virtualLevelsEnabled = HudManager.getInstance().isVirtualLevelsEnabled();
-		float ts = Math.max(0.0F, (float) (scale() - 0.95D));
-		float skillNumberScale = HudManager.getInstance().isBiggerTextEnabled() ? ts * HudManager.BIGGER_TEXT_SCALE : ts;
-		int sfh = scaledTextHeight(mc, skillNumberScale);
+		float ts = resolveSkillTabTextScale(mc);
+		int sfh = scaledTextHeight(mc, ts);
 		final int JO = 7;
 		SkillType hoveredSkill = null;
 		int hoveredSkillX = -1;
@@ -590,16 +595,19 @@ public final class ContentPanelWidget extends HudWidget {
 				skillBoundsY[row][col] = sy;
 				skillTileSize = tileSize;
 				int rx = sx + tileSize - JO - tileOverlap;
+				int leftTileX = sx + SKILL_TILE_LEFT_INSET;
+				int leftTileWidth = Math.max(1, tileSize + tileOverlap - SKILL_TILE_LEFT_INSET);
+				int rightTileWidth = Math.max(1, tileSize + JO + tileOverlap - SKILL_TILE_RIGHT_TRIM);
 				long tileStart = PerfDebug.start();
-				blitTexture(graphics, STAT_TILE_RIGHT, rx, sy, tileSize + JO + tileOverlap, tileSize, 36, 36);
-				blitTexture(graphics, STAT_TILE_LEFT, sx, sy, tileSize + tileOverlap, tileSize, 36, 36);
+				blitTexture(graphics, STAT_TILE_RIGHT, rx, sy, rightTileWidth, tileSize, 36, 36);
+				blitTexture(graphics, STAT_TILE_LEFT, leftTileX, sy, leftTileWidth, tileSize, 36, 36);
 				PerfDebug.record("skills.tiles", tileStart);
 				int iconSize = Math.max(4, (tileSize * 20) / 28);
 				int iconOff = (tileSize - iconSize) / 2;
 				Identifier icon = SKILL_ICONS.get(skill);
 				if (icon != null) {
 					long iconStart = PerfDebug.start();
-					blitTexture(graphics, icon, sx + iconOff, sy + iconOff - 2, iconSize, iconSize, 25, 25);
+					blitTexture(graphics, icon, sx + iconOff + 2, sy + iconOff - 2, iconSize, iconSize, 25, 25);
 					PerfDebug.record("skills.icons", iconStart);
 				}
 				int baseLevel = data.getLevel(skill);
@@ -620,15 +628,15 @@ public final class ContentPanelWidget extends HudWidget {
 				}
 				String effStr = String.valueOf(displayTop);
 				String baseStr = String.valueOf(virtualLevel);
-				int effW = scaledTextWidth(mc, effStr, skillNumberScale);
-				int baseW = scaledTextWidth(mc, baseStr, skillNumberScale);
+				int effW = scaledTextWidth(mc, effStr, ts);
+				int baseW = scaledTextWidth(mc, baseStr, ts);
 				int topH = tileSize * 2 / 5;
 				int botStart = tileSize * 3 / 5;
 				int effY = sy + Math.max(0, (topH - sfh) / 2) + 2;
 				int baseY = sy + botStart + Math.max(0, (tileSize - botStart - sfh) / 2) - 4;
 				long textStart = PerfDebug.start();
-				drawScaledText(graphics, mc, effStr, rx + (tileSize - effW) / 2, effY, effColor, skillNumberScale);
-				drawScaledText(graphics, mc, baseStr, rx + (tileSize - baseW) / 2 + 8, baseY, 0xFFFFFF00, skillNumberScale);
+				drawScaledText(graphics, mc, effStr, rx + Math.round((tileSize - effW) / 2.0F), effY, effColor, ts);
+				drawScaledText(graphics, mc, baseStr, rx + Math.round((tileSize - baseW) / 2.0F) + 8, baseY, 0xFFFFFF00, ts);
 				PerfDebug.record("skills.text", textStart);
 				if (!suppressHover && mouseX >= sx && mouseX < sx + skillW && mouseY >= sy && mouseY < sy + tileSize) {
 					hoveredSkill = skill;
@@ -640,8 +648,8 @@ public final class ContentPanelWidget extends HudWidget {
 			}
 		}
 		int barY = gy + ROWS * rowStep;
-		int barW = Math.max(tileSize * 2, gridW - 5);
-		int barX = gx + (gridW - barW) / 2;
+		int barW = gridW-17;
+		int barX = (gx + (gridW - barW) / 2)-5;
 		long barStart = PerfDebug.start();
 		blitTexture(graphics, STAT_BAR_LEFT, barX, barY, tileSize, tileSize, 36, 36);
 		int midW = barW - 2 * tileSize + JO * 2;
@@ -655,17 +663,23 @@ public final class ContentPanelWidget extends HudWidget {
 			totalExperience += data.getExperience(s);
 		}
 		String totalText = "Total level: " + totalLevel;
-		int totalTextWidth = scaledTextWidth(mc, totalText, skillNumberScale);
+		int totalTextWidth = scaledTextWidth(mc, totalText, ts);
 		int ttx = gx + (gridW - totalTextWidth) / 2;
 		int tty = barY + Math.max(0, (tileSize - sfh) / 2) - 5;
 		long totalTextStart = PerfDebug.start();
-		drawScaledText(graphics, mc, totalText, ttx, tty, 0xFFFFFF00, skillNumberScale);
+		drawScaledText(graphics, mc, totalText, ttx, tty, 0xFFFFFF00, ts);
 		PerfDebug.record("skills.totalText", totalTextStart);
 		if (hoveredSkill != null) {
 			renderSkillHoverTooltip(graphics, mc, hoveredSkill, hoveredSkillX, hoveredSkillY, hoveredSkillW, hoveredSkillH, mc.getWindow().getGuiScaledWidth(), mc.getWindow().getGuiScaledHeight());
 		} else if (!suppressHover && mouseX >= ttx && mouseX < ttx + totalTextWidth && mouseY >= tty && mouseY < tty + sfh) {
 			renderTotalLevelHoverTooltip(graphics, mc, totalLevel, totalExperience, mouseX, mouseY, mc.getWindow().getGuiScaledWidth(), mc.getWindow().getGuiScaledHeight());
 		}
+	}
+
+	private float resolveSkillTabTextScale(Minecraft minecraft) {
+		float scaled = 1.0F + (float) ((this.scale() - SKILL_TEXT_BASE_WIDGET_SCALE) * 0.28F);
+		float minimum = Math.min(1.0F, HudManager.minimumScaledTextScale(minecraft) + 0.1F);
+		return Mth.clamp(Math.max(minimum, scaled), minimum, 1.1F);
 	}
 
 	private void renderInventory(GuiGraphicsExtractor graphics, Minecraft mc, int x, int y, int padding, int titleHeight) {

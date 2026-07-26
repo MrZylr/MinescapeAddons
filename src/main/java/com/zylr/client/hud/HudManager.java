@@ -52,7 +52,6 @@ public final class HudManager {
 	private static final long AFK_THRESHOLD_MILLIS = 300_000L;
 	static final double MIN_SCALE = 0.55D;
 	static final double MAX_SCALE = 3.0D;
-	public static final float BIGGER_TEXT_SCALE = 2.0F;
 	static final Identifier TAB_STONE = texture("resizeable_mode/tab_stone_middle.png");
 	static final Identifier TAB_STONE_SELECTED = texture("resizeable_mode/tab_stone_middle_selected.png");
 	static final TabSlot[] TAB_ROW_TOP = {
@@ -154,7 +153,6 @@ public final class HudManager {
 	private boolean customMobOutlinesEnabled = false;
 	private boolean entityOcclusionCullingEnabled = true;
 	private boolean lowHealthVignetteEnabled = true;
-	private boolean biggerTextEnabled = false;
 	private boolean performanceDebugEnabled = false;
 	private boolean barrowsLootResetPending = false;
 	private SkillType trackedXpSkill = null;
@@ -183,8 +181,7 @@ public final class HudManager {
 			boolean shouldSaveMissingConfigDefaults = config.agilityShortcutOutlinesEnabled == null
 				|| config.customMobOutlinesEnabled == null
 				|| config.entityOcclusionCullingEnabled == null
-				|| config.lowHealthVignetteEnabled == null
-				|| config.biggerTextEnabled == null;
+				|| config.lowHealthVignetteEnabled == null;
 			if (config.selectedTab != null) this.selectedTab = config.selectedTab;
 			this.sideStatBarsEnabled = config.sideStatBarsEnabled;
 			this.xpTrackerEnabled = config.xpTrackerEnabled;
@@ -204,7 +201,6 @@ public final class HudManager {
 			this.customMobOutlinesEnabled = config.customMobOutlinesEnabled != null && config.customMobOutlinesEnabled;
 			this.entityOcclusionCullingEnabled = config.entityOcclusionCullingEnabled == null || config.entityOcclusionCullingEnabled;
 			this.lowHealthVignetteEnabled = config.lowHealthVignetteEnabled == null || config.lowHealthVignetteEnabled;
-			this.biggerTextEnabled = config.biggerTextEnabled != null && config.biggerTextEnabled;
 			this.performanceDebugEnabled = config.performanceDebugEnabled != null && config.performanceDebugEnabled;
 			PerfDebug.setEnabled(this.performanceDebugEnabled);
 			this.trackedXpSkill = parseTrackedXpSkill(config.trackedXpSkill);
@@ -256,7 +252,6 @@ public final class HudManager {
 		this.customMobOutlinesEnabled = false;
 		this.entityOcclusionCullingEnabled = true;
 		this.lowHealthVignetteEnabled = true;
-		this.biggerTextEnabled = false;
 		this.performanceDebugEnabled = false;
 		PerfDebug.setEnabled(false);
 		this.trackedXpSkill = null;
@@ -373,7 +368,6 @@ public final class HudManager {
 	public boolean isCustomMobOutlinesEnabled() { return this.customMobOutlinesEnabled; }
 	public boolean isEntityOcclusionCullingEnabled() { return this.entityOcclusionCullingEnabled; }
 	public boolean isLowHealthVignetteEnabled() { return this.lowHealthVignetteEnabled; }
-	public boolean isBiggerTextEnabled() { return this.biggerTextEnabled; }
 	public boolean isPerformanceDebugEnabled() { return this.performanceDebugEnabled; }
 	public SkillType getTrackedXpSkill() { return this.trackedXpSkill; }
 	public boolean isHighAlchContainerMode() { return this.highAlchContainerMode; }
@@ -526,12 +520,6 @@ public final class HudManager {
 		if (this.performanceDebugEnabled == enabled) return;
 		this.performanceDebugEnabled = enabled;
 		PerfDebug.setEnabled(enabled);
-		this.save();
-	}
-
-	public void setBiggerTextEnabled(boolean enabled) {
-		if (this.biggerTextEnabled == enabled) return;
-		this.biggerTextEnabled = enabled;
 		this.save();
 	}
 
@@ -953,7 +941,6 @@ public final class HudManager {
 		config.customMobOutlinesEnabled = this.customMobOutlinesEnabled;
 		config.entityOcclusionCullingEnabled = this.entityOcclusionCullingEnabled;
 		config.lowHealthVignetteEnabled = this.lowHealthVignetteEnabled;
-		config.biggerTextEnabled = this.biggerTextEnabled;
 		config.performanceDebugEnabled = this.performanceDebugEnabled;
 		config.trackedXpSkill = this.trackedXpSkill != null ? this.trackedXpSkill.name() : null;
 		config.tabStrip = this.tabStrip.snapshot();
@@ -1112,17 +1099,35 @@ public final class HudManager {
 		return minecraft.font;
 	}
 
+	public static float minimumScaledTextScale(Minecraft minecraft) {
+		if (minecraft == null || minecraft.getWindow() == null) {
+			return 1.0F;
+		}
+		double guiScale = minecraft.getWindow().getGuiScale();
+		if (guiScale <= 1.0D) {
+			return 1.0F;
+		}
+		return (float) Math.min(1.0D, 2.0D / guiScale);
+	}
+
+	private static float normalizedTextScale(Minecraft minecraft, float scale) {
+		return Math.max(minimumScaledTextScale(minecraft), scale);
+	}
+
 	static int scaledTextWidth(Minecraft minecraft, String text, float scale) {
+		scale = normalizedTextScale(minecraft, scale);
 		Font font = resolveHudTextFont(minecraft, scale);
 		return Math.max(1, Math.round(font.width(text) * scale));
 	}
 
 	static int scaledTextHeight(Minecraft minecraft, float scale) {
+		scale = normalizedTextScale(minecraft, scale);
 		Font font = resolveHudTextFont(minecraft, scale);
 		return Math.max(1, Math.round(font.lineHeight * scale));
 	}
 
 	static void drawScaledText(GuiGraphicsExtractor graphics, Minecraft minecraft, String text, int x, int y, int color, float scale) {
+		scale = normalizedTextScale(minecraft, scale);
 		Font font = resolveHudTextFont(minecraft, scale);
 		if (Math.abs(scale - 1.0F) < 0.001F) {
 			graphics.text(font, text, x, y, color, false);

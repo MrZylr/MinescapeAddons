@@ -70,7 +70,7 @@ public final class StackSizeOverlay {
 		long stockCount = overlay.stockCount();
 		long stackSize = overlay.stackSize();
 		if (stockCount < 0L && stackSize <= 1L) return;
-		float textScale = effectiveScaleMultiplier(Mth.clamp(drawSize / 16.0F, 0.75F, 1.0F));
+		float textScale = Mth.clamp(drawSize / 16.0F, 0.75F, 1.0F);
 		graphics.pose().pushMatrix();
 		graphics.pose().translate(x, y);
 		graphics.pose().scale(textScale, textScale);
@@ -97,7 +97,7 @@ public final class StackSizeOverlay {
 		if (stackSize <= 1L) return;
 		CachedLabel label = cachedLabel(format(stackSize), color(stackSize));
 		if (label == null) return;
-		renderCachedLabel(graphics, label, x + LABEL_INSET_X, y + LABEL_INSET_Y, effectiveScaleMultiplier(scaleMultiplier));
+		renderCachedLabel(graphics, label, x + LABEL_INSET_X, y + LABEL_INSET_Y, scaleMultiplier, true);
 	}
 
 	public static void renderLightweightStackSizeOrCount(GuiGraphicsExtractor graphics, Font font, ItemStack stack, int x, int y, int drawSize) {
@@ -110,7 +110,7 @@ public final class StackSizeOverlay {
 		if (stackSize <= 1L) return;
 		CachedLabel label = cachedLabel(format(stackSize), color(stackSize));
 		if (label == null) return;
-		renderCachedLabel(graphics, label, x + LABEL_INSET_X, y + LABEL_INSET_Y, effectiveScaleMultiplier(scaleMultiplier));
+		renderCachedLabel(graphics, label, x + LABEL_INSET_X, y + LABEL_INSET_Y, scaleMultiplier, true);
 	}
 
 	public static void renderLightweight(GuiGraphicsExtractor graphics, Font font, ItemStack stack, int x, int y, int drawSize) {
@@ -126,14 +126,14 @@ public final class StackSizeOverlay {
 		if (stockCount >= 0L) {
 			CachedLabel stockLabel = cachedLabel(format(stockCount), color(stockCount));
 			if (stockLabel != null) {
-				renderCachedLabel(graphics, stockLabel, x + LABEL_INSET_X, y + LABEL_INSET_Y + logicalY, effectiveScaleMultiplier(scaleMultiplier));
+				renderCachedLabel(graphics, stockLabel, x + LABEL_INSET_X, y + LABEL_INSET_Y + logicalY, scaleMultiplier, true);
 				logicalY += LOGICAL_LINE_OFFSET;
 			}
 		}
 		if (stackSize > 1L) {
 			CachedLabel stackLabel = cachedLabel(format(stackSize), color(stackSize));
 			if (stackLabel != null) {
-				renderCachedLabel(graphics, stackLabel, x + LABEL_INSET_X, y + LABEL_INSET_Y + logicalY, effectiveScaleMultiplier(scaleMultiplier));
+				renderCachedLabel(graphics, stackLabel, x + LABEL_INSET_X, y + LABEL_INSET_Y + logicalY, scaleMultiplier, true);
 			}
 		}
 	}
@@ -151,14 +151,14 @@ public final class StackSizeOverlay {
 		if (stockCount >= 0L) {
 			CachedLabel stockLabel = cachedLabel(format(stockCount), color(stockCount));
 			if (stockLabel != null) {
-				renderCachedLabel(graphics, stockLabel, x + LABEL_INSET_X, y + LABEL_INSET_Y + logicalY, effectiveScaleMultiplier(scaleMultiplier));
+				renderCachedLabel(graphics, stockLabel, x + LABEL_INSET_X, y + LABEL_INSET_Y + logicalY, scaleMultiplier, true);
 				logicalY += LOGICAL_LINE_OFFSET;
 			}
 		}
 		if (stackSize > 1L) {
 			CachedLabel stackLabel = cachedLabel(format(stackSize), color(stackSize));
 			if (stackLabel != null) {
-				renderCachedLabel(graphics, stackLabel, x + LABEL_INSET_X, y + LABEL_INSET_Y + logicalY, effectiveScaleMultiplier(scaleMultiplier));
+				renderCachedLabel(graphics, stackLabel, x + LABEL_INSET_X, y + LABEL_INSET_Y + logicalY, scaleMultiplier, true);
 			}
 		}
 	}
@@ -167,11 +167,14 @@ public final class StackSizeOverlay {
 		if (text == null || text.isEmpty()) return;
 		CachedLabel label = cachedLabel(text, color);
 		if (label == null) return;
-		renderCachedLabel(graphics, label, x, y, effectiveScaleMultiplier(scaleMultiplier));
+		renderCachedLabel(graphics, label, x, y, scaleMultiplier, true);
 	}
 
-	private static float effectiveScaleMultiplier(float scaleMultiplier) {
-		return HudManager.getInstance().isBiggerTextEnabled() ? scaleMultiplier * HudManager.BIGGER_TEXT_SCALE : scaleMultiplier;
+	public static void renderLightweightLabelUnclamped(GuiGraphicsExtractor graphics, String text, int color, int x, int y, float scaleMultiplier) {
+		if (text == null || text.isEmpty()) return;
+		CachedLabel label = cachedLabel(text, color);
+		if (label == null) return;
+		renderCachedLabel(graphics, label, x, y, scaleMultiplier, false);
 	}
 
 	private static OverlayData overlayData(ItemStack stack) {
@@ -271,7 +274,8 @@ public final class StackSizeOverlay {
 		if (text == null || text.isEmpty()) return;
 		PreparedLabel label = preparedLabel(font, text, color);
 		if (label == null) return;
-		float textScale = Mth.clamp(drawSize / 16.0F, 0.75F, 1.0F) * scaleMultiplier;
+		Minecraft minecraft = Minecraft.getInstance();
+		float textScale = Math.max(HudManager.minimumScaledTextScale(minecraft), Mth.clamp(drawSize / 16.0F, 0.75F, 1.0F) * scaleMultiplier);
 		graphics.pose().pushMatrix();
 		graphics.pose().translate(x, y);
 		graphics.pose().scale(textScale, textScale);
@@ -497,10 +501,14 @@ public final class StackSizeOverlay {
 		return ((alpha & 0xFF) << 24) | (rgb & 0x00FFFFFF);
 	}
 
-	private static void renderCachedLabel(GuiGraphicsExtractor graphics, CachedLabel label, int x, int y, float scaleMultiplier) {
+	private static void renderCachedLabel(GuiGraphicsExtractor graphics, CachedLabel label, int x, int y, float scaleMultiplier, boolean clampMinimumScale) {
 		graphics.pose().pushMatrix();
 		graphics.pose().translate(x, y);
 		float drawScale = label.drawScale() * scaleMultiplier;
+		if (clampMinimumScale) {
+			Minecraft minecraft = Minecraft.getInstance();
+			drawScale = Math.max(label.drawScale() * HudManager.minimumScaledTextScale(minecraft), drawScale);
+		}
 		graphics.pose().scale(drawScale, drawScale);
 		graphics.blit(
 			RenderPipelines.GUI_TEXTURED,

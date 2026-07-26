@@ -311,9 +311,10 @@ public final class MinimapWidget extends HudWidget {
 		int hoverMouseY = allowHover ? mouseY : Integer.MIN_VALUE;
 		Font orbFont = minecraft.font;
 		if (orbFont == null) return;
+		float minimapTextScale = Math.max(HudManager.minimumScaledTextScale(minecraft), Math.max(0.75F, (float) this.scale()));
 		OrbRenderMetrics metrics = new OrbRenderMetrics(
 			orbFont,
-			Math.max(0.75F, (float) this.scale()),
+			minimapTextScale,
 			width / (float) BASE_WIDTH,
 			height / (float) BASE_HEIGHT,
 			Math.max(1, scaleX(ORB_FRAME_WIDTH, width)),
@@ -413,7 +414,7 @@ public final class MinimapWidget extends HudWidget {
 		int textWidth = metrics.orbLabelWidth(text, color);
 		int textX = frameX + metrics.valueOffsetX() - textWidth;
 		int textY = frameY + metrics.valueOffsetY();
-		StackSizeOverlay.renderLightweightLabel(graphics, text, color, textX, textY, metrics.textScale());
+		StackSizeOverlay.renderLightweightLabelUnclamped(graphics, text, color, textX, textY, metrics.textScale());
 	}
 
 	private static float statPercent(int current, int maximum) {
@@ -1188,7 +1189,7 @@ public final class MinimapWidget extends HudWidget {
 		int mapSize = Math.min(scaleX(MAP_SIZE, width), scaleY(MAP_SIZE, height));
 		int px = mapLeft + (int) Math.round((center + mapX) / MAP_SIZE * mapSize);
 		int py = mapTop + (int) Math.round((center + mapY) / MAP_SIZE * mapSize);
-		float textScale = Math.max(0.5F, (float) this.scale());
+		float textScale = Math.max(HudManager.minimumScaledTextScale(minecraft), Math.max(0.5F, (float) this.scale()));
 		int textWidth = Math.round(minecraft.font.width(text) * textScale);
 		int textHeight = Math.round(minecraft.font.lineHeight * textScale);
 		int textX = px - textWidth / 2;

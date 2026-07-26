@@ -132,7 +132,6 @@ public final class HudSettingsScreen extends Screen {
 		this.settings.add(SettingRow.section("Gameplay Helpers"));
 		this.settings.add(SettingRow.toggle("Farming Alert", "Show ready farming patch alerts.", manager::isFarmingAlertEnabled, manager::setFarmingAlertEnabled));
 		this.settings.add(SettingRow.toggle("Low Health Vignette", "Show the red screen edge warning at low HP.", manager::isLowHealthVignetteEnabled, manager::setLowHealthVignetteEnabled));
-		this.settings.add(SettingRow.toggle("Bigger Text", "Scale skill tab numbers and stack size overlays by 1.15x. Only use on small HUD's", manager::isBiggerTextEnabled, manager::setBiggerTextEnabled));
 		this.settings.add(SettingRow.toggle("Agility Shortcut Outlines", "Highlight configured agility shortcuts.", manager::isAgilityShortcutOutlinesEnabled, manager::setAgilityShortcutOutlinesEnabled));
 		this.settings.add(SettingRow.toggle("Custom Mob Outlines", "Highlight configured mobs in-world.", manager::isCustomMobOutlinesEnabled, manager::setCustomMobOutlinesEnabled));
 		this.settings.add(SettingRow.toggle("Entity Occlusion Culling", "Hide entities when solid blocks fully block the camera view.", manager::isEntityOcclusionCullingEnabled, manager::setEntityOcclusionCullingEnabled));
